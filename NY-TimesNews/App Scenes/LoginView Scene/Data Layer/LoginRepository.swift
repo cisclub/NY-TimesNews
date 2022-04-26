@@ -7,18 +7,18 @@
 
 import Combine
 
-struct LoginQuery: Codable{
+struct LoginRepoInput {
     let email: String
     let password: String
 }
 
-protocol LoginRepository{
-    func login(query: LoginQuery)-> AnyPublisher<User, LoginUseCaseError>
-}
-
-final class LoginRepositoryMock: LoginRepository{
-    func login(query: LoginQuery) -> AnyPublisher<User, LoginUseCaseError> {
-        Just(User(name: "Yahia")).setFailureType(to: LoginUseCaseError.self)
-            .eraseToAnyPublisher()
+struct LoginRepository: Repository {
+    var network: HTTPClient
+    
+    func execute(input: LoginRepoInput, finishHandler: (User) -> ()) {
+        finishHandler(User(name: "Ali"))
     }
+    
+    typealias Input = LoginRepoInput
+    typealias Output = User
 }

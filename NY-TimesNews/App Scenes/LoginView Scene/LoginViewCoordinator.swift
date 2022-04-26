@@ -6,17 +6,51 @@
 //
 
 import UIKit
-final class LoginViewCoordinator: Coordinator{
-    private let navigationController: UINavigationController
-    init( navigationController: UINavigationController){
-        self.navigationController = navigationController
+
+
+final class LoginCoordinator: Coordinator {
+    typealias InputType = UINavigationController
+    typealias ViewModelType = LoginViewModel
+    typealias UseCaseType = LoginUseCase
+    typealias ActionsType = LoginActions
+    
+    
+    var input: UINavigationController
+    var viewModel: LoginViewModel
+    
+    
+    init(input: UINavigationController, viewModel: LoginViewModel) {
+        self.input = input
+        self.viewModel = viewModel
     }
+    
     func start() {
-        let view: LoginView = .instantiate()
-        view.viewModel = .init(loginUseCase: LoginUseCaseImp(loginRepository: LoginRepositoryMock()), routes: .init(showHomeView: showHomeView))
-        navigationController.pushViewController(view, animated: true)
+        let repo = LoginRepository(network: HTTPClient.defaultClient)
+        let useCase = LoginUseCase(repo: repo)
+        let actions = LoginActions { user in
+            // Move to home screen
+        } didFailToLogin: {
+            // Show failure alert
+        } forgotPassword: {
+            // Move to forgot password scene
+        }
+        
+        let viewModel = LoginViewModel(actions: actions,
+                                       useCases: useCase)
+        let viewController: LoginViewController = .instanceFromStoryboard(withViewModel: viewModel)
+        
+        input.pushViewController(viewController, animated: true)
     }
+    
+    
     private func showHomeView(){
         
     }
+}
+
+
+struct LoginActions {
+    let didLoginSuccessfully: (User) -> ()
+    let didFailToLogin: () -> ()
+    let forgotPassword: () -> ()
 }

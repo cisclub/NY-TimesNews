@@ -7,59 +7,34 @@
 
 import Foundation
 
-import Combine
 
-final class LoginViewModel: ObservableObject{
-    @Published var errorMessage: String?
-    @Published var showLoadingIndicator = false
-    
-    private let loginUseCase: LoginUseCase
-    private var cancellables = Set<AnyCancellable>()
-    private let routes: LoginViewRoutes
-    init(loginUseCase: LoginUseCase, routes: LoginViewRoutes){
-        self.loginUseCase = loginUseCase
-        self.routes = routes
-    }
+
+final class LoginViewModel: ViewModel<LoginUseCase, LoginActions> {
+    var errorMessage: String?
+    var showLoadingIndicator = false
+    var username: String?
+    var email: String?
+    var password: String?
 }
 
 extension LoginViewModel{//view to view model
-    func didPressLoginButton(email: String?, poassword: String?){
+    func didPressLoginButton(email: String?, poassword: String?) {
         showLoadingIndicator = true
-        loginUseCase.execute(email: email, password: poassword)
-            .sink { [weak self] completionStatus in
-                if case let .failure(error) = completionStatus {
-                    self?.handleLoginError(error)
+        let input = LoginUseCaseInput(username: username!, email: email!, password: password!)
+        _ = useCases?.execute(input, finishHandler: { user in
+            if let user = user {
+                if let loginAction = actions?.didLoginSuccessfully {
+                    loginAction(user);
                 }
-                self?.showLoadingIndicator = false
-            } receiveValue: { [weak self] loggedInUser in//succesfull login
-                self?.showLoadingIndicator = false
-                //use case to execute the save user info into keychain
-                self?.routes.showHomeView()
-            }.store(in: &cancellables)
-    }
-    
-    private func handleLoginError(_ error: LoginUseCaseError){
-        switch error {
-        case .notAuthorized:
-            errorMessage = "You are not authorized"
-        case .invalidEmailOrPassword:
-            errorMessage = "Invalid email or password"
-        case .emailIsMissing:
-            errorMessage = "Missing email"
-        case .invalidEmail:
-            errorMessage = "Invalid email"
-        case .missingPassword:
-            errorMessage = "Missing password"
-        case .tooShortPassword:
-            errorMessage = "password too short"
-        }
+            } else {
+                if let failAction = actions?.didFailToLogin {
+                    failAction()
+                }
+            }
+        })
     }
 }
 
 struct User: Codable{
     let name: String
-}
-
-struct LoginViewRoutes{
-    let showHomeView:()->()
 }

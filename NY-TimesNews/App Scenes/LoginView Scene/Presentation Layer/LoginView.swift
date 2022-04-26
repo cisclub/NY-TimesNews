@@ -6,11 +6,6 @@
 //
 
 import UIKit
-class LoginView: UIViewController {
-    var viewModel: LoginViewModel!
+class LoginViewController: BaseViewController<LoginUseCase, LoginActions, LoginViewModel> {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
 }

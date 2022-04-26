@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NewsListCoordinator: Coordinator{
+final class NewsListCoordinator {
 //    let dependencies: NewsListCoordinatorDependencies // use this way if there are many dependancies
     
     private let navigationController: UINavigationController

@@ -7,16 +7,20 @@
 
 import UIKit
 
-final class AppCoordinator: Coordinator{
-    var childCoordinators: [Coordinator] = []
+final class AppCoordinator {
+    typealias ViewModelType = String
+    typealias InputType = UIWindow
+    typealias UseCaseType = String
+    typealias ActionsType = String
     
-    private let window: UIWindow!
-    private lazy var navigationController: UINavigationController = {
-        UINavigationController()
-    }()
     
-    init(window: UIWindow) {
-        self.window = window
+    var input: InputType
+    var viewModel: ViewModelType
+    
+    
+    init(input: InputType, viewModel: String) {
+        self.input = input
+        self.viewModel = viewModel
     }
     
     func start() {//make desision about the landing scene
@@ -24,22 +28,31 @@ final class AppCoordinator: Coordinator{
         let status = launchStateManager.getLaunchState()
         
         switch status {
-        case .guest:
-            let coordinator: LoginViewCoordinator = .init(navigationController: navigationController)
-            coordinator.start()
-        case .onboarding:
-            let coordinator: LoginViewCoordinator = .init(navigationController: navigationController)
+        case .guest, .onboarding:
+            let repo = LoginRepository(network: HTTPClient.defaultClient)
+            let useCase = LoginUseCase(repo: repo)
+            let actions = LoginActions { user in
+                // Move to home screen
+            } didFailToLogin: {
+                // Show failure alert
+            } forgotPassword: {
+                // Move to forgot password scene
+            }
+            
+            let viewModel = LoginViewModel(actions: actions,
+                                           useCases: useCase)
+            let viewController: LoginViewController = .instanceFromStoryboard(withViewModel: viewModel)
+            let coordinator: LoginCoordinator = .init(input: UINavigationController(rootViewController: viewController),
+                                                      viewModel: viewModel)
             coordinator.start()
         case .loggedIn:
-            let coordinator: NewsListCoordinator = .init(navigationController: navigationController)
-            coordinator.start()
+            break
+//            let coordinator: NewsListCoordinator = .init(navigationController: navigationController)
+//            coordinator.start()
         }
         
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
-    }
-    
-    func finish() {
+        input.rootViewController = UINavigationController()
+        input.makeKeyAndVisible()
     }
 }
 

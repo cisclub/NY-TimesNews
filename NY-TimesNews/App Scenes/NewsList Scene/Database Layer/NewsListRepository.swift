@@ -11,7 +11,7 @@ import Combine
 protocol NewsListRepository{
 //    var apiKey: String {get}
 //    var period: NewsPeriod {get}
-    func getNewsList(getNewsListQuery: GetNewsListQuery) -> UseCaseResult<NewsFeed?, GetNewsUseCaseError>
+    //func getNewsList(getNewsListQuery: GetNewsListQuery) -> UseCaseResult<NewsFeed?, GetNewsUseCaseError>
 }
 
 final class NewsListRepositoryImp: NewsListRepository{

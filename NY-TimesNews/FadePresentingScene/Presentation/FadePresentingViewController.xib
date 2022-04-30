@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController restorationIdentifier="FadePresentingViewController" id="jEA-IP-UxK" customClass="FadePresentingViewController" customModule="NY_TimesNews" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="Dw4-e9-14X">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGk-FG-Gl4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="3dY-L1-rLY"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="xGk-FG-Gl4" firstAttribute="top" secondItem="Dw4-e9-14X" secondAttribute="top" id="K5Z-AZ-KS5"/>
+                    <constraint firstItem="xGk-FG-Gl4" firstAttribute="leading" secondItem="3dY-L1-rLY" secondAttribute="leading" id="m3t-cQ-R1E"/>
+                    <constraint firstItem="3dY-L1-rLY" firstAttribute="trailing" secondItem="xGk-FG-Gl4" secondAttribute="trailing" id="tVk-kd-jKQ"/>
+                    <constraint firstAttribute="bottom" secondItem="xGk-FG-Gl4" secondAttribute="bottom" id="xg8-Xz-w9Q"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="fadeView" destination="xGk-FG-Gl4" id="4Rw-sO-X8b"/>
+            </connections>
+            <point key="canvasLocation" x="214" y="-4"/>
+        </viewController>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

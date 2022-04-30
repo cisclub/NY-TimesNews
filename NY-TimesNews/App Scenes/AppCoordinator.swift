@@ -24,35 +24,21 @@ final class AppCoordinator {
     }
     
     func start() {//make desision about the landing scene
-        let launchStateManager: LaunchStateManager = .init()
-        let status = launchStateManager.getLaunchState()
+        let window = UIApplication.shared.windows.first!
+        let root = UIViewController()
+        window.rootViewController = root
+        root.view.backgroundColor = .white
+        window.makeKeyAndVisible()
         
-        switch status {
-        case .guest, .onboarding:
-            let repo = LoginRepository(network: HTTPClient.defaultClient)
-            let useCase = LoginUseCase(repo: repo)
-            let actions = LoginActions { user in
-                // Move to home screen
-            } didFailToLogin: {
-                // Show failure alert
-            } forgotPassword: {
-                // Move to forgot password scene
-            }
-            
-            let viewModel = LoginViewModel(actions: actions,
-                                           useCases: useCase)
-            let viewController: LoginViewController = .instanceFromStoryboard(withViewModel: viewModel)
-            let coordinator: LoginCoordinator = .init(input: UINavigationController(rootViewController: viewController),
-                                                      viewModel: viewModel)
-            coordinator.start()
-        case .loggedIn:
-            break
-//            let coordinator: NewsListCoordinator = .init(navigationController: navigationController)
-//            coordinator.start()
+        
+        let coordinatorInput = ActionsFadePresentingCoordinatorInput(presentingViewController: root)
+        let coordinatorActions = ActionsFadePresentingCoordinatorActions {
+            root.dismiss(animated: true)
         }
+        let coordinator = ActionsFadePresentingCoordinator(input: coordinatorInput,
+                                                           actions: coordinatorActions)
         
-        input.rootViewController = UINavigationController()
-        input.makeKeyAndVisible()
+        coordinator.start()
     }
 }
 

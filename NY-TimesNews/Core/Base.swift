@@ -1,88 +1,145 @@
 //
-//  Base.swift
-//  NY-TimesNews
+//  CLEANBase.swift
 //
 //  Created by Ali Amin on 26/04/2022.
 //
+//  CLEANBase is a set of protocols that helps creating an architecture Based on the Clean Architecture
+/// In this architecture all logic is put into ViewModel. that in turn will split different types of logic into other components.
+/// Presentation is the responsibility of ViewController and all other UI elements. But it should always remain dumb. That it doean't perm any logic. Not even presentation logic
+/// Logic can be split into three different types. Presentation logic, Domain/Business logic and Data retrieval logic.
+/// Networking logic is in a separate layer
+
+
 
 import Foundation
 import UIKit
 
+
+
+// MARK: Coordinator
+/// Coordinator: is responsible of the coordination of flow between different scenes, including all navigation/routing logic.
+/// It contains the presentation and logic layers (ViewController and ViewModel respectively).
+/// Interaction between coordinaores should happen to perfoem the navigation/flow from scene to another
+/// - InoutType: Is the dependencies of the coordinator. For example MyCoordinator needs the current NavigationController and the value of language app set to. So the InputType typealias will be a struct that contains both UINavigationController and String peroperties.
+/// ```
+/// struct MyCoordinatorInput {
+///     let navigationController: UINavigationController
+///     let language: String
+/// }
+/// ```
+/// - ActionsType: Actions are the channel via which coordinator can communicate with caller objet (mainly another coordinator). It can be a closure
 protocol Coordinator {
-    associatedtype InputType
-    associatedtype UseCaseType
-    associatedtype ActionsType
-    associatedtype ViewModelType: ViewModel<UseCaseType, ActionsType>
+    associatedtype InputType // Dependencies type
+    associatedtype ActionsType // Feedback closure type
 
     
     var input: InputType { get }
-    var viewModel: ViewModelType { get }
+    var actions: ActionsType { get }
 
     
-    init(input: InputType, viewModel: ViewModelType)
+    init(input: InputType, actions: ActionsType)
     
     func start()
 }
 
 
+// MARK: Use Case
 protocol UseCase {
     associatedtype InputType
-    associatedtype OutputType
+    associatedtype ClosureType  // AsyncReturnType
+    associatedtype ReturnType   // ReturnType
     associatedtype RepoType
     
-    var repo: RepoType? { get }
+    
+    var repo: RepoType { get }
 
-    func execute(_ input: InputType?, finishHandler:(OutputType) -> ())
+    
+    func execute(input: InputType, finishHandler:ClosureType) -> ReturnType
 }
 
 
+// MARK: Repository
 protocol Repository {
-    associatedtype Input
-    associatedtype Output
+    associatedtype InputType
+    associatedtype ClosureType
+    associatedtype ReturnType
     
     
-    var network : HTTPClient { get }
+    var network : NetworkManager.Type { get }
     
-    func execute(input: Input, finishHandler: (Output) -> ())
+    func execute(input: InputType, finishHandler: ClosureType) -> ReturnType
 }
 
-class ViewModel<UseCaseType, ActionsType> {
-    let viewController: UIViewController? = nil
-    let actions: ActionsType?
-    let useCases: UseCaseType?
-    
-    init(actions: ActionsType?, useCases: UseCaseType?) {
-        self.actions = actions
-        self.useCases = useCases
-    }
-}
 
-protocol BasicViewController {
-    associatedtype UseCaseType
+// MARK: View Model
+protocol ViewModel {
+    associatedtype UseCasesType
     associatedtype ActionsType
-    associatedtype ViewModelType: ViewModel<UseCaseType, ActionsType>
     
-    static func instanceFromStoryboard<T>(withViewModel viewModel: ViewModelType) -> T where T: BaseViewController<UseCaseType, ActionsType, ViewModelType>
+    var useCases: UseCasesType { get }
+    var actions: ActionsType { get }
 }
 
-class BaseViewController<U, A, VM: ViewModel<U, A>>: UIViewController, BasicViewController {
-    static func instanceFromStoryboard<T>(withViewModel viewModel: VM) -> T where T : BaseViewController<U, A, VM> {
-        let storyboard = UIStoryboard(name: "\(Self.self)Storyboard", bundle: .main)
+
+// MARK: View Controller
+protocol BasicViewController {
+    associatedtype ViewModelType: ViewModel
+    
+    
+    var viewModel: ViewModelType { get }
+}
+
+
+class StandardViewController<VM: ViewModel>: UIViewController, BasicViewController {
+    typealias ViewModelType = VM
+    
+    
+    private var _viewModel: ViewModelType?
+    var viewModel: ViewModelType {
+        get {
+            return _viewModel!
+        }
+    }
+    
+    
+    static func instanceFromStoryboard<T>(withViewModel viewModel: VM) -> T where T : StandardViewController<VM>
+    {
+        let name = "\(Self.self)".replacingOccurrences(of: "ViewController", with: "Scene")
+        let storyboard = UIStoryboard(name: name, bundle: .main)
         let viewController = storyboard.instantiateViewController(withIdentifier: "\(Self.self)") as! T
         viewController._viewModel = viewModel
         
         return viewController
     }
     
-    typealias UseCaseType = U
-    typealias ActionsType = A
-    typealias ViewModelType = VM
-    
-    
-    private var _viewModel: VM?
-    var viewModel: VM {
-        get {
-            return _viewModel!
+    static func instanceFromNib<T>(withViewModel viewModel: VM) -> T where T : StandardViewController<VM>
+    {
+        let nibName = "\(Self.self)"
+        let viewController = Bundle.main.loadNibNamed(nibName, owner: nil)!.first! as! T
+        viewController._viewModel = viewModel
+        
+        return viewController
+    }
+}
+
+
+// MARK: Binding
+class Observable<T> {
+
+    var value: T {
+        didSet {
+            listener?(value)
         }
+    }
+
+    private var listener: ((T) -> Void)?
+
+    init(_ value: T) {
+        self.value = value
+    }
+
+    func bind(_ closure: @escaping (T) -> Void) {
+        closure(value)
+        listener = closure
     }
 }

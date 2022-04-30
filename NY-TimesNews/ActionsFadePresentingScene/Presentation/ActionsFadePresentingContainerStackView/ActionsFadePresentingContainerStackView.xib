@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="6gT-e4-ryW" customClass="ActionsFadePresentingContainerStackView" customModule="NY_TimesNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="202"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NF5-WV-BDh">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="68"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imM-Xf-oTs">
+                            <rect key="frame" x="322" y="12" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="JR6-fQ-Fyz"/>
+                                <constraint firstAttribute="height" constant="44" id="xgc-Pr-Vk5"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLm-Tx-rmq">
+                            <rect key="frame" x="16" y="0.0" width="306" height="68"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="eLm-Tx-rmq" secondAttribute="bottom" id="6th-At-QIF"/>
+                        <constraint firstAttribute="bottom" secondItem="eLm-Tx-rmq" secondAttribute="bottom" id="EAn-vW-v5S"/>
+                        <constraint firstAttribute="trailing" secondItem="imM-Xf-oTs" secondAttribute="trailing" id="IAC-2P-m1W"/>
+                        <constraint firstItem="imM-Xf-oTs" firstAttribute="leading" secondItem="eLm-Tx-rmq" secondAttribute="trailing" id="ILu-3c-X9B"/>
+                        <constraint firstItem="imM-Xf-oTs" firstAttribute="centerY" secondItem="eLm-Tx-rmq" secondAttribute="centerY" id="NxG-Vg-YJ9"/>
+                        <constraint firstItem="eLm-Tx-rmq" firstAttribute="leading" secondItem="NF5-WV-BDh" secondAttribute="leading" constant="16" id="YBX-xI-sCl"/>
+                        <constraint firstItem="eLm-Tx-rmq" firstAttribute="top" secondItem="NF5-WV-BDh" secondAttribute="top" id="Zdb-Ex-hEm"/>
+                        <constraint firstItem="eLm-Tx-rmq" firstAttribute="top" secondItem="NF5-WV-BDh" secondAttribute="top" id="ash-Jp-MRG"/>
+                        <constraint firstAttribute="height" constant="68" id="sIN-5m-HnH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGs-CS-jrF">
+                    <rect key="frame" x="0.0" y="68" width="366" height="134"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="rRg-nX-Dhz"/>
+            <point key="canvasLocation" x="175.36231884057972" y="123.21428571428571"/>
+        </stackView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

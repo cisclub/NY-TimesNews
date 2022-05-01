@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="OTPLoginViewController" id="Y6W-OH-hqX" customClass="OTPLoginViewController" customModule="NY_TimesNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="etisalatLogoVerticalEng" translatesAutoresizingMaskIntoConstraints="NO" id="7JQ-GO-dbi">
+                                <rect key="frame" x="157.5" y="119" width="99" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="DmJ-x4-IiA"/>
+                                    <constraint firstAttribute="width" constant="99" id="l5K-JU-5Dj"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="J9z-3C-UVO">
+                                <rect key="frame" x="16" y="276" width="382" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOy-Y9-azv" customClass="BaseLabel" customModule="NY_TimesNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu5-WF-Jf8" customClass="BaseLabel" customModule="NY_TimesNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="36.5" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbE-tS-5LM">
+                                <rect key="frame" x="16" y="373" width="382" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voB-Hv-2JB" customClass="MDTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="64"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconErrorCross" translatesAutoresizingMaskIntoConstraints="NO" id="TPL-qM-Jtp">
+                                        <rect key="frame" x="358" y="40" width="24" height="24"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="A0y-36-KNF"/>
+                                    <constraint firstAttribute="bottom" secondItem="voB-Hv-2JB" secondAttribute="bottom" id="A3C-LH-Nuj"/>
+                                    <constraint firstItem="TPL-qM-Jtp" firstAttribute="bottom" secondItem="voB-Hv-2JB" secondAttribute="bottom" id="Bmr-rn-0NP"/>
+                                    <constraint firstItem="voB-Hv-2JB" firstAttribute="leading" secondItem="BbE-tS-5LM" secondAttribute="leading" id="Cy8-uC-gjr"/>
+                                    <constraint firstAttribute="trailing" secondItem="TPL-qM-Jtp" secondAttribute="trailing" id="G3d-Dv-UG7"/>
+                                    <constraint firstItem="voB-Hv-2JB" firstAttribute="top" secondItem="BbE-tS-5LM" secondAttribute="top" id="Sd7-RB-ZiD"/>
+                                    <constraint firstAttribute="trailing" secondItem="voB-Hv-2JB" secondAttribute="trailing" id="gBG-DI-7ru"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="i1D-t9-kAG">
+                                <rect key="frame" x="16" y="466" width="382" height="184"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goN-Qh-srv" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="KGk-mZ-rJ4"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jC6-db-sQ0">
+                                        <rect key="frame" x="0.0" y="81" width="382" height="22"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfm-X1-FKJ">
+                                                <rect key="frame" x="0.0" y="10.5" width="382" height="1"/>
+                                                <color key="backgroundColor" name="separatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="qn9-yW-v7X"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIg-ar-16q">
+                                                <rect key="frame" x="175.5" y="0.0" width="31" height="22"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="16M-D1-nQG"/>
+                                                    <constraint firstAttribute="width" constant="31" id="18T-nq-31M"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="MIg-ar-16q" firstAttribute="centerY" secondItem="jC6-db-sQ0" secondAttribute="centerY" id="0Hc-Eo-66l"/>
+                                            <constraint firstAttribute="height" constant="22" id="9DX-9c-nwB"/>
+                                            <constraint firstItem="MIg-ar-16q" firstAttribute="centerX" secondItem="jC6-db-sQ0" secondAttribute="centerX" id="MgP-Ia-p22"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jfm-X1-FKJ" secondAttribute="trailing" id="U51-nI-L3J"/>
+                                            <constraint firstItem="Jfm-X1-FKJ" firstAttribute="leading" secondItem="jC6-db-sQ0" secondAttribute="leading" id="WDd-JO-Tkk"/>
+                                            <constraint firstItem="Jfm-X1-FKJ" firstAttribute="centerY" secondItem="jC6-db-sQ0" secondAttribute="centerY" id="WFN-eF-i4x"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-lf-sgv" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="127" width="382" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="kx9-lz-94g"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="loginOptionsButtonTapped" destination="Y6W-OH-hqX" eventType="touchUpInside" id="H7d-LT-EYd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsy-zs-AgA" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
+                                <rect key="frame" x="173.5" y="818" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="i1D-t9-kAG" secondAttribute="trailing" constant="16" id="1iA-nA-gAb"/>
+                            <constraint firstItem="BbE-tS-5LM" firstAttribute="top" secondItem="J9z-3C-UVO" secondAttribute="bottom" constant="40" id="2Hi-9H-xH6"/>
+                            <constraint firstItem="J9z-3C-UVO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="3Mu-Iq-WEr"/>
+                            <constraint firstItem="J9z-3C-UVO" firstAttribute="top" secondItem="7JQ-GO-dbi" secondAttribute="bottom" constant="32" id="9AK-sn-fVn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="J9z-3C-UVO" secondAttribute="trailing" constant="16" id="HX5-JG-uG2"/>
+                            <constraint firstItem="7JQ-GO-dbi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="75" id="Hyl-5I-eFK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BbE-tS-5LM" secondAttribute="trailing" constant="16" id="MlI-6a-ksB"/>
+                            <constraint firstItem="BbE-tS-5LM" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="SFg-Fb-wYY"/>
+                            <constraint firstItem="gsy-zs-AgA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Tsv-WA-OmI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gsy-zs-AgA" secondAttribute="bottom" constant="13" id="VTZ-ag-8ic"/>
+                            <constraint firstItem="i1D-t9-kAG" firstAttribute="top" secondItem="BbE-tS-5LM" secondAttribute="bottom" constant="29" id="ddY-dE-enW"/>
+                            <constraint firstItem="i1D-t9-kAG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="gV9-Ee-Bon"/>
+                            <constraint firstItem="7JQ-GO-dbi" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tJw-FV-zLe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bodyLabel" destination="Gu5-WF-Jf8" id="B3h-eI-J7o"/>
+                        <outlet property="continueAsGuestButton" destination="gsy-zs-AgA" id="AT9-eL-Gz2"/>
+                        <outlet property="headerLabel" destination="JOy-Y9-azv" id="wyp-LF-MaV"/>
+                        <outlet property="loginButton" destination="goN-Qh-srv" id="cCE-Qv-mvU"/>
+                        <outlet property="loginOptionsButton" destination="gh6-lf-sgv" id="6tp-UL-itb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="62"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="etisalatLogoVerticalEng" width="64" height="64"/>
+        <image name="iconErrorCross" width="24" height="24"/>
+        <namedColor name="separatorColor">
+            <color red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -26,8 +26,8 @@ class FadePresentingWithBottomContainerCoordinator: Coordinator {
     func start() {
         let presentingViewController = input.presentingViewController
         let fadeCoordinatorInput = FadePresentingCoordinatorInput(presentingViewController: presentingViewController)
-        let coordinatorActions = FadePresentingCoordinatorActions { [weak self] in
-            self?.actions.cancelAction()
+        let coordinatorActions = FadePresentingCoordinatorActions { [weak self] presentedViewController in
+            self!.actions.cancelAction(presentedViewController)
         }
         let fadeCoordinator = FadePresentingCoordinator(input: fadeCoordinatorInput, actions: coordinatorActions)
         let container = input.bottomContainer
@@ -65,5 +65,5 @@ struct FadePresentingWithBottomContainerCoordinatorInput {
 
 
 struct FadePresentingWithBottomContainerCoordinatorActions {
-    let cancelAction: () -> ()
+    let cancelAction: (UIViewController) -> ()
 }

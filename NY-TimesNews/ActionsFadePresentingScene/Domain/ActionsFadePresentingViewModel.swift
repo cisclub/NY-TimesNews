@@ -8,16 +8,33 @@
 //
 
 
-struct ActionsFadePresentingViewModel: ViewModel {
+import UIKit
+
+
+class ActionsFadePresentingViewModel: ViewModel {
     typealias UseCasesType = Void?
     typealias ActionsType = ActionsFadePresentingViewModelActions
     
     
+    var viewController: UIViewController? = nil
     let useCases: UseCasesType
     let actions: ActionsType
+    
+    
+    init(useCases: UseCasesType, actions: ActionsType) {
+        self.useCases = useCases
+        self.actions = actions
+    }
+}
+
+
+extension ActionsFadePresentingViewModel {
+    func handleCloseButtonTapped() {
+        actions.cancelAction(viewController!)
+    }
 }
 
 
 struct ActionsFadePresentingViewModelActions {
-    let cancelAction: () -> ()
+    let cancelAction: (UIViewController) -> ()
 }

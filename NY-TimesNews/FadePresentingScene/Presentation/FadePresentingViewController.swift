@@ -18,7 +18,7 @@ class FadePresentingViewController: StandardViewController<FadePresentingViewMod
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedToDismiss))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backgroundTapped))
         fadeView.addGestureRecognizer(tapGesture)
         
         view.backgroundColor = .clear
@@ -47,7 +47,7 @@ class FadePresentingViewController: StandardViewController<FadePresentingViewMod
 
 // MAR: Actions
 extension FadePresentingViewController {
-    @objc func tappedToDismiss() {
-        viewModel.actions.handleCancelAction()
+    @objc func backgroundTapped() {
+        viewModel.handleBackgroundTapped(inViewController: self)
     }
 }

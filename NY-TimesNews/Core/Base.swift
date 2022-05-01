@@ -76,13 +76,14 @@ protocol ViewModel {
     associatedtype UseCasesType
     associatedtype ActionsType
     
+    var viewController: UIViewController? { get }
     var useCases: UseCasesType { get }
     var actions: ActionsType { get }
 }
 
 
 // MARK: View Controller
-protocol BasicViewController {
+protocol MVVM {
     associatedtype ViewModelType: ViewModel
     
     
@@ -90,7 +91,7 @@ protocol BasicViewController {
 }
 
 
-class StandardViewController<VM: ViewModel>: UIViewController, BasicViewController {
+class StandardViewController<VM: ViewModel>: UIViewController, MVVM {
     typealias ViewModelType = VM
     
     

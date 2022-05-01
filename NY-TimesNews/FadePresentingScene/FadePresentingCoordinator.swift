@@ -24,8 +24,8 @@ class FadePresentingCoordinator: Coordinator {
         self.input = input
         self.actions = actions
         
-        let viewModelActions = FadePresentingViewModelActions {
-            actions.cancelAction()
+        let viewModelActions = FadePresentingViewModelActions { presentedViewController in
+            actions.cancelAction(presentedViewController)
         }
         let viewModel = FadePresentingViewModel(useCases: nil, actions: viewModelActions)
         let viewController = FadePresentingViewController.instanceFromNib(withViewModel: viewModel)
@@ -45,5 +45,5 @@ struct FadePresentingCoordinatorInput {
 
 
 struct FadePresentingCoordinatorActions {
-    let cancelAction: () -> ()
+    let cancelAction: (UIViewController) -> ()
 }

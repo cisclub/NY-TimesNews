@@ -10,8 +10,8 @@
 import UIKit
 
 
-class ActionsFadePresentingCoordinator: Coordinator {
-    typealias InputType = ActionsFadePresentingCoordinatorInput
+class ActionsFadePresentingCoordinator: Coordinator {    
+    typealias InputType = ActionsFadePresentingCoordinatorInput<OTPLoginOptionsActionsView>
     typealias ActionsType = ActionsFadePresentingCoordinatorActions
 
     
@@ -27,28 +27,31 @@ class ActionsFadePresentingCoordinator: Coordinator {
     
     func start() {
         let presentingViewController = input.presentingViewController
-        let actions = ActionsFadePresentingViewModelActions { [weak self] in
-            self?.actions.cancelAction()
+        let actions = ActionsFadePresentingViewModelActions { presentedViewController in
+            presentedViewController.dismiss(animated: true)
         }
         let viewModel = ActionsFadePresentingViewModel(useCases: nil, actions: actions)
-        let container = ActionsFadePresentingContainerStackView.instanceWithViewModel(viewModel)
+        viewModel.viewController = presentingViewController
+        let container = ActionsFadePresentingContainerStackView.instanceWithViewModel(viewModel, actionsView: input.actionsView)
+        container.title = Strings.moreLoginOptions
         let coordinatorInput = FadePresentingWithBottomContainerCoordinatorInput(presentingViewController: presentingViewController,
                                                                                  bottomContainer: container)
-        let coordinatorActions = FadePresentingWithBottomContainerCoordinatorActions { [weak self] in
-            self?.actions.cancelAction()
+        let coordinatorActions = FadePresentingWithBottomContainerCoordinatorActions { [weak self] presentedViewController in
+            self?.actions.cancelAction(presentedViewController)
         }
-        let coordinator = FadePresentingWithBottomContainerCoordinator(input: coordinatorInput, actions: coordinatorActions)
+        coordinator = FadePresentingWithBottomContainerCoordinator(input: coordinatorInput, actions: coordinatorActions)
         
-        coordinator.start()
+        coordinator!.start()
     }
 }
 
 
-struct ActionsFadePresentingCoordinatorInput {
+struct ActionsFadePresentingCoordinatorInput<MVVMType> where MVVMType: MVVM {
     let presentingViewController: UIViewController
+    let actionsView: MVVMType
 }
 
 
 struct ActionsFadePresentingCoordinatorActions {
-    let cancelAction: () -> ()
+    let cancelAction: (UIViewController) -> ()
 }

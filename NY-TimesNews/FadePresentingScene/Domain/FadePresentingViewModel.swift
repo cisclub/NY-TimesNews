@@ -7,17 +7,27 @@
 //
 //
 
+import UIKit
+
 
 struct FadePresentingViewModel: ViewModel {
     typealias UseCasesType = Void?
     typealias ActionsType = FadePresentingViewModelActions
     
     
+    var viewController: UIViewController?
     let useCases: UseCasesType
     let actions: ActionsType
 }
 
 
+extension FadePresentingViewModel {
+    func handleBackgroundTapped(inViewController viewController: UIViewController) {
+        actions.handleCancelAction(viewController)
+    }
+}
+
+
 struct FadePresentingViewModelActions {
-    let handleCancelAction: () -> ()
+    let handleCancelAction: (UIViewController) -> ()
 }

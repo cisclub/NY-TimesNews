@@ -37,3 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 class NetworkManager {
     
 }
+
+
+extension String {
+    var localized: String {
+        return self
+    }
+}

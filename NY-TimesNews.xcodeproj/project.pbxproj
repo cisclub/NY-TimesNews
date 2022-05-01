@@ -31,6 +31,8 @@
 		07796C9B27A2AEB600FD0E4D /* APIParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07796C9A27A2AEB600FD0E4D /* APIParameters.swift */; };
 		07796CAB27A7BC6B00FD0E4D /* GetNewsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07796CAA27A7BC6B00FD0E4D /* GetNewsUseCaseTests.swift */; };
 		07FE274B2812E8B9004B53EF /* LaunchStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE274A2812E8B9004B53EF /* LaunchStateManager.swift */; };
+		D20868EF281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20868EE281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift */; };
+		D20868F2281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D20868F1281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib */; };
 		D24BD3A9281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD39F281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift */; };
 		D24BD3AD281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD3A5281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift */; };
 		D24BD3AE281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD3A8281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift */; };
@@ -45,6 +47,57 @@
 		D24EEAF1281C9AD000D7F4CC /* ActionsFadePresentingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EEAE7281C9AD000D7F4CC /* ActionsFadePresentingCoordinator.swift */; };
 		D24EEAF6281C9AD000D7F4CC /* ActionsFadePresentingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EEAF0281C9AD000D7F4CC /* ActionsFadePresentingViewController.swift */; };
 		D25FB6652817FD980034D08A /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FB6642817FD980034D08A /* Base.swift */; };
+		D2D6E618281CFB6400193460 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E613281CFB6400193460 /* BaseLabel.swift */; };
+		D2D6E619281CFB6400193460 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E614281CFB6400193460 /* BaseView.swift */; };
+		D2D6E61A281CFB6400193460 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E615281CFB6400193460 /* BaseButton.swift */; };
+		D2D6E61B281CFB6400193460 /* ApplicationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E617281CFB6400193460 /* ApplicationTheme.swift */; };
+		D2D6E635281CFFFC00193460 /* OTPLoginOptionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E61D281CFFFC00193460 /* OTPLoginOptionsCoordinator.swift */; };
+		D2D6E636281CFFFC00193460 /* OTPLoginOptionsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E61F281CFFFC00193460 /* OTPLoginOptionsRepo.swift */; };
+		D2D6E637281CFFFC00193460 /* OTPLoginOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E621281CFFFC00193460 /* OTPLoginOptionsViewModel.swift */; };
+		D2D6E638281CFFFC00193460 /* OTPLoginOptionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E622281CFFFC00193460 /* OTPLoginOptionsUseCase.swift */; };
+		D2D6E639281CFFFC00193460 /* OTPLoginOptionsUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E623281CFFFC00193460 /* OTPLoginOptionsUseCases.swift */; };
+		D2D6E63A281CFFFC00193460 /* OTPLoginOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E626281CFFFC00193460 /* OTPLoginOptionsViewController.swift */; };
+		D2D6E63B281CFFFC00193460 /* OTPLoginOptionsScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E627281CFFFC00193460 /* OTPLoginOptionsScene.storyboard */; };
+		D2D6E63C281CFFFC00193460 /* OTPLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E629281CFFFC00193460 /* OTPLoginCoordinator.swift */; };
+		D2D6E63D281CFFFC00193460 /* OTPLoginRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E62B281CFFFC00193460 /* OTPLoginRepo.swift */; };
+		D2D6E63E281CFFFC00193460 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E62C281CFFFC00193460 /* Dummy.swift */; };
+		D2D6E63F281CFFFC00193460 /* OTPLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E62E281CFFFC00193460 /* OTPLoginViewModel.swift */; };
+		D2D6E640281CFFFC00193460 /* OTPLoginUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E62F281CFFFC00193460 /* OTPLoginUseCases.swift */; };
+		D2D6E641281CFFFC00193460 /* OTPLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E630281CFFFC00193460 /* OTPLoginUseCase.swift */; };
+		D2D6E642281CFFFC00193460 /* OTPLoginScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E633281CFFFC00193460 /* OTPLoginScene.storyboard */; };
+		D2D6E643281CFFFC00193460 /* OTPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E634281CFFFC00193460 /* OTPLoginViewController.swift */; };
+		D2D6E664281D042A00193460 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E645281D042A00193460 /* Lato-HeavyItalic.ttf */; };
+		D2D6E665281D042A00193460 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E646281D042A00193460 /* Lato-Italic.ttf */; };
+		D2D6E666281D042A00193460 /* ufonts.com_lucida-grande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E647281D042A00193460 /* ufonts.com_lucida-grande.ttf */; };
+		D2D6E667281D042A00193460 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E648281D042A00193460 /* Lato-LightItalic.ttf */; };
+		D2D6E668281D042A00193460 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E649281D042A00193460 /* Lato-Thin.ttf */; };
+		D2D6E669281D042A00193460 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E64A281D042A00193460 /* Lato-Bold.ttf */; };
+		D2D6E66A281D042A00193460 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E64B281D042A00193460 /* Lato-Black.ttf */; };
+		D2D6E66B281D042A00193460 /* AXtManal Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E64C281D042A00193460 /* AXtManal Regular.ttf */; };
+		D2D6E66C281D042A00193460 /* AXtManalBLack Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E64D281D042A00193460 /* AXtManalBLack Regular.ttf */; };
+		D2D6E66D281D042A00193460 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E64E281D042A00193460 /* Lato-SemiboldItalic.ttf */; };
+		D2D6E66E281D042A00193460 /* AXtManalBold Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E64F281D042A00193460 /* AXtManalBold Regular.ttf */; };
+		D2D6E66F281D042A00193460 /* AM278.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E650281D042A00193460 /* AM278.TTF */; };
+		D2D6E670281D042A00193460 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E651281D042A00193460 /* Lato-Regular.ttf */; };
+		D2D6E671281D042A00193460 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E652281D042A00193460 /* Lato-Hairline.ttf */; };
+		D2D6E672281D042A00193460 /* GESSTwoEtisalat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E653281D042A00193460 /* GESSTwoEtisalat.ttf */; };
+		D2D6E673281D042A00193460 /* AM282.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E654281D042A00193460 /* AM282.TTF */; };
+		D2D6E674281D042A00193460 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E655281D042A00193460 /* Lato-BlackItalic.ttf */; };
+		D2D6E675281D042A00193460 /* AM281.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E656281D042A00193460 /* AM281.TTF */; };
+		D2D6E676281D042A00193460 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E657281D042A00193460 /* Lato-Semibold.ttf */; };
+		D2D6E677281D042A00193460 /* ge_ss_two_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E658281D042A00193460 /* ge_ss_two_medium.ttf */; };
+		D2D6E678281D042A00193460 /* AM273.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E659281D042A00193460 /* AM273.TTF */; };
+		D2D6E679281D042A00193460 /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E65A281D042A00193460 /* Lato-MediumItalic.ttf */; };
+		D2D6E67A281D042A00193460 /* AM274.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E65B281D042A00193460 /* AM274.TTF */; };
+		D2D6E67B281D042A00193460 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E65C281D042A00193460 /* Lato-Heavy.ttf */; };
+		D2D6E67C281D042A00193460 /* AM277.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E65D281D042A00193460 /* AM277.TTF */; };
+		D2D6E67D281D042A00193460 /* ge_ss_two_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E65E281D042A00193460 /* ge_ss_two_light.ttf */; };
+		D2D6E67E281D042A00193460 /* ge_ss_two_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E65F281D042A00193460 /* ge_ss_two_bold.ttf */; };
+		D2D6E67F281D042A00193460 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E660281D042A00193460 /* Lato-BoldItalic.ttf */; };
+		D2D6E680281D042A00193460 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E661281D042A00193460 /* Lato-Light.ttf */; };
+		D2D6E681281D042A00193460 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E662281D042A00193460 /* Lato-Medium.ttf */; };
+		D2D6E682281D042A00193460 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2D6E663281D042A00193460 /* Lato-ThinItalic.ttf */; };
+		D2D6E685281D056D00193460 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E684281D056D00193460 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +146,8 @@
 		07796C9A27A2AEB600FD0E4D /* APIParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameters.swift; sourceTree = "<group>"; };
 		07796CAA27A7BC6B00FD0E4D /* GetNewsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNewsUseCaseTests.swift; sourceTree = "<group>"; };
 		07FE274A2812E8B9004B53EF /* LaunchStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchStateManager.swift; sourceTree = "<group>"; };
+		D20868EE281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPLoginOptionsActionsView.swift; sourceTree = "<group>"; };
+		D20868F1281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPLoginOptionsActionsView.xib; sourceTree = "<group>"; };
 		D24BD39F281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentingWithBottomContainerCoordinator.swift; sourceTree = "<group>"; };
 		D24BD3A5281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentingWithBottomContainerViewModel.swift; sourceTree = "<group>"; };
 		D24BD3A8281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentingWithBottomContainerViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +162,58 @@
 		D24EEAE7281C9AD000D7F4CC /* ActionsFadePresentingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsFadePresentingCoordinator.swift; sourceTree = "<group>"; };
 		D24EEAF0281C9AD000D7F4CC /* ActionsFadePresentingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsFadePresentingViewController.swift; sourceTree = "<group>"; };
 		D25FB6642817FD980034D08A /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		D2D6E613281CFB6400193460 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
+		D2D6E614281CFB6400193460 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D2D6E615281CFB6400193460 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		D2D6E617281CFB6400193460 /* ApplicationTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationTheme.swift; sourceTree = "<group>"; };
+		D2D6E61D281CFFFC00193460 /* OTPLoginOptionsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginOptionsCoordinator.swift; sourceTree = "<group>"; };
+		D2D6E61F281CFFFC00193460 /* OTPLoginOptionsRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginOptionsRepo.swift; sourceTree = "<group>"; };
+		D2D6E621281CFFFC00193460 /* OTPLoginOptionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginOptionsViewModel.swift; sourceTree = "<group>"; };
+		D2D6E622281CFFFC00193460 /* OTPLoginOptionsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginOptionsUseCase.swift; sourceTree = "<group>"; };
+		D2D6E623281CFFFC00193460 /* OTPLoginOptionsUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginOptionsUseCases.swift; sourceTree = "<group>"; };
+		D2D6E626281CFFFC00193460 /* OTPLoginOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginOptionsViewController.swift; sourceTree = "<group>"; };
+		D2D6E627281CFFFC00193460 /* OTPLoginOptionsScene.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OTPLoginOptionsScene.storyboard; sourceTree = "<group>"; };
+		D2D6E629281CFFFC00193460 /* OTPLoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginCoordinator.swift; sourceTree = "<group>"; };
+		D2D6E62B281CFFFC00193460 /* OTPLoginRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginRepo.swift; sourceTree = "<group>"; };
+		D2D6E62C281CFFFC00193460 /* Dummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		D2D6E62E281CFFFC00193460 /* OTPLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginViewModel.swift; sourceTree = "<group>"; };
+		D2D6E62F281CFFFC00193460 /* OTPLoginUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginUseCases.swift; sourceTree = "<group>"; };
+		D2D6E630281CFFFC00193460 /* OTPLoginUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginUseCase.swift; sourceTree = "<group>"; };
+		D2D6E633281CFFFC00193460 /* OTPLoginScene.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OTPLoginScene.storyboard; sourceTree = "<group>"; };
+		D2D6E634281CFFFC00193460 /* OTPLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginViewController.swift; sourceTree = "<group>"; };
+		D2D6E645281D042A00193460 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		D2D6E646281D042A00193460 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		D2D6E647281D042A00193460 /* ufonts.com_lucida-grande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ufonts.com_lucida-grande.ttf"; sourceTree = "<group>"; };
+		D2D6E648281D042A00193460 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		D2D6E649281D042A00193460 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		D2D6E64A281D042A00193460 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		D2D6E64B281D042A00193460 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		D2D6E64C281D042A00193460 /* AXtManal Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AXtManal Regular.ttf"; sourceTree = "<group>"; };
+		D2D6E64D281D042A00193460 /* AXtManalBLack Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AXtManalBLack Regular.ttf"; sourceTree = "<group>"; };
+		D2D6E64E281D042A00193460 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		D2D6E64F281D042A00193460 /* AXtManalBold Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AXtManalBold Regular.ttf"; sourceTree = "<group>"; };
+		D2D6E650281D042A00193460 /* AM278.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AM278.TTF; sourceTree = "<group>"; };
+		D2D6E651281D042A00193460 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		D2D6E652281D042A00193460 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		D2D6E653281D042A00193460 /* GESSTwoEtisalat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GESSTwoEtisalat.ttf; sourceTree = "<group>"; };
+		D2D6E654281D042A00193460 /* AM282.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AM282.TTF; sourceTree = "<group>"; };
+		D2D6E655281D042A00193460 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		D2D6E656281D042A00193460 /* AM281.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AM281.TTF; sourceTree = "<group>"; };
+		D2D6E657281D042A00193460 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		D2D6E658281D042A00193460 /* ge_ss_two_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ge_ss_two_medium.ttf; sourceTree = "<group>"; };
+		D2D6E659281D042A00193460 /* AM273.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AM273.TTF; sourceTree = "<group>"; };
+		D2D6E65A281D042A00193460 /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
+		D2D6E65B281D042A00193460 /* AM274.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AM274.TTF; sourceTree = "<group>"; };
+		D2D6E65C281D042A00193460 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		D2D6E65D281D042A00193460 /* AM277.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AM277.TTF; sourceTree = "<group>"; };
+		D2D6E65E281D042A00193460 /* ge_ss_two_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ge_ss_two_light.ttf; sourceTree = "<group>"; };
+		D2D6E65F281D042A00193460 /* ge_ss_two_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ge_ss_two_bold.ttf; sourceTree = "<group>"; };
+		D2D6E660281D042A00193460 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D2D6E661281D042A00193460 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		D2D6E662281D042A00193460 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		D2D6E663281D042A00193460 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		D2D6E684281D056D00193460 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		D2D6E686281D08D400193460 /* NY-TimesNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NY-TimesNews-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,10 +244,13 @@
 		07796C2427A1773A00FD0E4D = {
 			isa = PBXGroup;
 			children = (
+				D2D6E683281D056400193460 /* Resources */,
+				D2D6E611281CFB5B00193460 /* Theme */,
 				07796C2F27A1773A00FD0E4D /* NY-TimesNews */,
 				07796C4627A1773C00FD0E4D /* NY-TimesNewsTests */,
 				07796C5027A1773C00FD0E4D /* NY-TimesNewsUITests */,
 				07796C2E27A1773A00FD0E4D /* Products */,
+				D2D6E686281D08D400193460 /* NY-TimesNews-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +267,8 @@
 		07796C2F27A1773A00FD0E4D /* NY-TimesNews */ = {
 			isa = PBXGroup;
 			children = (
+				D2D6E61C281CFFFC00193460 /* OTPLoginOptionsScene */,
+				D2D6E628281CFFFC00193460 /* OTPLoginScene */,
 				D24BD39E281C9DA100974860 /* FadePresentingWithBottomContainerScene */,
 				D24EEAE6281C9AD000D7F4CC /* ActionsFadePresentingScene */,
 				D24EEAD8281C9A2800D7F4CC /* FadePresentingScene */,
@@ -269,6 +381,15 @@
 			path = "Presentation Layer";
 			sourceTree = "<group>";
 		};
+		D20868F0281E9D9D0032F1D2 /* OTPLoginOptionsActionsView */ = {
+			isa = PBXGroup;
+			children = (
+				D20868EE281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift */,
+				D20868F1281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib */,
+			);
+			path = OTPLoginOptionsActionsView;
+			sourceTree = "<group>";
+		};
 		D24BD39E281C9DA100974860 /* FadePresentingWithBottomContainerScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +487,166 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		D2D6E611281CFB5B00193460 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E644281D042A00193460 /* fonts */,
+				D2D6E616281CFB6400193460 /* ApplicationTheme */,
+				D2D6E612281CFB6400193460 /* BaseControls */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		D2D6E612281CFB6400193460 /* BaseControls */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E613281CFB6400193460 /* BaseLabel.swift */,
+				D2D6E614281CFB6400193460 /* BaseView.swift */,
+				D2D6E615281CFB6400193460 /* BaseButton.swift */,
+			);
+			path = BaseControls;
+			sourceTree = "<group>";
+		};
+		D2D6E616281CFB6400193460 /* ApplicationTheme */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E617281CFB6400193460 /* ApplicationTheme.swift */,
+			);
+			path = ApplicationTheme;
+			sourceTree = "<group>";
+		};
+		D2D6E61C281CFFFC00193460 /* OTPLoginOptionsScene */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E61D281CFFFC00193460 /* OTPLoginOptionsCoordinator.swift */,
+				D2D6E61E281CFFFC00193460 /* Data */,
+				D2D6E620281CFFFC00193460 /* Domain */,
+				D2D6E624281CFFFC00193460 /* Presentation */,
+			);
+			path = OTPLoginOptionsScene;
+			sourceTree = "<group>";
+		};
+		D2D6E61E281CFFFC00193460 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E61F281CFFFC00193460 /* OTPLoginOptionsRepo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D2D6E620281CFFFC00193460 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E621281CFFFC00193460 /* OTPLoginOptionsViewModel.swift */,
+				D2D6E622281CFFFC00193460 /* OTPLoginOptionsUseCase.swift */,
+				D2D6E623281CFFFC00193460 /* OTPLoginOptionsUseCases.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D2D6E624281CFFFC00193460 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D20868F0281E9D9D0032F1D2 /* OTPLoginOptionsActionsView */,
+				D2D6E626281CFFFC00193460 /* OTPLoginOptionsViewController.swift */,
+				D2D6E627281CFFFC00193460 /* OTPLoginOptionsScene.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D2D6E628281CFFFC00193460 /* OTPLoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E629281CFFFC00193460 /* OTPLoginCoordinator.swift */,
+				D2D6E62A281CFFFC00193460 /* Data */,
+				D2D6E62C281CFFFC00193460 /* Dummy.swift */,
+				D2D6E62D281CFFFC00193460 /* Domain */,
+				D2D6E631281CFFFC00193460 /* Presentation */,
+			);
+			path = OTPLoginScene;
+			sourceTree = "<group>";
+		};
+		D2D6E62A281CFFFC00193460 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E62B281CFFFC00193460 /* OTPLoginRepo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D2D6E62D281CFFFC00193460 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E62E281CFFFC00193460 /* OTPLoginViewModel.swift */,
+				D2D6E62F281CFFFC00193460 /* OTPLoginUseCases.swift */,
+				D2D6E630281CFFFC00193460 /* OTPLoginUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D2D6E631281CFFFC00193460 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E632281CFFFC00193460 /* Cells */,
+				D2D6E633281CFFFC00193460 /* OTPLoginScene.storyboard */,
+				D2D6E634281CFFFC00193460 /* OTPLoginViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D2D6E632281CFFFC00193460 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D2D6E644281D042A00193460 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E645281D042A00193460 /* Lato-HeavyItalic.ttf */,
+				D2D6E646281D042A00193460 /* Lato-Italic.ttf */,
+				D2D6E647281D042A00193460 /* ufonts.com_lucida-grande.ttf */,
+				D2D6E648281D042A00193460 /* Lato-LightItalic.ttf */,
+				D2D6E649281D042A00193460 /* Lato-Thin.ttf */,
+				D2D6E64A281D042A00193460 /* Lato-Bold.ttf */,
+				D2D6E64B281D042A00193460 /* Lato-Black.ttf */,
+				D2D6E64C281D042A00193460 /* AXtManal Regular.ttf */,
+				D2D6E64D281D042A00193460 /* AXtManalBLack Regular.ttf */,
+				D2D6E64E281D042A00193460 /* Lato-SemiboldItalic.ttf */,
+				D2D6E64F281D042A00193460 /* AXtManalBold Regular.ttf */,
+				D2D6E650281D042A00193460 /* AM278.TTF */,
+				D2D6E651281D042A00193460 /* Lato-Regular.ttf */,
+				D2D6E652281D042A00193460 /* Lato-Hairline.ttf */,
+				D2D6E653281D042A00193460 /* GESSTwoEtisalat.ttf */,
+				D2D6E654281D042A00193460 /* AM282.TTF */,
+				D2D6E655281D042A00193460 /* Lato-BlackItalic.ttf */,
+				D2D6E656281D042A00193460 /* AM281.TTF */,
+				D2D6E657281D042A00193460 /* Lato-Semibold.ttf */,
+				D2D6E658281D042A00193460 /* ge_ss_two_medium.ttf */,
+				D2D6E659281D042A00193460 /* AM273.TTF */,
+				D2D6E65A281D042A00193460 /* Lato-MediumItalic.ttf */,
+				D2D6E65B281D042A00193460 /* AM274.TTF */,
+				D2D6E65C281D042A00193460 /* Lato-Heavy.ttf */,
+				D2D6E65D281D042A00193460 /* AM277.TTF */,
+				D2D6E65E281D042A00193460 /* ge_ss_two_light.ttf */,
+				D2D6E65F281D042A00193460 /* ge_ss_two_bold.ttf */,
+				D2D6E660281D042A00193460 /* Lato-BoldItalic.ttf */,
+				D2D6E661281D042A00193460 /* Lato-Light.ttf */,
+				D2D6E662281D042A00193460 /* Lato-Medium.ttf */,
+				D2D6E663281D042A00193460 /* Lato-ThinItalic.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		D2D6E683281D056400193460 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D2D6E684281D056D00193460 /* Strings.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -434,6 +715,7 @@
 				TargetAttributes = {
 					07796C2C27A1773A00FD0E4D = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1330;
 					};
 					07796C4227A1773C00FD0E4D = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -470,10 +752,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D6E67B281D042A00193460 /* Lato-Heavy.ttf in Resources */,
 				D24BD3B2281CA84800974860 /* ActionsFadePresentingContainerStackView.xib in Resources */,
+				D2D6E667281D042A00193460 /* Lato-LightItalic.ttf in Resources */,
 				D24EEAE3281C9A2800D7F4CC /* FadePresentingViewController.xib in Resources */,
+				D2D6E670281D042A00193460 /* Lato-Regular.ttf in Resources */,
 				07796C3D27A1773C00FD0E4D /* LaunchScreen.storyboard in Resources */,
+				D2D6E668281D042A00193460 /* Lato-Thin.ttf in Resources */,
+				D2D6E671281D042A00193460 /* Lato-Hairline.ttf in Resources */,
+				D2D6E678281D042A00193460 /* AM273.TTF in Resources */,
+				D2D6E66D281D042A00193460 /* Lato-SemiboldItalic.ttf in Resources */,
+				D2D6E642281CFFFC00193460 /* OTPLoginScene.storyboard in Resources */,
+				D20868F2281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib in Resources */,
+				D2D6E67A281D042A00193460 /* AM274.TTF in Resources */,
+				D2D6E673281D042A00193460 /* AM282.TTF in Resources */,
+				D2D6E681281D042A00193460 /* Lato-Medium.ttf in Resources */,
+				D2D6E674281D042A00193460 /* Lato-BlackItalic.ttf in Resources */,
+				D2D6E672281D042A00193460 /* GESSTwoEtisalat.ttf in Resources */,
+				D2D6E677281D042A00193460 /* ge_ss_two_medium.ttf in Resources */,
+				D2D6E67D281D042A00193460 /* ge_ss_two_light.ttf in Resources */,
+				D2D6E67C281D042A00193460 /* AM277.TTF in Resources */,
+				D2D6E66B281D042A00193460 /* AXtManal Regular.ttf in Resources */,
 				07796C3A27A1773C00FD0E4D /* Assets.xcassets in Resources */,
+				D2D6E680281D042A00193460 /* Lato-Light.ttf in Resources */,
+				D2D6E669281D042A00193460 /* Lato-Bold.ttf in Resources */,
+				D2D6E682281D042A00193460 /* Lato-ThinItalic.ttf in Resources */,
+				D2D6E664281D042A00193460 /* Lato-HeavyItalic.ttf in Resources */,
+				D2D6E665281D042A00193460 /* Lato-Italic.ttf in Resources */,
+				D2D6E67F281D042A00193460 /* Lato-BoldItalic.ttf in Resources */,
+				D2D6E66A281D042A00193460 /* Lato-Black.ttf in Resources */,
+				D2D6E66C281D042A00193460 /* AXtManalBLack Regular.ttf in Resources */,
+				D2D6E63B281CFFFC00193460 /* OTPLoginOptionsScene.storyboard in Resources */,
+				D2D6E676281D042A00193460 /* Lato-Semibold.ttf in Resources */,
+				D2D6E66E281D042A00193460 /* AXtManalBold Regular.ttf in Resources */,
+				D2D6E67E281D042A00193460 /* ge_ss_two_bold.ttf in Resources */,
+				D2D6E66F281D042A00193460 /* AM278.TTF in Resources */,
+				D2D6E679281D042A00193460 /* Lato-MediumItalic.ttf in Resources */,
+				D2D6E675281D042A00193460 /* AM281.TTF in Resources */,
+				D2D6E666281D042A00193460 /* ufonts.com_lucida-grande.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,36 +814,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D6E637281CFFFC00193460 /* OTPLoginOptionsViewModel.swift in Sources */,
+				D2D6E643281CFFFC00193460 /* OTPLoginViewController.swift in Sources */,
 				07796C6327A1778900FD0E4D /* StringConstants.swift in Sources */,
+				D2D6E63F281CFFFC00193460 /* OTPLoginViewModel.swift in Sources */,
+				D2D6E638281CFFFC00193460 /* OTPLoginOptionsUseCase.swift in Sources */,
 				D24EEAE2281C9A2800D7F4CC /* FadePresentingViewController.swift in Sources */,
+				D20868EF281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift in Sources */,
 				07796C9927A2927400FD0E4D /* UIImageView+Extension.swift in Sources */,
 				D24BD3AE281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift in Sources */,
+				D2D6E61B281CFB6400193460 /* ApplicationTheme.swift in Sources */,
 				07796C7327A17E8200FD0E4D /* HTTPRequest.swift in Sources */,
 				D24EEAF6281C9AD000D7F4CC /* ActionsFadePresentingViewController.swift in Sources */,
 				D25FB6652817FD980034D08A /* Base.swift in Sources */,
 				D24BD3AD281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift in Sources */,
 				07FE274B2812E8B9004B53EF /* LaunchStateManager.swift in Sources */,
+				D2D6E641281CFFFC00193460 /* OTPLoginUseCase.swift in Sources */,
 				07796C8427A1862200FD0E4D /* UIViewController+Extension.swift in Sources */,
+				D2D6E63A281CFFFC00193460 /* OTPLoginOptionsViewController.swift in Sources */,
 				07796C6A27A17DD200FD0E4D /* HTTPClient.swift in Sources */,
+				D2D6E63E281CFFFC00193460 /* Dummy.swift in Sources */,
 				07796C8F27A188B100FD0E4D /* AlertsView.swift in Sources */,
+				D2D6E63C281CFFFC00193460 /* OTPLoginCoordinator.swift in Sources */,
 				D24BD3B5281CAD9A00974860 /* ActionsFadePresentingContainerStackView.swift in Sources */,
 				07796C6F27A17E4100FD0E4D /* Data+Extension.swift in Sources */,
 				D24EEAE1281C9A2800D7F4CC /* FadePresentingViewModel.swift in Sources */,
 				07796C7A27A1809900FD0E4D /* AppCoordinator.swift in Sources */,
+				D2D6E61A281CFB6400193460 /* BaseButton.swift in Sources */,
 				D24BD3B0281C9E6B00974860 /* ActionsFadePresentingViewModel.swift in Sources */,
+				D2D6E639281CFFFC00193460 /* OTPLoginOptionsUseCases.swift in Sources */,
 				07796C8727A1865F00FD0E4D /* LoadableIndicator.swift in Sources */,
 				D24EEAF1281C9AD000D7F4CC /* ActionsFadePresentingCoordinator.swift in Sources */,
 				D24BD3A9281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift in Sources */,
+				D2D6E640281CFFFC00193460 /* OTPLoginUseCases.swift in Sources */,
 				07796C7527A17F4400FD0E4D /* ParamEncoding.swift in Sources */,
+				D2D6E618281CFB6400193460 /* BaseLabel.swift in Sources */,
+				D2D6E685281D056D00193460 /* Strings.swift in Sources */,
+				D2D6E635281CFFFC00193460 /* OTPLoginOptionsCoordinator.swift in Sources */,
 				07796C8D27A1886F00FD0E4D /* ViewsIdentifiers.swift in Sources */,
+				D2D6E636281CFFFC00193460 /* OTPLoginOptionsRepo.swift in Sources */,
 				07796C3127A1773A00FD0E4D /* AppDelegate.swift in Sources */,
 				07796C7727A17FE100FD0E4D /* RESTError.swift in Sources */,
 				07796C6C27A17DF000FD0E4D /* EndPoints.swift in Sources */,
 				07796C9B27A2AEB600FD0E4D /* APIParameters.swift in Sources */,
 				07796C7127A17E6800FD0E4D /* String+Extension.swift in Sources */,
+				D2D6E63D281CFFFC00193460 /* OTPLoginRepo.swift in Sources */,
 				07796C3327A1773A00FD0E4D /* SceneDelegate.swift in Sources */,
 				D24EEAE0281C9A2800D7F4CC /* FadePresentingCoordinator.swift in Sources */,
 				D24EEAD7281C94ED00D7F4CC /* SWThemeManager.swift in Sources */,
+				D2D6E619281CFB6400193460 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +1032,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -714,6 +1050,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "YahiaMosaad.NY-TimesNews";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NY-TimesNews-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -724,6 +1062,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -741,6 +1080,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "YahiaMosaad.NY-TimesNews";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NY-TimesNews-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

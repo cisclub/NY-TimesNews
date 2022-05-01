@@ -16,6 +16,8 @@ final class AppCoordinator {
     
     var input: InputType
     var viewModel: ViewModelType
+    var coordinator: AnyObject?
+    var innerCoordinator: OTPLoginOptionsCoordinator?
     
     
     init(input: InputType, viewModel: String) {
@@ -25,20 +27,21 @@ final class AppCoordinator {
     
     func start() {//make desision about the landing scene
         let window = UIApplication.shared.windows.first!
-        let root = UIViewController()
-        window.rootViewController = root
-        root.view.backgroundColor = .white
-        window.makeKeyAndVisible()
-        
-        
-        let coordinatorInput = ActionsFadePresentingCoordinatorInput(presentingViewController: root)
-        let coordinatorActions = ActionsFadePresentingCoordinatorActions {
-            root.dismiss(animated: true)
+        let input = OTPLoginCoordinatorInput(window: window) { selectedOption in
+            
         }
-        let coordinator = ActionsFadePresentingCoordinator(input: coordinatorInput,
-                                                           actions: coordinatorActions)
+        let actions = OTPLoginCoordinatorActions { [weak self] viewController in
+            let optionsInput = OTPLoginOptionsCoordinatorInput(presentingViewController: viewController)
+            let optionsAction = OTPLoginOptionsCoordinatorActions { selectedOption in
+                
+            }
+            self?.innerCoordinator = OTPLoginOptionsCoordinator(input: optionsInput,
+                                                                actions: optionsAction)
+            self?.innerCoordinator!.start()
+        }
+        coordinator = OTPLoginCoordinator(input: input, actions: actions)
         
-        coordinator.start()
+        (coordinator as! OTPLoginCoordinator).start()
     }
 }
 

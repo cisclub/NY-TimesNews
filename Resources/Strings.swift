@@ -15,4 +15,6 @@ struct Strings {
     static let loginWithOtherOptions = "uae_pass_login_options".localized
     static let continueAsGuest = "uae_pass_continue_guest".localized
     static let moreLoginOptions = "login_more_options".localized
+    static let loginWithUsername = "Login with Username".localized
+    static let signInWithUAEPass = "sign_in_with_uae_pass".localized
 }

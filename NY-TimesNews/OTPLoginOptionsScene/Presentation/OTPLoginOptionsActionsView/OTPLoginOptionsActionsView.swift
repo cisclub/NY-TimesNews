@@ -33,20 +33,53 @@ class OTPLoginOptionsActionsView: UIView, MVVM {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        userNameButton.type = .greenBordered
-        uaePassButton.type = .blackBordered
+        userNameButton.type = .custom(textColor: .white,
+                                      bgColor: .mainThemeColor,
+                                      cornerRadius: userNameButton.frame.size.height / 2,
+                                      borderColor: nil,
+                                      margin: 0.0)
+        userNameButton.titleLabel?.font = .h4
+        uaePassButton.type = .custom(textColor: .black,
+                                     bgColor: .white,
+                                     cornerRadius: 20.0,
+                                     borderColor: .black,
+                                     margin: 0.0)
         
-        
+        userNameButton.setTitle(Strings.loginWithUsername, for: .normal)
+        uaePassButton.setTitle(Strings.signInWithUAEPass, for: .normal)
+    }
+    
+    
+    @IBAction func loginWithUsernameTapped() {
+        viewModel.handleLoginWithUSernameSelected()
+    }
+    
+    @IBAction func loginWithUAEPassTapped() {
+        viewModel.handleLoginWithUAEPassSelected()
     }
 }
 
 
 struct OTPLoginOptionsActionsViewModel: ViewModel {
     typealias UseCasesType = Void?
-    typealias ActionsType = Void?
+    typealias ActionsType = OTPLoginOptionsActionsViewModelActions
     
     
     var viewController: UIViewController?
     var useCases: Void?
-    var actions: Void?
+    var actions: ActionsType
+    
+    
+    func handleLoginWithUSernameSelected() {
+        actions.didSelectLoginWithUsername()
+    }
+    
+    func handleLoginWithUAEPassSelected() {
+        actions.didSelectLoginWithUAEPass()
+    }
+}
+
+struct OTPLoginOptionsActionsViewModelActions {
+    let didSelectLoginWithUsername: () -> ()
+    let didSelectLoginWithUAEPass: () -> ()
 }

@@ -40,6 +40,13 @@ protocol Coordinator {
     init(input: InputType, actions: ActionsType)
     
     func start()
+    func dismiss()
+}
+
+extension Coordinator {
+    func dismiss() {
+        fatalError("\(Self.self).dismiss is not implemented") // Means you are trying to call dismiss in a class/struct that doesnt implement it
+    }
 }
 
 
@@ -113,7 +120,7 @@ class StandardViewController<VM: ViewModel>: UIViewController, MVVM {
         return viewController
     }
     
-    static func instanceFromNib<T>(withViewModel viewModel: VM) -> T where T : StandardViewController<VM>
+    static func instanceFromNib<T: StandardViewController<VM>>(withViewModel viewModel: VM) -> T 
     {
         let nibName = "\(Self.self)"
         let viewController = Bundle.main.loadNibNamed(nibName, owner: nil)!.first! as! T

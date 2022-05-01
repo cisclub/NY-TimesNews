@@ -44,7 +44,6 @@ class OTPLoginCoordinator: Coordinator {
 
 struct OTPLoginCoordinatorInput {
     let window: UIWindow
-    let otpLoginOptionIsSelected: (OTPLoginOptionsCoordinator.LoginOption) -> ()
 }
 
 

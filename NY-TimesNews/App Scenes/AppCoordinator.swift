@@ -27,14 +27,15 @@ final class AppCoordinator {
     
     func start() {//make desision about the landing scene
         let window = UIApplication.shared.windows.first!
-        let input = OTPLoginCoordinatorInput(window: window) { selectedOption in
-            
-        }
+        let input = OTPLoginCoordinatorInput(window: window)
         let actions = OTPLoginCoordinatorActions { [weak self] viewController in
             let optionsInput = OTPLoginOptionsCoordinatorInput(presentingViewController: viewController)
-            let optionsAction = OTPLoginOptionsCoordinatorActions { selectedOption in
-                
+            let optionsAction = OTPLoginOptionsCoordinatorActions {
+                print("LOGIN WITH USERNAME")
+            } didSelectLoginWithUAEPass: {
+                print("LOGIN WITH UAEPASS")
             }
+
             self?.innerCoordinator = OTPLoginOptionsCoordinator(input: optionsInput,
                                                                 actions: optionsAction)
             self?.innerCoordinator!.start()

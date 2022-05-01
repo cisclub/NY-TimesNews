@@ -16,6 +16,7 @@ class FadePresentingWithBottomContainerCoordinator: Coordinator {
     
     let input: InputType
     let actions: ActionsType
+    var fadeCoordinator: FadePresentingCoordinator?
 
     
     required init(input: InputType, actions: ActionsType) {
@@ -26,17 +27,19 @@ class FadePresentingWithBottomContainerCoordinator: Coordinator {
     func start() {
         let presentingViewController = input.presentingViewController
         let fadeCoordinatorInput = FadePresentingCoordinatorInput(presentingViewController: presentingViewController)
-        let coordinatorActions = FadePresentingCoordinatorActions { [weak self] presentedViewController in
-            self!.actions.cancelAction(presentedViewController)
+        let coordinatorActions = FadePresentingCoordinatorActions { [unowned self] presentedViewController in
+            self.actions.cancelAction(presentedViewController)
         }
-        let fadeCoordinator = FadePresentingCoordinator(input: fadeCoordinatorInput, actions: coordinatorActions)
+        fadeCoordinator = FadePresentingCoordinator(input: fadeCoordinatorInput, actions: coordinatorActions)
         let container = input.bottomContainer
-        let view = fadeCoordinator.viewController.view!
-        view.addSubview(container)
-        
+        let view = fadeCoordinator!.viewController.view!
         addContainer(container, toParent: view)
         
-        fadeCoordinator.start()
+        fadeCoordinator!.start()
+    }
+    
+    func dismiss() {
+        fadeCoordinator!.dismiss()
     }
 }
 
@@ -44,6 +47,7 @@ class FadePresentingWithBottomContainerCoordinator: Coordinator {
 // MARK: Bottom Container
 extension FadePresentingWithBottomContainerCoordinator {
     private func addContainer(_ container: UIView, toParent parent: UIView) {
+        parent.addSubview(container)
         container.translatesAutoresizingMaskIntoConstraints = false
         let views = ["parent": parent, "child": container]
         let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[child]|",

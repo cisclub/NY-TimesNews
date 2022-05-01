@@ -160,6 +160,10 @@ extension UIColor {
     class var separatorColor: UIColor {
         return #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 1)
     }
+    
+    class var mainThemeColor: UIColor {
+        return #colorLiteral(red: 0.4431372549, green: 0.6196078431, blue: 0.09803921569, alpha: 1)
+    }
 }
 
 //view.backgroundColor = UIColor.MyProject.pink

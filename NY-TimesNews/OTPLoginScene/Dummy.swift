@@ -13,13 +13,14 @@ import UIKit
 @objc class Dummy: NSObject {
     @objc func startFlow(witgWindow window: UIWindow) {
         let window = UIApplication.shared.windows.first!
-        let input = OTPLoginCoordinatorInput(window: window) { selectedLoginOption in
-            
-        }
+        let input = OTPLoginCoordinatorInput(window: window)
         let actions = OTPLoginCoordinatorActions(presentLoginOptions: { presentingViewController in
-            let actions = OTPLoginOptionsCoordinatorActions { selectedLoginOption in
-                //otpLoginCoordinator.input.otpLoginOptionIsSelected(selectedLoginOption)
+            let actions = OTPLoginOptionsCoordinatorActions {
+                
+            } didSelectLoginWithUAEPass: {
+                
             }
+
             let input = OTPLoginOptionsCoordinatorInput(presentingViewController: presentingViewController)
             let OTPLoginOptionsCoordinator = OTPLoginOptionsCoordinator(input: input,
                                                                         actions: actions)

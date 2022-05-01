@@ -43,6 +43,10 @@ class ActionsFadePresentingCoordinator: Coordinator {
         
         coordinator!.start()
     }
+    
+    func dismiss() {
+        coordinator!.dismiss()
+    }
 }
 
 

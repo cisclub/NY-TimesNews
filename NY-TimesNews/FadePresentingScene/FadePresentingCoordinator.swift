@@ -17,7 +17,7 @@ class FadePresentingCoordinator: Coordinator {
     
     let input: InputType
     let actions: ActionsType
-    let viewController: UIViewController
+    let viewController: FadePresentingViewController
 
     
     required init(input: InputType, actions: ActionsType) {
@@ -28,13 +28,17 @@ class FadePresentingCoordinator: Coordinator {
             actions.cancelAction(presentedViewController)
         }
         let viewModel = FadePresentingViewModel(useCases: nil, actions: viewModelActions)
-        let viewController = FadePresentingViewController.instanceFromNib(withViewModel: viewModel)
-        self.viewController = viewController
+        let fadeViewController = FadePresentingViewController.instanceFromNib(withViewModel: viewModel)
+        self.viewController = fadeViewController as! FadePresentingViewController
     }
     
     func start() {
         viewController.modalPresentationStyle = .overCurrentContext
         input.presentingViewController.present(viewController, animated: true)
+    }
+    
+    func dismiss() {
+        viewController.backgroundTapped()
     }
 }
 

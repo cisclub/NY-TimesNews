@@ -14,12 +14,6 @@ import UIKit
 class OTPLoginOptionsCoordinator: Coordinator {
     typealias InputType = OTPLoginOptionsCoordinatorInput
     typealias ActionsType = OTPLoginOptionsCoordinatorActions
-
-    
-    enum LoginOption {
-        case loginWithUserName
-        case loginWithUAEPass
-    }
     
     
     let input: InputType
@@ -33,7 +27,14 @@ class OTPLoginOptionsCoordinator: Coordinator {
     }
     
     func start() {
-        let viewModel = OTPLoginOptionsActionsViewModel()
+        let viewModelActions = OTPLoginOptionsActionsViewModelActions { [weak self] in
+            self!.actions.didSelectLoginWithUsername()
+            self!.coordinator!.dismiss()
+        } didSelectLoginWithUAEPass: { [weak self] in
+            self!.actions.didSelectLoginWithUAEPass()
+            self!.coordinator!.dismiss()
+        }
+        let viewModel = OTPLoginOptionsActionsViewModel(actions: viewModelActions)
         let actionsView = OTPLoginOptionsActionsView.instance(withModel: viewModel)
         let actionsFadeInput = ActionsFadePresentingCoordinatorInput(presentingViewController: input.presentingViewController,
                                                                      actionsView:actionsView)
@@ -53,5 +54,6 @@ struct OTPLoginOptionsCoordinatorInput {
 
 
 struct OTPLoginOptionsCoordinatorActions {
-    let didSelectOTPLoginOption: (OTPLoginOptionsCoordinator.LoginOption) -> ()
+    let didSelectLoginWithUsername: () -> ()
+    let didSelectLoginWithUAEPass: () -> ()
 }

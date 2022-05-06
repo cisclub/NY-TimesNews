@@ -12,9 +12,9 @@ struct Strings {
     static let loginToMyEtisalat = "uae_pass_login_title".localized
     static let UAEPassSubtitle = "uae_pass_login_subtitle".localized
     static let login = "Login".localized
-    static let loginWithOtherOptions = "uae_pass_login_options".localized
+    static let loginWithOtherOptions = "Select another option".localized
     static let continueAsGuest = "uae_pass_continue_guest".localized
-    static let moreLoginOptions = "login_more_options".localized
-    static let loginWithUsername = "Login with Username".localized
-    static let signInWithUAEPass = "sign_in_with_uae_pass".localized
+    static let moreLoginOptions = "<Title>".localized
+    static let loginWithUsername = "Login with username".localized
+    static let signInWithUAEPass = "Sign in with UAE Pass".localized
 }

@@ -49,6 +49,12 @@ class OTPLoginOptionsActionsView: UIView, MVVM {
         uaePassButton.setTitle(Strings.signInWithUAEPass, for: .normal)
     }
     
+    override func layoutSubviews() {
+        super .layoutSubviews()
+        
+        addDashedBorder()
+    }
+    
     
     @IBAction func loginWithUsernameTapped() {
         viewModel.handleLoginWithUSernameSelected()
@@ -82,4 +88,26 @@ struct OTPLoginOptionsActionsViewModel: ViewModel {
 struct OTPLoginOptionsActionsViewModelActions {
     let didSelectLoginWithUsername: () -> ()
     let didSelectLoginWithUAEPass: () -> ()
+}
+
+
+extension UIView {
+  func addDashedBorder() {
+    let color = UIColor.red.cgColor
+
+    let shapeLayer:CAShapeLayer = CAShapeLayer()
+    let frameSize = self.frame.size
+    let shapeRect = CGRect(x: 0, y: 0, width: frameSize.width, height: frameSize.height)
+
+    shapeLayer.bounds = shapeRect
+    shapeLayer.position = CGPoint(x: frameSize.width/2, y: frameSize.height/2)
+    shapeLayer.fillColor = UIColor.clear.cgColor
+    shapeLayer.strokeColor = color
+    shapeLayer.lineWidth = 3
+    shapeLayer.lineJoin = CAShapeLayerLineJoin.round
+    shapeLayer.lineDashPattern = [6,6]
+    shapeLayer.path = UIBezierPath(roundedRect: shapeRect, cornerRadius: 5).cgPath
+
+    self.layer.addSublayer(shapeLayer)
+    }
 }

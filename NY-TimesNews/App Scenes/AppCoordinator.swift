@@ -16,8 +16,8 @@ final class AppCoordinator {
     
     var input: InputType
     var viewModel: ViewModelType
-    var coordinator: AnyObject?
-    var innerCoordinator: OTPLoginOptionsCoordinator?
+    var coordinator: GreenCoordinator?
+    var innerCoordinator: GreenCoordinator?
     
     
     init(input: InputType, viewModel: String) {
@@ -26,23 +26,15 @@ final class AppCoordinator {
     }
     
     func start() {//make desision about the landing scene
+        ApplicationTheme.setupNavigationBarTheme()
+        
         let window = UIApplication.shared.windows.first!
         let input = OTPLoginCoordinatorInput(window: window)
         let actions = OTPLoginCoordinatorActions { [weak self] viewController in
-            let optionsInput = OTPLoginOptionsCoordinatorInput(presentingViewController: viewController)
-            let optionsAction = OTPLoginOptionsCoordinatorActions {
-                print("LOGIN WITH USERNAME")
-            } didSelectLoginWithUAEPass: {
-                print("LOGIN WITH UAEPASS")
-            }
-
-            self?.innerCoordinator = OTPLoginOptionsCoordinator(input: optionsInput,
-                                                                actions: optionsAction)
-            self?.innerCoordinator!.start()
         }
-        coordinator = OTPLoginCoordinator(input: input, actions: actions)
+        coordinator = GreenCoordinator(input: GreenCoordinatorInput(window: window), actions: GreenCoordinatorActions())
         
-        (coordinator as! OTPLoginCoordinator).start()
+        coordinator!.start()
     }
 }
 

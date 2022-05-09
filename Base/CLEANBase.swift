@@ -89,45 +89,11 @@ protocol ViewModel {
 }
 
 
-// MARK: View Controller
 protocol MVVM {
     associatedtype ViewModelType: ViewModel
     
     
     var viewModel: ViewModelType { get }
-}
-
-
-class StandardViewController<VM: ViewModel>: UIViewController, MVVM {
-    typealias ViewModelType = VM
-    
-    
-    private var _viewModel: ViewModelType?
-    var viewModel: ViewModelType {
-        get {
-            return _viewModel!
-        }
-    }
-    
-    
-    static func instanceFromStoryboard<T>(withViewModel viewModel: VM) -> T where T : StandardViewController<VM>
-    {
-        let name = "\(Self.self)".replacingOccurrences(of: "ViewController", with: "Scene")
-        let storyboard = UIStoryboard(name: name, bundle: .main)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "\(Self.self)") as! T
-        viewController._viewModel = viewModel
-        
-        return viewController
-    }
-    
-    static func instanceFromNib<T: StandardViewController<VM>>(withViewModel viewModel: VM) -> T 
-    {
-        let nibName = "\(Self.self)"
-        let viewController = Bundle.main.loadNibNamed(nibName, owner: nil)!.first! as! T
-        viewController._viewModel = viewModel
-        
-        return viewController
-    }
 }
 
 

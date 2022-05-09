@@ -36,7 +36,6 @@ extension UIFont {
     class var body2: UIFont {
         return UIFont(name: "Lato-Medium", size: 14.0)!
     }
-    
 }
 
 
@@ -164,6 +163,10 @@ extension UIColor {
     class var mainThemeColor: UIColor {
         return #colorLiteral(red: 0.4431372549, green: 0.6196078431, blue: 0.09803921569, alpha: 1)
     }
+    
+    class var shimmerColor: UIColor {
+        return UIColor(red: 245/255.0, green: 246/255.0, blue: 243/255.0, alpha: 1.0)
+    }
 }
 
 //view.backgroundColor = UIColor.MyProject.pink
@@ -198,5 +201,34 @@ public extension UIView {
         
         layer.cornerRadius = radius
         layer.masksToBounds  = true
+    }
+}
+
+
+// Navigation Bar
+extension ApplicationTheme {
+    static func setupNavigationBarTheme() {
+        // UInavigationbar in contracted state
+        let navigationTitleAttributes = [NSAttributedString.Key.font: UIFont.h2,
+                                         NSAttributedString.Key.foregroundColor: UIColor.darkText]
+        // UInavigationbar in expanded state
+        let navigationLargeTitleAttributes = [NSAttributedString.Key.font: UIFont.h1,
+                                              NSAttributedString.Key.foregroundColor: UIColor.darkText]
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .white
+        appearance.titleTextAttributes = navigationTitleAttributes
+        appearance.largeTitleTextAttributes = navigationLargeTitleAttributes
+        appearance.shadowColor = nil // to remove seperator
+        UINavigationBar.appearance().tintColor = .white // text/button color
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        if #available(iOS 13.0, *) {
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        } else {
+            UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+            UINavigationBar.appearance().shadowImage = UIImage()
+            UINavigationBar.appearance().barTintColor = .white // background color
+            UINavigationBar.appearance().isTranslucent = false
+        }
     }
 }

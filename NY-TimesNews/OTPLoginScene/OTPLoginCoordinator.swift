@@ -29,7 +29,7 @@ class OTPLoginCoordinator: Coordinator {
     func start() {
         let actions = OTPLoginViewModelActions(needToShowLoginOptions: needToShowLoginOptions)
         let viewModel = OTPLoginViewModel(useCases: nil, actions: actions)
-        let otpLoginViewControler = OTPLoginViewController.instanceFromStoryboard(withViewModel: viewModel)
+        let otpLoginViewControler = OTPLoginViewController.instanceFromStoryboard(withViewModel: viewModel, fromStoryboard: "OTPLoginScene")
         nextViewController = otpLoginViewControler
         
         input.window.rootViewController = otpLoginViewControler

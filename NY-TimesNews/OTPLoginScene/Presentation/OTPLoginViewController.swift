@@ -45,6 +45,6 @@ class OTPLoginViewController: StandardViewController<OTPLoginViewModel> {
 
 extension OTPLoginViewController {
     @IBAction func loginOptionsButtonTapped() {
-        viewModel.showLoginOptions()
+        viewModel?.showLoginOptions()
     }
 }

@@ -14,8 +14,10 @@ import UIKit
 class ActionsFadePresentingViewModel: ViewModel {
     typealias UseCasesType = Void?
     typealias ActionsType = ActionsFadePresentingViewModelActions
+    typealias ViewType = UIViewController
     
     
+    var view: UIViewController?
     var viewController: UIViewController? = nil
     let useCases: UseCasesType
     let actions: ActionsType

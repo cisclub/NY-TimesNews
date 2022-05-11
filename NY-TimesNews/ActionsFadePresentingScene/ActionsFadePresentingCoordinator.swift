@@ -10,8 +10,8 @@
 import UIKit
 
 
-class ActionsFadePresentingCoordinator: Coordinator {    
-    typealias InputType = ActionsFadePresentingCoordinatorInput<OTPLoginOptionsActionsView>
+class ActionsFadePresentingCoordinator<MVVMType: UIView>: Coordinator where MVVMType: MVVM {
+    typealias InputType = ActionsFadePresentingCoordinatorInput<MVVMType>
     typealias ActionsType = ActionsFadePresentingCoordinatorActions
 
     
@@ -33,7 +33,7 @@ class ActionsFadePresentingCoordinator: Coordinator {
         let viewModel = ActionsFadePresentingViewModel(useCases: nil, actions: actions)
         viewModel.viewController = presentingViewController
         let container = ActionsFadePresentingContainerStackView.instanceWithViewModel(viewModel, actionsView: input.actionsView)
-        container.title = Strings.moreLoginOptions
+        container.title = input.title
         let coordinatorInput = FadePresentingWithBottomContainerCoordinatorInput(presentingViewController: presentingViewController,
                                                                                  bottomContainer: container)
         let coordinatorActions = FadePresentingWithBottomContainerCoordinatorActions { [weak self] presentedViewController in
@@ -52,6 +52,7 @@ class ActionsFadePresentingCoordinator: Coordinator {
 
 struct ActionsFadePresentingCoordinatorInput<MVVMType> where MVVMType: MVVM {
     let presentingViewController: UIViewController
+    let title: String
     let actionsView: MVVMType
 }
 

@@ -15,16 +15,13 @@ class OTPRemoveActionsView: UIView, MVVM {
     typealias ViewModelType = OTPRemoveActionsViewModel
     
     
-    private var _viewModel: ViewModelType?
-    var viewModel: ViewModelType {
-        return _viewModel!
-    }
+    var viewModel: ViewModelType?
     
     
     class func instance(withModel viewModel: ViewModelType) -> OTPRemoveActionsView {
         let nibName = "OTPRemoveActionsView"
         let view = Bundle.main.loadNibNamed(nibName, owner: nil)!.first as! OTPRemoveActionsView
-        view._viewModel = viewModel
+        view.viewModel = viewModel
         
         return view
     }
@@ -40,8 +37,10 @@ extension OTPRemoveActionsView {
 struct OTPRemoveActionsViewModel: ViewModel {
     typealias UseCasesType = Void?
     typealias ActionsType = OTPRemoveActionsViewModelActions
+    typealias ViewType = UIViewController
     
     
+    var view: UIViewController?
     var viewController: UIViewController?
     var useCases: Void?
     var actions: ActionsType

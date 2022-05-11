@@ -13,18 +13,23 @@ import UIKit
 extension UIView {
     /// margins: [top, right, bottom, left]
     ///
-    class func addView(view: UIView, toSuperView superView: UIView, withMargins margins: [CGFloat]) {
+    func addView(view: UIView, withMargins margins: [CGFloat], height: CGFloat? = nil) {
         assert(margins.count == 4, "Margins array should contain 4 elements [top, right, bottom, left]")
         
         view.translatesAutoresizingMaskIntoConstraints = false
-        superView.addSubview(view)
+        addSubview(view)
         
         let viewsDictionary = ["child": view]
-        superView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-\(margins[0])-[child]-\(margins[2])-|",
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-\(margins[0])-[child]-\(margins[2])-|",
                                                                 metrics: nil,
                                                                 views: viewsDictionary))
-        superView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-\(margins[3])-[child]-\(margins[1])-|",
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-\(margins[3])-[child]-\(margins[1])-|",
                                                                 metrics: nil,
                                                             views: viewsDictionary))
+        if let height = height {
+            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[child(==\(height)]",
+                                                          metrics: nil,
+                                                          views: viewsDictionary))
+        }
     }
 }

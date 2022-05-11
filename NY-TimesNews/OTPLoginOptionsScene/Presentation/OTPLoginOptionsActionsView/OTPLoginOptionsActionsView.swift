@@ -16,16 +16,14 @@ class OTPLoginOptionsActionsView: UIView, MVVM {
     @IBOutlet private var userNameButton: BaseButton!
     @IBOutlet private var uaePassButton: BaseButton!
     
-    private var _viewModel: ViewModelType?
-    var viewModel: OTPLoginOptionsActionsViewModel {
-        return _viewModel!
-    }
+    
+    var viewModel: OTPLoginOptionsActionsViewModel?
     
     
     class func instance(withModel viewModel: ViewModelType) -> OTPLoginOptionsActionsView {
         let nibName = "OTPLoginOptionsActionsView"
         let view = Bundle.main.loadNibNamed(nibName, owner: nil)!.first as! OTPLoginOptionsActionsView
-        view._viewModel = viewModel
+        view.viewModel = viewModel
         
         return view
     }
@@ -51,11 +49,11 @@ class OTPLoginOptionsActionsView: UIView, MVVM {
     
     
     @IBAction func loginWithUsernameTapped() {
-        viewModel.handleLoginWithUSernameSelected()
+        viewModel?.handleLoginWithUSernameSelected()
     }
     
     @IBAction func loginWithUAEPassTapped() {
-        viewModel.handleLoginWithUAEPassSelected()
+        viewModel?.handleLoginWithUAEPassSelected()
     }
 }
 
@@ -63,8 +61,10 @@ class OTPLoginOptionsActionsView: UIView, MVVM {
 struct OTPLoginOptionsActionsViewModel: ViewModel {
     typealias UseCasesType = Void?
     typealias ActionsType = OTPLoginOptionsActionsViewModelActions
+    typealias ViewType = UIViewController
     
     
+    var view: UIViewController?
     var viewController: UIViewController?
     var useCases: Void?
     var actions: ActionsType

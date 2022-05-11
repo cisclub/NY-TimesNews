@@ -16,8 +16,8 @@ final class AppCoordinator {
     
     var input: InputType
     var viewModel: ViewModelType
-    var coordinator: GreenCoordinator?
-    var innerCoordinator: GreenCoordinator?
+    var coordinator: OTPLoginCoordinator?
+    var innerCoordinator: LinkedAccountsListCoordinator?
     
     
     init(input: InputType, viewModel: String) {
@@ -30,9 +30,73 @@ final class AppCoordinator {
         
         let window = UIApplication.shared.windows.first!
         let input = OTPLoginCoordinatorInput(window: window)
-        let actions = OTPLoginCoordinatorActions { [weak self] viewController in
+        
+        var dataSource: [StandardCellModel]? = nil
+        let cellsActions = StandardCellActions { selectedIndex in
+            for (index, model) in dataSource!.enumerated() {
+                if index == selectedIndex {
+                    model.state.value = .selected
+                } else {
+                    model.state.value = .normal
+                }
+            }
         }
-        coordinator = GreenCoordinator(input: GreenCoordinatorInput(window: window), actions: GreenCoordinatorActions())
+        let actions = OTPLoginCoordinatorActions { presentingViewController in
+            dataSource =
+                        [
+                            TextCellModel(useCases: nil,
+                                          actions: nil,
+                                          content: "The following are all the accounts under your Emirates ID that will be linked to and*****0:"),
+                            LinkedAccountCellModel(useCases: nil, actions: cellsActions,
+                                                   profileImage: UIImage(named: "etisalatLogoVerticalEng")!,
+                                                   name: "Ahmad",
+                                                   description: "0508734558 - Postpaid"),
+                            LinkedAccountCellModel(useCases: nil, actions: cellsActions,
+                                                   profileImage: UIImage(named: "etisalatLogoVerticalEng")!,
+                                                   name: "Amin",
+                                                   description: "0508734558 - Prepaid")
+                        ]
+                        let linkedAccountsInput = LinkedAccountsListCoordinatorInput(presentingViewController: presentingViewController,
+                                                                                     dataSource: dataSource!)
+                        let linkedAccountsActions = LinkedAccountsListCoordinatorActions()
+                        self.innerCoordinator = LinkedAccountsListCoordinator(input: linkedAccountsInput,
+                                                                         actions: linkedAccountsActions)
+            
+                        self.innerCoordinator!.start()
+            
+//            let dataSource =
+//            [
+//                TextCellModel(useCases: nil,
+//                              actions: nil,
+//                              content: "The following are all the accounts under your Emirates ID that will be linked to and*****0:"),
+//                LinkedAccountCellModel(useCases: nil, actions: nil,
+//                                       profileImage: UIImage(named: "etisalatLogoVerticalEng")!,
+//                                       name: "Ahmad",
+//                                       description: "0508734558 - Postpaid"),
+//                LinkedAccountCellModel(useCases: nil, actions: nil,
+//                                       profileImage: UIImage(named: "etisalatLogoVerticalEng")!,
+//                                       name: "Amin",
+//                                       description: "0508734558 - Prepaid")
+//            ]
+//            let linkedAccountsInput = LinkedAccountsListCoordinatorInput(presentingViewController: presentingViewController,
+//                                                                         dataSource: dataSource)
+//            let linkedAccountsActions = LinkedAccountsListCoordinatorActions()
+//            self.innerCoordinator = LinkedAccountsListCoordinator(input: linkedAccountsInput,
+//                                                             actions: linkedAccountsActions)
+//
+//            self.innerCoordinator!.start()
+            
+            
+//            let optionsInput = OTPLoginOptionsCoordinatorInput(presentingViewController: presentingViewController)
+//            let optionsActions = OTPLoginOptionsCoordinatorActions {
+//            } didSelectLoginWithUAEPass: {
+//            }
+//
+//            self!.innerCoordinator = OTPLoginOptionsCoordinator(input: optionsInput,
+//                                                          actions: optionsActions)
+//            self!.innerCoordinator?.start()
+        }
+        coordinator = OTPLoginCoordinator(input: input, actions: actions)
         
         coordinator!.start()
     }

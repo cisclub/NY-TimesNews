@@ -17,4 +17,5 @@ struct Strings {
     static let moreLoginOptions = "<Title>".localized
     static let loginWithUsername = "Login with username".localized
     static let signInWithUAEPass = "Sign in with UAE Pass".localized
+    static let primary = "Primary".localized
 }

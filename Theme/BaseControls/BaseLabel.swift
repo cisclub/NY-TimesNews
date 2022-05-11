@@ -11,7 +11,11 @@ enum BaseLabelType {
     case title
     case h1
     case h2
+    case h4
+    case h4Active
+    case h6
     case subtitle
+    case subtitleActive
     case custom
 }
 
@@ -49,10 +53,23 @@ class BaseLabel: UILabel {
             attributedText = text?.styled(as: .h1)
         case .h2:
             attributedText = text?.styled(as: .h2)
+        case .h4:
+            attributedText = text?.styled(as: .h4)
+        case .h4Active:
+            attributedText = text?.styled(as: .h4Active)
+        case .h6:
+            attributedText = text?.styled(as: .h6)
         case .subtitle:
             attributedText = text?.styled(as: .body2)
+        case .subtitleActive:
+            attributedText = text?.styled(as: .body2Active)
         case .custom:
             attributedText = text?.styled(as: .body1)
         }
+    }
+    
+    func fullyRoundCorners() {
+        layer.cornerRadius = frame.size.height / 2
+        clipsToBounds = true
     }
 }

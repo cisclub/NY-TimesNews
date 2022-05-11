@@ -9,9 +9,8 @@ import Foundation
 import UIKit
 
 
-class ActionsFadePresentingContainerStackView<ActionsViewType: UIView>: UIStackView, MVVM where ActionsViewType: MVVM {
+class ActionsFadePresentingContainerStackView: UIStackView, MVVM {
     typealias ViewModelType = ActionsFadePresentingViewModel
-    
     
     
     @IBOutlet private var titleLabel: BaseLabel!
@@ -20,10 +19,7 @@ class ActionsFadePresentingContainerStackView<ActionsViewType: UIView>: UIStackV
     @IBOutlet private var actionsViewContainer: UIView!
     
     
-    private var _viewModel: ActionsFadePresentingViewModel?
-    var viewModel: ActionsFadePresentingViewModel {
-        return _viewModel!
-    }
+    var viewModel: ActionsFadePresentingViewModel?
     
     
     var title: String? {
@@ -31,8 +27,8 @@ class ActionsFadePresentingContainerStackView<ActionsViewType: UIView>: UIStackV
             titleLabel.text = title
         }
     }
-    private var _actionsView: ActionsViewType?
-    private var actionsView: ActionsViewType {
+    private var _actionsView: UIView?
+    private var actionsView: UIView {
         set {
             _actionsView = newValue
             
@@ -53,13 +49,11 @@ class ActionsFadePresentingContainerStackView<ActionsViewType: UIView>: UIStackV
     }
     
     
-    
-    
-    static func instanceWithViewModel(_ viewModel: ViewModelType, actionsView: ActionsViewType) -> ActionsFadePresentingContainerStackView {
+    static func instanceWithViewModel(_ viewModel: ViewModelType, actionsView: UIView) -> ActionsFadePresentingContainerStackView {
         let nibName = "ActionsFadePresentingContainerStackView"
         let container = Bundle.main.loadNibNamed(nibName,
                                                  owner: nil)!.first as! ActionsFadePresentingContainerStackView
-        container._viewModel = viewModel
+        container.viewModel = viewModel
         container.actionsView = actionsView
         return container
     }
@@ -76,10 +70,6 @@ class ActionsFadePresentingContainerStackView<ActionsViewType: UIView>: UIStackV
     
     
     @IBAction func closeButtonTapped() {
-        viewModel.handleCloseButtonTapped()
+        viewModel?.handleCloseButtonTapped()
     }
-}
-
-
-class NibLoadableActionsFadePresentingContainerStackView: ActionsFadePresentingContainerStackView<OTPLoginOptionsActionsView> {
 }

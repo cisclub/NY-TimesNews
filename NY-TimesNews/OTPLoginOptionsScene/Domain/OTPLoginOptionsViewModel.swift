@@ -13,8 +13,10 @@ import UIKit
 struct OTPLoginOptionsViewModel: ViewModel {
     typealias UseCasesType = OTPLoginOptionsUseCases
     typealias ActionsType = OTPLoginOptionsViewModelActions
+    typealias ViewType = UIViewController
     
     
+    var view: UIViewController?
     var viewController: UIViewController?
     let useCases: UseCasesType
     let actions: ActionsType

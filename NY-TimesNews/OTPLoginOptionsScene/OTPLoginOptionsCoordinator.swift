@@ -18,7 +18,7 @@ class OTPLoginOptionsCoordinator: Coordinator {
     
     let input: InputType
     let actions: ActionsType
-    var coordinator: ActionsFadePresentingCoordinator?
+    var coordinator: ActionsFadePresentingCoordinator<OTPLoginOptionsActionsView>?
 
     
     required init(input: InputType, actions: ActionsType) {
@@ -37,6 +37,7 @@ class OTPLoginOptionsCoordinator: Coordinator {
         let viewModel = OTPLoginOptionsActionsViewModel(actions: viewModelActions)
         let actionsView = OTPLoginOptionsActionsView.instance(withModel: viewModel)
         let actionsFadeInput = ActionsFadePresentingCoordinatorInput(presentingViewController: input.presentingViewController,
+                                                                     title: Strings.moreLoginOptions,
                                                                      actionsView:actionsView)
         let actionsFadeActions = ActionsFadePresentingCoordinatorActions { presentedViewController in
             presentedViewController.dismiss(animated: true)

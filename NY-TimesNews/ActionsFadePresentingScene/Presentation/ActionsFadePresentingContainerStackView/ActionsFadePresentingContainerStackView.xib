@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="6gT-e4-ryW" customClass="NibLoadableActionsFadePresentingContainerStackView" customModule="NY_TimesNews" customModuleProvider="target">
+        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="6gT-e4-ryW" customClass="ActionsFadePresentingContainerStackView" customModule="NY_TimesNews" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="366" height="68"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>

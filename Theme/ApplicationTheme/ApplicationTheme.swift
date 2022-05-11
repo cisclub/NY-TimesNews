@@ -33,6 +33,10 @@ extension UIFont {
         return UIFont(name: "Lato-Heavy", size: 14.0)!
     }
     
+    class var h6: UIFont {
+        return UIFont(name: "Lato-Heavy", size: 12.0)!
+    }
+    
     class var body2: UIFont {
         return UIFont(name: "Lato-Medium", size: 14.0)!
     }
@@ -43,6 +47,7 @@ struct Spacing {
     
     static let XS: CGFloat = 8.0
     static let M: CGFloat = 16.0
+    static let MM: CGFloat = 22.0
     static let L: CGFloat = 28.0
     static let XL: CGFloat = 32.0
     static let XXL: CGFloat = 40.0
@@ -55,9 +60,13 @@ enum TextStyle {
     case h2
     case h3
     case h4
+    case h4Active
     case h5
+    case h6
     case body1
     case body2
+    case body2Active
+    case body3
 }
 
 extension TextStyle {
@@ -96,6 +105,14 @@ extension TextStyle {
                     .paragraphStyle: paragraphStyle,
                     .foregroundColor: UIColor.darkText]
             
+        case .h4Active:
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .left
+            paragraphStyle.minimumLineHeight = Spacing.M
+            return [.font: UIFont.h4,
+                    .paragraphStyle: paragraphStyle,
+                    .foregroundColor: UIColor.mainThemeColor]
+            
         case .body1:
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .left
@@ -112,10 +129,33 @@ extension TextStyle {
                     .paragraphStyle: paragraphStyle,
                     .foregroundColor: UIColor.darkText]
             
+        case .h6:
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .left
+            paragraphStyle.minimumLineHeight = Spacing.M
+            return [.font: UIFont.h6,
+                    .paragraphStyle: paragraphStyle,
+                    .foregroundColor: UIColor.white]
+            
         case .body2:
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .left
             paragraphStyle.minimumLineHeight = Spacing.M
+            return [.font: UIFont.body2,
+                    .paragraphStyle: paragraphStyle,
+                    .foregroundColor: UIColor.darkText]
+            
+        case .body2Active:
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .left
+            paragraphStyle.minimumLineHeight = Spacing.M
+            return [.font: UIFont.body2,
+                    .paragraphStyle: paragraphStyle,
+                    .foregroundColor: UIColor.mainThemeColor]
+        case .body3:
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .left
+            paragraphStyle.minimumLineHeight = Spacing.MM
             return [.font: UIFont.body2,
                     .paragraphStyle: paragraphStyle,
                     .foregroundColor: UIColor.darkText]
@@ -166,6 +206,10 @@ extension UIColor {
     
     class var shimmerColor: UIColor {
         return UIColor(red: 245/255.0, green: 246/255.0, blue: 243/255.0, alpha: 1.0)
+    }
+    
+    class var separator: UIColor {
+        return UIColor(red: 231/255.0, green: 231/255.0, blue: 231/255.0, alpha: 1.0)
     }
 }
 

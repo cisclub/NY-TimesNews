@@ -12,9 +12,10 @@ import UIKit
 struct GreenViewModel: ViewModel {
     typealias UseCasesType = GreenUseCases
     typealias ActionsType = GreenViewModelActions
+    typealias ViewType = UIViewController
     
     
-    let viewController: UIViewController? = nil
+    var view: UIViewController?
     let useCases: UseCasesType
     let actions: ActionsType
     

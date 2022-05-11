@@ -48,6 +48,6 @@ class FadePresentingViewController: StandardViewController<FadePresentingViewMod
 // MAR: Actions
 extension FadePresentingViewController {
     @objc func backgroundTapped() {
-        viewModel.handleBackgroundTapped(inViewController: self)
+        viewModel?.handleBackgroundTapped(inViewController: self)
     }
 }

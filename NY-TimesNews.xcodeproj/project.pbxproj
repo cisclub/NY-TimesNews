@@ -40,9 +40,20 @@
 		D20D433D28293D2700F31B44 /* GreenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D433528293D2700F31B44 /* GreenUseCase.swift */; };
 		D20D433E28293D2700F31B44 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D433828293D2700F31B44 /* GreenViewController.swift */; };
 		D20D4340282943C100F31B44 /* GreenScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20D433F282943C100F31B44 /* GreenScene.storyboard */; };
-		D20D4342282974C200F31B44 /* StandardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D4341282974C200F31B44 /* StandardCell.swift */; };
 		D20D434728297E8400F31B44 /* UIView+Shimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D434628297E8400F31B44 /* UIView+Shimmer.m */; };
 		D20D4349282983E300F31B44 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D4348282983E300F31B44 /* UIView.swift */; };
+		D24AE2AE282A787E0090B0F5 /* ListActionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24AE2AC282A787E0090B0F5 /* ListActionsView.xib */; };
+		D24AE2AF282A787E0090B0F5 /* ListActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2AD282A787E0090B0F5 /* ListActionsView.swift */; };
+		D24AE2B5282A802B0090B0F5 /* StandardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2B3282A802B0090B0F5 /* StandardCell.swift */; };
+		D24AE2B6282A802B0090B0F5 /* StandardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24AE2B4282A802B0090B0F5 /* StandardCell.xib */; };
+		D24AE2D4282AA9710090B0F5 /* LinkedAccountsListRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2CB282AA9710090B0F5 /* LinkedAccountsListRepo.swift */; };
+		D24AE2D5282AA9710090B0F5 /* LinkedAccountsListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2CD282AA9710090B0F5 /* LinkedAccountsListUseCase.swift */; };
+		D24AE2D6282AA9710090B0F5 /* LinkedAccountsListUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2CE282AA9710090B0F5 /* LinkedAccountsListUseCases.swift */; };
+		D24AE2D7282AA9710090B0F5 /* LinkedAccountsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2CF282AA9710090B0F5 /* LinkedAccountsListViewModel.swift */; };
+		D24AE2D9282AA9710090B0F5 /* LinkedAccountsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2D3282AA9710090B0F5 /* LinkedAccountsListCoordinator.swift */; };
+		D24AE2DB282AABE50090B0F5 /* LinkedAccountCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2DA282AABE50090B0F5 /* LinkedAccountCellModel.swift */; };
+		D24AE2DD282ACC560090B0F5 /* LinkedAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2DC282ACC560090B0F5 /* LinkedAccountCell.swift */; };
+		D24AE2DF282ACE2A0090B0F5 /* LinkedAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24AE2DE282ACE2A0090B0F5 /* LinkedAccountCell.xib */; };
 		D24BD3A9281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD39F281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift */; };
 		D24BD3AD281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD3A5281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift */; };
 		D24BD3AE281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD3A8281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift */; };
@@ -55,11 +66,17 @@
 		D24EEAE2281C9A2800D7F4CC /* FadePresentingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EEADE281C9A2800D7F4CC /* FadePresentingViewController.swift */; };
 		D24EEAE3281C9A2800D7F4CC /* FadePresentingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24EEADF281C9A2800D7F4CC /* FadePresentingViewController.xib */; };
 		D24EEAF1281C9AD000D7F4CC /* ActionsFadePresentingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EEAE7281C9AD000D7F4CC /* ActionsFadePresentingCoordinator.swift */; };
-		D24EEAF6281C9AD000D7F4CC /* ActionsFadePresentingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EEAF0281C9AD000D7F4CC /* ActionsFadePresentingViewController.swift */; };
 		D25FB6652817FD980034D08A /* CLEANBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25FB6642817FD980034D08A /* CLEANBase.swift */; };
 		D27D7BDD281F68BC00B4E0BE /* OTPRemoveActionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27D7BDB281F68BC00B4E0BE /* OTPRemoveActionsView.xib */; };
 		D27D7BDE281F68BC00B4E0BE /* OTPRemoveActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27D7BDC281F68BC00B4E0BE /* OTPRemoveActionsView.swift */; };
+		D2851602282A709C004A760A /* ListActionsFadePresentingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28515F8282A709C004A760A /* ListActionsFadePresentingCoordinator.swift */; };
+		D2851603282A709C004A760A /* ListActionsFadePresentingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28515FA282A709C004A760A /* ListActionsFadePresentingRepo.swift */; };
+		D2851604282A709C004A760A /* ListActionsFadePresentingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28515FC282A709C004A760A /* ListActionsFadePresentingUseCase.swift */; };
+		D2851605282A709C004A760A /* ListActionsFadePresentingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28515FD282A709C004A760A /* ListActionsFadePresentingViewModel.swift */; };
+		D2851606282A709C004A760A /* ListActionsFadePresentingUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28515FE282A709C004A760A /* ListActionsFadePresentingUseCases.swift */; };
 		D2B3FD56282936E200C81ABE /* StandardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3FD55282936E200C81ABE /* StandardViewController.swift */; };
+		D2C54CE4282B6B48000AAA13 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54CE3282B6B48000AAA13 /* TextCell.swift */; };
+		D2C54CE6282B6B9D000AAA13 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C54CE5282B6B9D000AAA13 /* TextCell.xib */; };
 		D2D6E618281CFB6400193460 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E613281CFB6400193460 /* BaseLabel.swift */; };
 		D2D6E619281CFB6400193460 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E614281CFB6400193460 /* BaseView.swift */; };
 		D2D6E61A281CFB6400193460 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E615281CFB6400193460 /* BaseButton.swift */; };
@@ -166,10 +183,21 @@
 		D20D433528293D2700F31B44 /* GreenUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenUseCase.swift; sourceTree = "<group>"; };
 		D20D433828293D2700F31B44 /* GreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		D20D433F282943C100F31B44 /* GreenScene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GreenScene.storyboard; sourceTree = "<group>"; };
-		D20D4341282974C200F31B44 /* StandardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCell.swift; sourceTree = "<group>"; };
 		D20D434528297E8300F31B44 /* UIView+Shimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shimmer.h"; sourceTree = "<group>"; };
 		D20D434628297E8400F31B44 /* UIView+Shimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shimmer.m"; sourceTree = "<group>"; };
 		D20D4348282983E300F31B44 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D24AE2AC282A787E0090B0F5 /* ListActionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListActionsView.xib; sourceTree = "<group>"; };
+		D24AE2AD282A787E0090B0F5 /* ListActionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListActionsView.swift; sourceTree = "<group>"; };
+		D24AE2B3282A802B0090B0F5 /* StandardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardCell.swift; sourceTree = "<group>"; };
+		D24AE2B4282A802B0090B0F5 /* StandardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StandardCell.xib; sourceTree = "<group>"; };
+		D24AE2CB282AA9710090B0F5 /* LinkedAccountsListRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedAccountsListRepo.swift; sourceTree = "<group>"; };
+		D24AE2CD282AA9710090B0F5 /* LinkedAccountsListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedAccountsListUseCase.swift; sourceTree = "<group>"; };
+		D24AE2CE282AA9710090B0F5 /* LinkedAccountsListUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedAccountsListUseCases.swift; sourceTree = "<group>"; };
+		D24AE2CF282AA9710090B0F5 /* LinkedAccountsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedAccountsListViewModel.swift; sourceTree = "<group>"; };
+		D24AE2D3282AA9710090B0F5 /* LinkedAccountsListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedAccountsListCoordinator.swift; sourceTree = "<group>"; };
+		D24AE2DA282AABE50090B0F5 /* LinkedAccountCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedAccountCellModel.swift; sourceTree = "<group>"; };
+		D24AE2DC282ACC560090B0F5 /* LinkedAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedAccountCell.swift; sourceTree = "<group>"; };
+		D24AE2DE282ACE2A0090B0F5 /* LinkedAccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinkedAccountCell.xib; sourceTree = "<group>"; };
 		D24BD39F281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentingWithBottomContainerCoordinator.swift; sourceTree = "<group>"; };
 		D24BD3A5281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentingWithBottomContainerViewModel.swift; sourceTree = "<group>"; };
 		D24BD3A8281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentingWithBottomContainerViewController.swift; sourceTree = "<group>"; };
@@ -182,11 +210,17 @@
 		D24EEADE281C9A2800D7F4CC /* FadePresentingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentingViewController.swift; sourceTree = "<group>"; };
 		D24EEADF281C9A2800D7F4CC /* FadePresentingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FadePresentingViewController.xib; sourceTree = "<group>"; };
 		D24EEAE7281C9AD000D7F4CC /* ActionsFadePresentingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsFadePresentingCoordinator.swift; sourceTree = "<group>"; };
-		D24EEAF0281C9AD000D7F4CC /* ActionsFadePresentingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsFadePresentingViewController.swift; sourceTree = "<group>"; };
 		D25FB6642817FD980034D08A /* CLEANBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLEANBase.swift; sourceTree = "<group>"; };
 		D27D7BDB281F68BC00B4E0BE /* OTPRemoveActionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTPRemoveActionsView.xib; sourceTree = "<group>"; };
 		D27D7BDC281F68BC00B4E0BE /* OTPRemoveActionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPRemoveActionsView.swift; sourceTree = "<group>"; };
+		D28515F8282A709C004A760A /* ListActionsFadePresentingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListActionsFadePresentingCoordinator.swift; sourceTree = "<group>"; };
+		D28515FA282A709C004A760A /* ListActionsFadePresentingRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListActionsFadePresentingRepo.swift; sourceTree = "<group>"; };
+		D28515FC282A709C004A760A /* ListActionsFadePresentingUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListActionsFadePresentingUseCase.swift; sourceTree = "<group>"; };
+		D28515FD282A709C004A760A /* ListActionsFadePresentingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListActionsFadePresentingViewModel.swift; sourceTree = "<group>"; };
+		D28515FE282A709C004A760A /* ListActionsFadePresentingUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListActionsFadePresentingUseCases.swift; sourceTree = "<group>"; };
 		D2B3FD55282936E200C81ABE /* StandardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardViewController.swift; sourceTree = "<group>"; };
+		D2C54CE3282B6B48000AAA13 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		D2C54CE5282B6B9D000AAA13 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
 		D2D6E613281CFB6400193460 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		D2D6E614281CFB6400193460 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D2D6E615281CFB6400193460 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
@@ -294,6 +328,8 @@
 		07796C2F27A1773A00FD0E4D /* NY-TimesNews */ = {
 			isa = PBXGroup;
 			children = (
+				D24AE2C9282AA9710090B0F5 /* LinkedAccountsListScene */,
+				D28515F7282A709C004A760A /* ListActionsFadePresentingScene */,
 				D20D432E28293D2700F31B44 /* GreenScene */,
 				D2D6E61C281CFFFC00193460 /* OTPLoginOptionsScene */,
 				D2D6E628281CFFFC00193460 /* OTPLoginScene */,
@@ -463,6 +499,72 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		D24AE2AB282A787E0090B0F5 /* ListActionsViewMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				D24AE2AC282A787E0090B0F5 /* ListActionsView.xib */,
+				D24AE2AD282A787E0090B0F5 /* ListActionsView.swift */,
+			);
+			path = ListActionsViewMVVM;
+			sourceTree = "<group>";
+		};
+		D24AE2B2282A802B0090B0F5 /* StandardCellMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				D24AE2B3282A802B0090B0F5 /* StandardCell.swift */,
+				D24AE2B4282A802B0090B0F5 /* StandardCell.xib */,
+			);
+			path = StandardCellMVVM;
+			sourceTree = "<group>";
+		};
+		D24AE2C9282AA9710090B0F5 /* LinkedAccountsListScene */ = {
+			isa = PBXGroup;
+			children = (
+				D24AE2CA282AA9710090B0F5 /* Data */,
+				D24AE2CC282AA9710090B0F5 /* Domain */,
+				D24AE2D0282AA9710090B0F5 /* Presentation */,
+				D24AE2D3282AA9710090B0F5 /* LinkedAccountsListCoordinator.swift */,
+			);
+			path = LinkedAccountsListScene;
+			sourceTree = "<group>";
+		};
+		D24AE2CA282AA9710090B0F5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D24AE2CB282AA9710090B0F5 /* LinkedAccountsListRepo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D24AE2CC282AA9710090B0F5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D24AE2CD282AA9710090B0F5 /* LinkedAccountsListUseCase.swift */,
+				D24AE2CE282AA9710090B0F5 /* LinkedAccountsListUseCases.swift */,
+				D24AE2CF282AA9710090B0F5 /* LinkedAccountsListViewModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D24AE2D0282AA9710090B0F5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D24AE2D1282AA9710090B0F5 /* Cells */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D24AE2D1282AA9710090B0F5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54CE2282B6B2E000AAA13 /* TextCell */,
+				D24AE2DA282AABE50090B0F5 /* LinkedAccountCellModel.swift */,
+				D24AE2DC282ACC560090B0F5 /* LinkedAccountCell.swift */,
+				D24AE2DE282ACE2A0090B0F5 /* LinkedAccountCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D24BD39E281C9DA100974860 /* FadePresentingWithBottomContainerScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,7 +657,6 @@
 			isa = PBXGroup;
 			children = (
 				D24BD3B3281CAD8F00974860 /* ActionsFadePresentingContainerStackView */,
-				D24EEAF0281C9AD000D7F4CC /* ActionsFadePresentingViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -569,14 +670,60 @@
 			path = OTPRemoveActionsView;
 			sourceTree = "<group>";
 		};
+		D28515F7282A709C004A760A /* ListActionsFadePresentingScene */ = {
+			isa = PBXGroup;
+			children = (
+				D28515F8282A709C004A760A /* ListActionsFadePresentingCoordinator.swift */,
+				D28515F9282A709C004A760A /* Data */,
+				D28515FB282A709C004A760A /* Domain */,
+				D28515FF282A709C004A760A /* Presentation */,
+			);
+			path = ListActionsFadePresentingScene;
+			sourceTree = "<group>";
+		};
+		D28515F9282A709C004A760A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D28515FA282A709C004A760A /* ListActionsFadePresentingRepo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D28515FB282A709C004A760A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D28515FC282A709C004A760A /* ListActionsFadePresentingUseCase.swift */,
+				D28515FD282A709C004A760A /* ListActionsFadePresentingViewModel.swift */,
+				D28515FE282A709C004A760A /* ListActionsFadePresentingUseCases.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D28515FF282A709C004A760A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D24AE2AB282A787E0090B0F5 /* ListActionsViewMVVM */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		D2B3FD542829369D00C81ABE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D24AE2B2282A802B0090B0F5 /* StandardCellMVVM */,
 				D25FB6642817FD980034D08A /* CLEANBase.swift */,
 				D2B3FD55282936E200C81ABE /* StandardViewController.swift */,
-				D20D4341282974C200F31B44 /* StandardCell.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		D2C54CE2282B6B2E000AAA13 /* TextCell */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54CE3282B6B48000AAA13 /* TextCell.swift */,
+				D2C54CE5282B6B9D000AAA13 /* TextCell.xib */,
+			);
+			path = TextCell;
 			sourceTree = "<group>";
 		};
 		D2D6E611281CFB5B00193460 /* Theme */ = {
@@ -839,22 +986,26 @@
 				D24BD3B2281CA84800974860 /* ActionsFadePresentingContainerStackView.xib in Resources */,
 				D2D6E667281D042A00193460 /* Lato-LightItalic.ttf in Resources */,
 				D24EEAE3281C9A2800D7F4CC /* FadePresentingViewController.xib in Resources */,
+				D24AE2AE282A787E0090B0F5 /* ListActionsView.xib in Resources */,
 				D2D6E670281D042A00193460 /* Lato-Regular.ttf in Resources */,
 				07796C3D27A1773C00FD0E4D /* LaunchScreen.storyboard in Resources */,
 				D2D6E668281D042A00193460 /* Lato-Thin.ttf in Resources */,
 				D2D6E671281D042A00193460 /* Lato-Hairline.ttf in Resources */,
 				D2D6E678281D042A00193460 /* AM273.TTF in Resources */,
 				D2D6E66D281D042A00193460 /* Lato-SemiboldItalic.ttf in Resources */,
+				D2C54CE6282B6B9D000AAA13 /* TextCell.xib in Resources */,
 				D2D6E642281CFFFC00193460 /* OTPLoginScene.storyboard in Resources */,
 				D20868F2281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib in Resources */,
 				D2D6E67A281D042A00193460 /* AM274.TTF in Resources */,
 				D2D6E673281D042A00193460 /* AM282.TTF in Resources */,
+				D24AE2B6282A802B0090B0F5 /* StandardCell.xib in Resources */,
 				D20D4340282943C100F31B44 /* GreenScene.storyboard in Resources */,
 				D2D6E681281D042A00193460 /* Lato-Medium.ttf in Resources */,
 				D2D6E674281D042A00193460 /* Lato-BlackItalic.ttf in Resources */,
 				D27D7BDD281F68BC00B4E0BE /* OTPRemoveActionsView.xib in Resources */,
 				D2D6E672281D042A00193460 /* GESSTwoEtisalat.ttf in Resources */,
 				D2D6E677281D042A00193460 /* ge_ss_two_medium.ttf in Resources */,
+				D24AE2DF282ACE2A0090B0F5 /* LinkedAccountCell.xib in Resources */,
 				D2D6E67D281D042A00193460 /* ge_ss_two_light.ttf in Resources */,
 				D2D6E67C281D042A00193460 /* AM277.TTF in Resources */,
 				D2D6E66B281D042A00193460 /* AXtManal Regular.ttf in Resources */,
@@ -898,7 +1049,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24AE2B5282A802B0090B0F5 /* StandardCell.swift in Sources */,
 				D2D6E637281CFFFC00193460 /* OTPLoginOptionsViewModel.swift in Sources */,
+				D24AE2D4282AA9710090B0F5 /* LinkedAccountsListRepo.swift in Sources */,
 				D2D6E643281CFFFC00193460 /* OTPLoginViewController.swift in Sources */,
 				07796C6327A1778900FD0E4D /* StringConstants.swift in Sources */,
 				D2D6E63F281CFFFC00193460 /* OTPLoginViewModel.swift in Sources */,
@@ -907,24 +1060,30 @@
 				D20D433D28293D2700F31B44 /* GreenUseCase.swift in Sources */,
 				D24EEAE2281C9A2800D7F4CC /* FadePresentingViewController.swift in Sources */,
 				D20868EF281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift in Sources */,
+				D24AE2D9282AA9710090B0F5 /* LinkedAccountsListCoordinator.swift in Sources */,
+				D24AE2D7282AA9710090B0F5 /* LinkedAccountsListViewModel.swift in Sources */,
 				07796C9927A2927400FD0E4D /* UIImageView+Extension.swift in Sources */,
 				D24BD3AE281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift in Sources */,
-				D20D4342282974C200F31B44 /* StandardCell.swift in Sources */,
 				D2D6E61B281CFB6400193460 /* ApplicationTheme.swift in Sources */,
 				07796C7327A17E8200FD0E4D /* HTTPRequest.swift in Sources */,
-				D24EEAF6281C9AD000D7F4CC /* ActionsFadePresentingViewController.swift in Sources */,
+				D24AE2D6282AA9710090B0F5 /* LinkedAccountsListUseCases.swift in Sources */,
 				D25FB6652817FD980034D08A /* CLEANBase.swift in Sources */,
 				D24BD3AD281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift in Sources */,
 				07FE274B2812E8B9004B53EF /* LaunchStateManager.swift in Sources */,
 				D2D6E641281CFFFC00193460 /* OTPLoginUseCase.swift in Sources */,
+				D2C54CE4282B6B48000AAA13 /* TextCell.swift in Sources */,
 				07796C8427A1862200FD0E4D /* UIViewController+Extension.swift in Sources */,
 				07796C6A27A17DD200FD0E4D /* HTTPClient.swift in Sources */,
+				D2851602282A709C004A760A /* ListActionsFadePresentingCoordinator.swift in Sources */,
 				D20D433E28293D2700F31B44 /* GreenViewController.swift in Sources */,
 				D2D6E63E281CFFFC00193460 /* Dummy.swift in Sources */,
 				07796C8F27A188B100FD0E4D /* AlertsView.swift in Sources */,
 				D2D6E63C281CFFFC00193460 /* OTPLoginCoordinator.swift in Sources */,
+				D24AE2DD282ACC560090B0F5 /* LinkedAccountCell.swift in Sources */,
+				D2851606282A709C004A760A /* ListActionsFadePresentingUseCases.swift in Sources */,
 				D24BD3B5281CAD9A00974860 /* ActionsFadePresentingContainerStackView.swift in Sources */,
 				07796C6F27A17E4100FD0E4D /* Data+Extension.swift in Sources */,
+				D2851604282A709C004A760A /* ListActionsFadePresentingUseCase.swift in Sources */,
 				D24EEAE1281C9A2800D7F4CC /* FadePresentingViewModel.swift in Sources */,
 				07796C7A27A1809900FD0E4D /* AppCoordinator.swift in Sources */,
 				D2B3FD56282936E200C81ABE /* StandardViewController.swift in Sources */,
@@ -936,21 +1095,26 @@
 				D24EEAF1281C9AD000D7F4CC /* ActionsFadePresentingCoordinator.swift in Sources */,
 				D20D433B28293D2700F31B44 /* GreenViewModel.swift in Sources */,
 				D24BD3A9281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift in Sources */,
+				D24AE2D5282AA9710090B0F5 /* LinkedAccountsListUseCase.swift in Sources */,
 				D2D6E640281CFFFC00193460 /* OTPLoginUseCases.swift in Sources */,
 				07796C7527A17F4400FD0E4D /* ParamEncoding.swift in Sources */,
 				D2D6E618281CFB6400193460 /* BaseLabel.swift in Sources */,
 				D20D433928293D2700F31B44 /* GreenCoordinator.swift in Sources */,
 				D2D6E685281D056D00193460 /* Strings.swift in Sources */,
+				D2851603282A709C004A760A /* ListActionsFadePresentingRepo.swift in Sources */,
 				D2D6E635281CFFFC00193460 /* OTPLoginOptionsCoordinator.swift in Sources */,
 				D20D4349282983E300F31B44 /* UIView.swift in Sources */,
 				07796C8D27A1886F00FD0E4D /* ViewsIdentifiers.swift in Sources */,
+				D2851605282A709C004A760A /* ListActionsFadePresentingViewModel.swift in Sources */,
 				D2D6E636281CFFFC00193460 /* OTPLoginOptionsRepo.swift in Sources */,
 				07796C3127A1773A00FD0E4D /* AppDelegate.swift in Sources */,
 				07796C7727A17FE100FD0E4D /* RESTError.swift in Sources */,
+				D24AE2DB282AABE50090B0F5 /* LinkedAccountCellModel.swift in Sources */,
 				07796C6C27A17DF000FD0E4D /* EndPoints.swift in Sources */,
 				07796C9B27A2AEB600FD0E4D /* APIParameters.swift in Sources */,
 				D27D7BDE281F68BC00B4E0BE /* OTPRemoveActionsView.swift in Sources */,
 				07796C7127A17E6800FD0E4D /* String+Extension.swift in Sources */,
+				D24AE2AF282A787E0090B0F5 /* ListActionsView.swift in Sources */,
 				D20D434728297E8400F31B44 /* UIView+Shimmer.m in Sources */,
 				D2D6E63D281CFFFC00193460 /* OTPLoginRepo.swift in Sources */,
 				07796C3327A1773A00FD0E4D /* SceneDelegate.swift in Sources */,

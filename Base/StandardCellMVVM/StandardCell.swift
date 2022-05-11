@@ -65,7 +65,7 @@ class StandardCell: UITableViewCell, MVVM {
         return cell
     }
     
-    class func identifier() -> String {
+    final class func identifier() -> String {
         return String(describing: Self.self)
     }
     
@@ -139,6 +139,6 @@ struct StandardCellUseCases {
 
 
 struct StandardCellActions {
-    let cellSelected: (_ index: Int) -> ()
+    let cellSelected: (_ index: Int, _ model: StandardCellModel) -> ()
 }
 

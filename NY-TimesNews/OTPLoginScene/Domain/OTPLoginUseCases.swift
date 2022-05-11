@@ -14,16 +14,15 @@ struct OTPLoginUseCases {
 }
 
 struct GetLinkedAccountsUseCase: UseCase {
-    func execute(input: Void?, finishHandler: ([String]) -> ()) -> String? {
-        repo.execute(input: nil) { listOfAccouts in
-            finishHandler(listOfAccouts)
-        }
+    func execute(input: ANYInput, finishHandler: ([String]) -> ()) -> String? {
+        return nil
     }
+    
     
     var repo: LinkedAccountsRepo
     
     
-    typealias InputType = Void?
+    typealias InputType = ANYInput
     typealias ClosureType = ([String]) -> ()
     typealias ReturnType = String?
     typealias RepoType = LinkedAccountsRepo
@@ -39,4 +38,8 @@ struct LinkedAccountsRepo: Repository {
     typealias InputType = Void?
     typealias ClosureType = ([String]) -> ()
     typealias ReturnType = String?
+}
+
+struct ANYInput {
+    let value: String
 }

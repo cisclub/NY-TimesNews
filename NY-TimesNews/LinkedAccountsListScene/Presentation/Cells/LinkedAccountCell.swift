@@ -14,6 +14,7 @@ class LinkedAccountCell: StandardCell {
     @IBOutlet private var descriptionLabel: BaseLabel!
     @IBOutlet private var separator: UIView!
     @IBOutlet private var primaryLabel: BaseLabel!
+    @IBOutlet private var tickImageView: UIImageView!
     
     
     override func awakeFromNib() {
@@ -33,6 +34,7 @@ class LinkedAccountCell: StandardCell {
         nameLabel.type = .h4
         descriptionLabel.type = .subtitle
         primaryLabel.isHidden = true
+        tickImageView.isHidden = true
         
         if let model = viewModel as? LinkedAccountCellModel {
             profileImageView.image = model.profileImage
@@ -47,5 +49,6 @@ class LinkedAccountCell: StandardCell {
         nameLabel.type = .h4Active
         descriptionLabel.type = .subtitleActive
         primaryLabel.isHidden = false
+        tickImageView.isHidden = false
     }
 }

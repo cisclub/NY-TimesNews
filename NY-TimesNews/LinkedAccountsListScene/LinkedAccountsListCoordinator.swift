@@ -24,18 +24,19 @@ class LinkedAccountsListCoordinator: Coordinator {
     }
     
     func start() {
-        let v = UIView()
-        v.backgroundColor = .red
         let actionsListInput = ListActionsFadePresentingCoordinatorInput(presentingViewController: input.presentingViewController,
                                                                          title: "LINKED ACCOUNTS",
                                                                          dataSource: input.dataSource,
-                                                                         backgroundColor: UIColor.white,
-                                                                         footerView: v)
+                                                                         backgroundColor: UIColor.white)
         let actions = ListActionsFadePresentingCoordinatorActions()
         actionsListCoordinator = ListActionsFadePresentingCoordinator(input: actionsListInput,
                                                                           actions: actions)
         
         actionsListCoordinator!.start()
+    }
+    
+    func dismiss() {
+        self.actionsListCoordinator?.dismiss()
     }
 }
 

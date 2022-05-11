@@ -11,7 +11,7 @@ import UIKit
 
 
 struct OTPLoginViewModel: ViewModel {
-    typealias UseCasesType = OTPLoginUseCases?
+    typealias UseCasesType = OTPLoginUseCases
     typealias ActionsType = OTPLoginViewModelActions
     typealias ViewType = UIViewController
     
@@ -22,8 +22,8 @@ struct OTPLoginViewModel: ViewModel {
     
     
     func showLoginOptions() {
-        _ = useCases?.getLinkedAccountsUseCase.execute(input: nil,
-                                                   finishHandler: { listOfAccounts in
+        _ = useCases.getLinkedAccountsUseCase.execute(input: ANYInput(value: "asdfasdf"),
+                                                      finishHandler: { listOfAccounts in
             actions.needToShowLoginOptions()
         })
         actions.needToShowLoginOptions()

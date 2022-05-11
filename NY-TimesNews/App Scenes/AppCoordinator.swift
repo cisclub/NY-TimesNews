@@ -32,7 +32,7 @@ final class AppCoordinator {
         let input = OTPLoginCoordinatorInput(window: window)
         
         var dataSource: [StandardCellModel]? = nil
-        let cellsActions = StandardCellActions { selectedIndex in
+        let cellsActions = StandardCellActions { (selectedIndex, model) in
             for (index, model) in dataSource!.enumerated() {
                 if index == selectedIndex {
                     model.state.value = .selected
@@ -47,14 +47,24 @@ final class AppCoordinator {
                             TextCellModel(useCases: nil,
                                           actions: nil,
                                           content: "The following are all the accounts under your Emirates ID that will be linked to and*****0:"),
-                            LinkedAccountCellModel(useCases: nil, actions: cellsActions,
+                            LinkedAccountCellModel(useCases: nil,
+                                                   actions: cellsActions,
                                                    profileImage: UIImage(named: "etisalatLogoVerticalEng")!,
                                                    name: "Ahmad",
                                                    description: "0508734558 - Postpaid"),
-                            LinkedAccountCellModel(useCases: nil, actions: cellsActions,
+                            LinkedAccountCellModel(useCases: nil,
+                                                   actions: cellsActions,
                                                    profileImage: UIImage(named: "etisalatLogoVerticalEng")!,
                                                    name: "Amin",
-                                                   description: "0508734558 - Prepaid")
+                                                   description: "0508734558 - Prepaid"),
+                            LinkedAccountCellModel(useCases: nil,
+                                                   actions: cellsActions,
+                                                   profileImage: UIImage(named: "etisalatLogoVerticalEng")!,
+                                                   name: "Amin",
+                                                   description: "0508734558 - Prepaid"),
+                            ButtonCellModel(useCases: nil, actions: StandardCellActions(cellSelected: { [weak self] index, model in
+                                self!.innerCoordinator?.dismiss()
+                            }), buttonTitle: Strings.saveAndContinue)
                         ]
                         let linkedAccountsInput = LinkedAccountsListCoordinatorInput(presentingViewController: presentingViewController,
                                                                                      dataSource: dataSource!)

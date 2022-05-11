@@ -77,6 +77,9 @@
 		D2B3FD56282936E200C81ABE /* StandardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3FD55282936E200C81ABE /* StandardViewController.swift */; };
 		D2C54CE4282B6B48000AAA13 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54CE3282B6B48000AAA13 /* TextCell.swift */; };
 		D2C54CE6282B6B9D000AAA13 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C54CE5282B6B9D000AAA13 /* TextCell.xib */; };
+		D2C54D02282C3E01000AAA13 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D01282C3E01000AAA13 /* ButtonCell.swift */; };
+		D2C54D04282C3E82000AAA13 /* ButtonCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D03282C3E82000AAA13 /* ButtonCellModel.swift */; };
+		D2C54D06282C3EA2000AAA13 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C54D05282C3EA2000AAA13 /* ButtonCell.xib */; };
 		D2D6E618281CFB6400193460 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E613281CFB6400193460 /* BaseLabel.swift */; };
 		D2D6E619281CFB6400193460 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E614281CFB6400193460 /* BaseView.swift */; };
 		D2D6E61A281CFB6400193460 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E615281CFB6400193460 /* BaseButton.swift */; };
@@ -221,6 +224,9 @@
 		D2B3FD55282936E200C81ABE /* StandardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardViewController.swift; sourceTree = "<group>"; };
 		D2C54CE3282B6B48000AAA13 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		D2C54CE5282B6B9D000AAA13 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
+		D2C54D01282C3E01000AAA13 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		D2C54D03282C3E82000AAA13 /* ButtonCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellModel.swift; sourceTree = "<group>"; };
+		D2C54D05282C3EA2000AAA13 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		D2D6E613281CFB6400193460 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		D2D6E614281CFB6400193460 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D2D6E615281CFB6400193460 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
@@ -557,6 +563,7 @@
 		D24AE2D1282AA9710090B0F5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D2C54D00282C3DF6000AAA13 /* ButtonCell */,
 				D2C54CE2282B6B2E000AAA13 /* TextCell */,
 				D24AE2DA282AABE50090B0F5 /* LinkedAccountCellModel.swift */,
 				D24AE2DC282ACC560090B0F5 /* LinkedAccountCell.swift */,
@@ -724,6 +731,16 @@
 				D2C54CE5282B6B9D000AAA13 /* TextCell.xib */,
 			);
 			path = TextCell;
+			sourceTree = "<group>";
+		};
+		D2C54D00282C3DF6000AAA13 /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54D01282C3E01000AAA13 /* ButtonCell.swift */,
+				D2C54D03282C3E82000AAA13 /* ButtonCellModel.swift */,
+				D2C54D05282C3EA2000AAA13 /* ButtonCell.xib */,
+			);
+			path = ButtonCell;
 			sourceTree = "<group>";
 		};
 		D2D6E611281CFB5B00193460 /* Theme */ = {
@@ -1009,6 +1026,7 @@
 				D2D6E67D281D042A00193460 /* ge_ss_two_light.ttf in Resources */,
 				D2D6E67C281D042A00193460 /* AM277.TTF in Resources */,
 				D2D6E66B281D042A00193460 /* AXtManal Regular.ttf in Resources */,
+				D2C54D06282C3EA2000AAA13 /* ButtonCell.xib in Resources */,
 				07796C3A27A1773C00FD0E4D /* Assets.xcassets in Resources */,
 				D2D6E680281D042A00193460 /* Lato-Light.ttf in Resources */,
 				D2D6E669281D042A00193460 /* Lato-Bold.ttf in Resources */,
@@ -1064,6 +1082,7 @@
 				D24AE2D7282AA9710090B0F5 /* LinkedAccountsListViewModel.swift in Sources */,
 				07796C9927A2927400FD0E4D /* UIImageView+Extension.swift in Sources */,
 				D24BD3AE281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift in Sources */,
+				D2C54D04282C3E82000AAA13 /* ButtonCellModel.swift in Sources */,
 				D2D6E61B281CFB6400193460 /* ApplicationTheme.swift in Sources */,
 				07796C7327A17E8200FD0E4D /* HTTPRequest.swift in Sources */,
 				D24AE2D6282AA9710090B0F5 /* LinkedAccountsListUseCases.swift in Sources */,
@@ -1115,6 +1134,7 @@
 				D27D7BDE281F68BC00B4E0BE /* OTPRemoveActionsView.swift in Sources */,
 				07796C7127A17E6800FD0E4D /* String+Extension.swift in Sources */,
 				D24AE2AF282A787E0090B0F5 /* ListActionsView.swift in Sources */,
+				D2C54D02282C3E01000AAA13 /* ButtonCell.swift in Sources */,
 				D20D434728297E8400F31B44 /* UIView+Shimmer.m in Sources */,
 				D2D6E63D281CFFFC00193460 /* OTPLoginRepo.swift in Sources */,
 				07796C3327A1773A00FD0E4D /* SceneDelegate.swift in Sources */,

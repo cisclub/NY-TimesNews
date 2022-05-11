@@ -24,22 +24,13 @@ class ListActionsFadePresentingCoordinator: Coordinator {
     }
     
     func start() {
-        let rowHeight = 65.0
-        let bottomMargin = 54.0
-        let height = CGFloat(input.dataSource.count) * rowHeight
+        let presentingViewControllerHeight = input.presentingViewController.view.frame.size.height
         let actionsViewModel = ListActionsViewModel(useCases: nil,
                                                     actions: nil,
                                                     dataSource: input.dataSource,
                                                     backgroundColor: input.backgroundColor,
-                                                    tableViewHeight: height + bottomMargin)
+                                                    presentingViewControllerHeight: presentingViewControllerHeight);
         let actionsView = ListActionsView.instance(withModel: actionsViewModel)
-//        if let footerView = input.footerView {
-//            actionsView.addArrangedSubview(footerView)
-//            let viewsDictionary = ["child": footerView]
-//            actionsView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[child(==100)]",
-//                                                                      metrics: nil,
-//                                                                      views: viewsDictionary))
-//        }
         let actionsFadeInput = ActionsFadePresentingCoordinatorInput(presentingViewController: input.presentingViewController,
                                                                      title: input.title,
                                                                      actionsView:actionsView)
@@ -49,6 +40,10 @@ class ListActionsFadePresentingCoordinator: Coordinator {
         fadeCoordinator = ActionsFadePresentingCoordinator(input: actionsFadeInput, actions: actionsFadeActions)
         fadeCoordinator!.start()
     }
+    
+    func dismiss() {
+        self.fadeCoordinator?.dismiss()
+    }
 }
 
 
@@ -57,7 +52,6 @@ struct ListActionsFadePresentingCoordinatorInput {
     let title: String
     let dataSource: [StandardCellModel]
     let backgroundColor: UIColor
-    let footerView: UIView?
 }
 
 

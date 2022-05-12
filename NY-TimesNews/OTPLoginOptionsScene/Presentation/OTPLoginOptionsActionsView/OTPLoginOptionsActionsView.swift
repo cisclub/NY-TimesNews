@@ -61,10 +61,8 @@ class OTPLoginOptionsActionsView: UIView, MVVM {
 struct OTPLoginOptionsActionsViewModel: ViewModel {
     typealias UseCasesType = Void?
     typealias ActionsType = OTPLoginOptionsActionsViewModelActions
-    typealias ViewType = UIViewController
     
     
-    var view: UIViewController?
     var viewController: UIViewController?
     var useCases: Void?
     var actions: ActionsType

@@ -14,9 +14,8 @@ struct ListActionsFadePresentingViewModel: ViewModel {
     
     typealias UseCasesType = ListActionsFadePresentingUseCases
     typealias ActionsType = ListActionsFadePresentingViewModelActions
-    typealias ViewType = UIViewController
     
-    var view: UIViewController?
+    
     let viewController: UIViewController? = nil
     let useCases: UseCasesType
     let actions: ActionsType

@@ -113,10 +113,8 @@ class StandardCell: UITableViewCell, MVVM {
 class StandardCellModel: ViewModel {
     typealias UseCasesType = StandardCellUseCases?
     typealias ActionsType = StandardCellActions?
-    typealias ViewType = StandardCell
     
     
-    var view: StandardCell?
     let useCases: UseCasesType
     let actions: ActionsType
     var state: Observable<StandardCell.State> = Observable<StandardCell.State>(.normal)
@@ -129,7 +127,7 @@ class StandardCellModel: ViewModel {
     
     
     func reusableIdentifier() -> String {
-        return String(describing: ViewType.self)
+        return "StandardCell"
     }
 }
 

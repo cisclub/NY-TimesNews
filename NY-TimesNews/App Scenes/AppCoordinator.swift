@@ -72,10 +72,10 @@ final class AppCoordinator {
             let linkedAccountsActions = LinkedAccountsListCoordinatorActions {
                 print("Dismissed")
             }
-                        self.innerCoordinator = LinkedAccountsListCoordinator(input: linkedAccountsInput,
-                                                                         actions: linkedAccountsActions)
+            self.innerCoordinator = LinkedAccountsListCoordinator(input: linkedAccountsInput,
+                                                                  actions: linkedAccountsActions)
             
-                        self.innerCoordinator!.start()
+            self.innerCoordinator!.start()
             
 //            let dataSource =
 //            [

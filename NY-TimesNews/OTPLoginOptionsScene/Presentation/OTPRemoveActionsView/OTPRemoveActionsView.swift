@@ -37,10 +37,8 @@ extension OTPRemoveActionsView {
 struct OTPRemoveActionsViewModel: ViewModel {
     typealias UseCasesType = Void?
     typealias ActionsType = OTPRemoveActionsViewModelActions
-    typealias ViewType = UIViewController
     
     
-    var view: UIViewController?
     var viewController: UIViewController?
     var useCases: Void?
     var actions: ActionsType

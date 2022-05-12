@@ -33,13 +33,6 @@
 		07FE274B2812E8B9004B53EF /* LaunchStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE274A2812E8B9004B53EF /* LaunchStateManager.swift */; };
 		D20868EF281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20868EE281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift */; };
 		D20868F2281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D20868F1281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib */; };
-		D20D433928293D2700F31B44 /* GreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D432F28293D2700F31B44 /* GreenCoordinator.swift */; };
-		D20D433A28293D2700F31B44 /* GreenRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D433128293D2700F31B44 /* GreenRepo.swift */; };
-		D20D433B28293D2700F31B44 /* GreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D433328293D2700F31B44 /* GreenViewModel.swift */; };
-		D20D433C28293D2700F31B44 /* GreenUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D433428293D2700F31B44 /* GreenUseCases.swift */; };
-		D20D433D28293D2700F31B44 /* GreenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D433528293D2700F31B44 /* GreenUseCase.swift */; };
-		D20D433E28293D2700F31B44 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D433828293D2700F31B44 /* GreenViewController.swift */; };
-		D20D4340282943C100F31B44 /* GreenScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20D433F282943C100F31B44 /* GreenScene.storyboard */; };
 		D20D434728297E8400F31B44 /* UIView+Shimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D434628297E8400F31B44 /* UIView+Shimmer.m */; };
 		D20D4349282983E300F31B44 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D4348282983E300F31B44 /* UIView.swift */; };
 		D24AE2AE282A787E0090B0F5 /* ListActionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24AE2AC282A787E0090B0F5 /* ListActionsView.xib */; };
@@ -80,12 +73,6 @@
 		D2C54D02282C3E01000AAA13 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D01282C3E01000AAA13 /* ButtonCell.swift */; };
 		D2C54D04282C3E82000AAA13 /* ButtonCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D03282C3E82000AAA13 /* ButtonCellModel.swift */; };
 		D2C54D06282C3EA2000AAA13 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C54D05282C3EA2000AAA13 /* ButtonCell.xib */; };
-		D2C54D16282CD42E000AAA13 /* SoftCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D0C282CD42E000AAA13 /* SoftCoordinator.swift */; };
-		D2C54D17282CD42E000AAA13 /* SoftRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D0E282CD42E000AAA13 /* SoftRepo.swift */; };
-		D2C54D18282CD42E000AAA13 /* SoftUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D10282CD42E000AAA13 /* SoftUseCase.swift */; };
-		D2C54D19282CD42E000AAA13 /* SoftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D11282CD42E000AAA13 /* SoftViewModel.swift */; };
-		D2C54D1A282CD42E000AAA13 /* SoftUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D12282CD42E000AAA13 /* SoftUseCases.swift */; };
-		D2C54D1B282CD42E000AAA13 /* SoftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D15282CD42E000AAA13 /* SoftViewController.swift */; };
 		D2D6E618281CFB6400193460 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E613281CFB6400193460 /* BaseLabel.swift */; };
 		D2D6E619281CFB6400193460 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E614281CFB6400193460 /* BaseView.swift */; };
 		D2D6E61A281CFB6400193460 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E615281CFB6400193460 /* BaseButton.swift */; };
@@ -185,13 +172,6 @@
 		07FE274A2812E8B9004B53EF /* LaunchStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchStateManager.swift; sourceTree = "<group>"; };
 		D20868EE281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPLoginOptionsActionsView.swift; sourceTree = "<group>"; };
 		D20868F1281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPLoginOptionsActionsView.xib; sourceTree = "<group>"; };
-		D20D432F28293D2700F31B44 /* GreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenCoordinator.swift; sourceTree = "<group>"; };
-		D20D433128293D2700F31B44 /* GreenRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenRepo.swift; sourceTree = "<group>"; };
-		D20D433328293D2700F31B44 /* GreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenViewModel.swift; sourceTree = "<group>"; };
-		D20D433428293D2700F31B44 /* GreenUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenUseCases.swift; sourceTree = "<group>"; };
-		D20D433528293D2700F31B44 /* GreenUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenUseCase.swift; sourceTree = "<group>"; };
-		D20D433828293D2700F31B44 /* GreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
-		D20D433F282943C100F31B44 /* GreenScene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GreenScene.storyboard; sourceTree = "<group>"; };
 		D20D434528297E8300F31B44 /* UIView+Shimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shimmer.h"; sourceTree = "<group>"; };
 		D20D434628297E8400F31B44 /* UIView+Shimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shimmer.m"; sourceTree = "<group>"; };
 		D20D4348282983E300F31B44 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -233,12 +213,6 @@
 		D2C54D01282C3E01000AAA13 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		D2C54D03282C3E82000AAA13 /* ButtonCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellModel.swift; sourceTree = "<group>"; };
 		D2C54D05282C3EA2000AAA13 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
-		D2C54D0C282CD42E000AAA13 /* SoftCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftCoordinator.swift; sourceTree = "<group>"; };
-		D2C54D0E282CD42E000AAA13 /* SoftRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftRepo.swift; sourceTree = "<group>"; };
-		D2C54D10282CD42E000AAA13 /* SoftUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftUseCase.swift; sourceTree = "<group>"; };
-		D2C54D11282CD42E000AAA13 /* SoftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftViewModel.swift; sourceTree = "<group>"; };
-		D2C54D12282CD42E000AAA13 /* SoftUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftUseCases.swift; sourceTree = "<group>"; };
-		D2C54D15282CD42E000AAA13 /* SoftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftViewController.swift; sourceTree = "<group>"; };
 		D2D6E613281CFB6400193460 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		D2D6E614281CFB6400193460 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D2D6E615281CFB6400193460 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
@@ -346,10 +320,8 @@
 		07796C2F27A1773A00FD0E4D /* NY-TimesNews */ = {
 			isa = PBXGroup;
 			children = (
-				D2C54D0B282CD42E000AAA13 /* SoftScene */,
 				D24AE2C9282AA9710090B0F5 /* LinkedAccountsListScene */,
 				D28515F7282A709C004A760A /* ListActionsFadePresentingScene */,
-				D20D432E28293D2700F31B44 /* GreenScene */,
 				D2D6E61C281CFFFC00193460 /* OTPLoginOptionsScene */,
 				D2D6E628281CFFFC00193460 /* OTPLoginScene */,
 				D24BD39E281C9DA100974860 /* FadePresentingWithBottomContainerScene */,
@@ -470,52 +442,6 @@
 				D20868F1281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib */,
 			);
 			path = OTPLoginOptionsActionsView;
-			sourceTree = "<group>";
-		};
-		D20D432E28293D2700F31B44 /* GreenScene */ = {
-			isa = PBXGroup;
-			children = (
-				D20D432F28293D2700F31B44 /* GreenCoordinator.swift */,
-				D20D433028293D2700F31B44 /* Data */,
-				D20D433228293D2700F31B44 /* Domain */,
-				D20D433628293D2700F31B44 /* Presentation */,
-			);
-			path = GreenScene;
-			sourceTree = "<group>";
-		};
-		D20D433028293D2700F31B44 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				D20D433128293D2700F31B44 /* GreenRepo.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		D20D433228293D2700F31B44 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				D20D433328293D2700F31B44 /* GreenViewModel.swift */,
-				D20D433428293D2700F31B44 /* GreenUseCases.swift */,
-				D20D433528293D2700F31B44 /* GreenUseCase.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		D20D433628293D2700F31B44 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				D20D433728293D2700F31B44 /* Cells */,
-				D20D433828293D2700F31B44 /* GreenViewController.swift */,
-				D20D433F282943C100F31B44 /* GreenScene.storyboard */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		D20D433728293D2700F31B44 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		D24AE2AB282A787E0090B0F5 /* ListActionsViewMVVM */ = {
@@ -754,51 +680,6 @@
 				D2C54D05282C3EA2000AAA13 /* ButtonCell.xib */,
 			);
 			path = ButtonCell;
-			sourceTree = "<group>";
-		};
-		D2C54D0B282CD42E000AAA13 /* SoftScene */ = {
-			isa = PBXGroup;
-			children = (
-				D2C54D0C282CD42E000AAA13 /* SoftCoordinator.swift */,
-				D2C54D0D282CD42E000AAA13 /* Data */,
-				D2C54D0F282CD42E000AAA13 /* Domain */,
-				D2C54D13282CD42E000AAA13 /* Presentation */,
-			);
-			path = SoftScene;
-			sourceTree = "<group>";
-		};
-		D2C54D0D282CD42E000AAA13 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				D2C54D0E282CD42E000AAA13 /* SoftRepo.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		D2C54D0F282CD42E000AAA13 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				D2C54D10282CD42E000AAA13 /* SoftUseCase.swift */,
-				D2C54D11282CD42E000AAA13 /* SoftViewModel.swift */,
-				D2C54D12282CD42E000AAA13 /* SoftUseCases.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		D2C54D13282CD42E000AAA13 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				D2C54D14282CD42E000AAA13 /* Cells */,
-				D2C54D15282CD42E000AAA13 /* SoftViewController.swift */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		D2C54D14282CD42E000AAA13 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		D2D6E611281CFB5B00193460 /* Theme */ = {
@@ -1074,7 +955,6 @@
 				D2D6E67A281D042A00193460 /* AM274.TTF in Resources */,
 				D2D6E673281D042A00193460 /* AM282.TTF in Resources */,
 				D24AE2B6282A802B0090B0F5 /* StandardCell.xib in Resources */,
-				D20D4340282943C100F31B44 /* GreenScene.storyboard in Resources */,
 				D2D6E681281D042A00193460 /* Lato-Medium.ttf in Resources */,
 				D2D6E674281D042A00193460 /* Lato-BlackItalic.ttf in Resources */,
 				D27D7BDD281F68BC00B4E0BE /* OTPRemoveActionsView.xib in Resources */,
@@ -1132,8 +1012,6 @@
 				07796C6327A1778900FD0E4D /* StringConstants.swift in Sources */,
 				D2D6E63F281CFFFC00193460 /* OTPLoginViewModel.swift in Sources */,
 				D2D6E638281CFFFC00193460 /* OTPLoginOptionsUseCase.swift in Sources */,
-				D20D433A28293D2700F31B44 /* GreenRepo.swift in Sources */,
-				D20D433D28293D2700F31B44 /* GreenUseCase.swift in Sources */,
 				D24EEAE2281C9A2800D7F4CC /* FadePresentingViewController.swift in Sources */,
 				D20868EF281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift in Sources */,
 				D24AE2D9282AA9710090B0F5 /* LinkedAccountsListCoordinator.swift in Sources */,
@@ -1142,20 +1020,16 @@
 				D24BD3AE281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift in Sources */,
 				D2C54D04282C3E82000AAA13 /* ButtonCellModel.swift in Sources */,
 				D2D6E61B281CFB6400193460 /* ApplicationTheme.swift in Sources */,
-				D2C54D16282CD42E000AAA13 /* SoftCoordinator.swift in Sources */,
 				07796C7327A17E8200FD0E4D /* HTTPRequest.swift in Sources */,
 				D24AE2D6282AA9710090B0F5 /* LinkedAccountsListUseCases.swift in Sources */,
 				D25FB6652817FD980034D08A /* CLEANBase.swift in Sources */,
 				D24BD3AD281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift in Sources */,
 				07FE274B2812E8B9004B53EF /* LaunchStateManager.swift in Sources */,
-				D2C54D1A282CD42E000AAA13 /* SoftUseCases.swift in Sources */,
-				D2C54D17282CD42E000AAA13 /* SoftRepo.swift in Sources */,
 				D2D6E641281CFFFC00193460 /* OTPLoginUseCase.swift in Sources */,
 				D2C54CE4282B6B48000AAA13 /* TextCell.swift in Sources */,
 				07796C8427A1862200FD0E4D /* UIViewController+Extension.swift in Sources */,
 				07796C6A27A17DD200FD0E4D /* HTTPClient.swift in Sources */,
 				D2851602282A709C004A760A /* ListActionsFadePresentingCoordinator.swift in Sources */,
-				D20D433E28293D2700F31B44 /* GreenViewController.swift in Sources */,
 				D2D6E63E281CFFFC00193460 /* Dummy.swift in Sources */,
 				07796C8F27A188B100FD0E4D /* AlertsView.swift in Sources */,
 				D2D6E63C281CFFFC00193460 /* OTPLoginCoordinator.swift in Sources */,
@@ -1167,29 +1041,23 @@
 				D24EEAE1281C9A2800D7F4CC /* FadePresentingViewModel.swift in Sources */,
 				07796C7A27A1809900FD0E4D /* AppCoordinator.swift in Sources */,
 				D2B3FD56282936E200C81ABE /* StandardViewController.swift in Sources */,
-				D20D433C28293D2700F31B44 /* GreenUseCases.swift in Sources */,
 				D2D6E61A281CFB6400193460 /* BaseButton.swift in Sources */,
 				D24BD3B0281C9E6B00974860 /* ActionsFadePresentingViewModel.swift in Sources */,
 				D2D6E639281CFFFC00193460 /* OTPLoginOptionsUseCases.swift in Sources */,
 				07796C8727A1865F00FD0E4D /* LoadableIndicator.swift in Sources */,
 				D24EEAF1281C9AD000D7F4CC /* ActionsFadePresentingCoordinator.swift in Sources */,
-				D20D433B28293D2700F31B44 /* GreenViewModel.swift in Sources */,
 				D24BD3A9281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift in Sources */,
 				D24AE2D5282AA9710090B0F5 /* LinkedAccountsListUseCase.swift in Sources */,
 				D2D6E640281CFFFC00193460 /* OTPLoginUseCases.swift in Sources */,
 				07796C7527A17F4400FD0E4D /* ParamEncoding.swift in Sources */,
 				D2D6E618281CFB6400193460 /* BaseLabel.swift in Sources */,
-				D20D433928293D2700F31B44 /* GreenCoordinator.swift in Sources */,
 				D2D6E685281D056D00193460 /* Strings.swift in Sources */,
 				D2851603282A709C004A760A /* ListActionsFadePresentingRepo.swift in Sources */,
 				D2D6E635281CFFFC00193460 /* OTPLoginOptionsCoordinator.swift in Sources */,
 				D20D4349282983E300F31B44 /* UIView.swift in Sources */,
 				07796C8D27A1886F00FD0E4D /* ViewsIdentifiers.swift in Sources */,
-				D2C54D18282CD42E000AAA13 /* SoftUseCase.swift in Sources */,
 				D2851605282A709C004A760A /* ListActionsFadePresentingViewModel.swift in Sources */,
-				D2C54D1B282CD42E000AAA13 /* SoftViewController.swift in Sources */,
 				D2D6E636281CFFFC00193460 /* OTPLoginOptionsRepo.swift in Sources */,
-				D2C54D19282CD42E000AAA13 /* SoftViewModel.swift in Sources */,
 				07796C3127A1773A00FD0E4D /* AppDelegate.swift in Sources */,
 				07796C7727A17FE100FD0E4D /* RESTError.swift in Sources */,
 				D24AE2DB282AABE50090B0F5 /* LinkedAccountCellModel.swift in Sources */,

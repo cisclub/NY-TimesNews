@@ -25,13 +25,33 @@ class ListActionsView: UIStackView, MVVM {
         let nibName = "ListActionsView"
         let view = Bundle.main.loadNibNamed(nibName, owner: nil)!.first as! ListActionsView
         
-        viewModel.view = view
         view.viewModel = viewModel
         view.tableView.delegate = view.viewModel
         view.tableView.dataSource = view.viewModel
         view.viewModel?.setupTableView()
+        view.bind()
         
         return view
+    }
+    
+    func bind() {
+        viewModel?.tableViewHeight.bind({[weak self] newValue in
+            self?.tableViewHeight.constant = newValue
+        })
+        
+        viewModel?.tableViewShouldScroll.bind({ [weak self] shouldScroll in
+            self?.tableView.isScrollEnabled = shouldScroll
+        })
+        viewModel?.tableViewBackgroundColor.bind({ [weak self] color in
+            self?.tableView.backgroundColor = color
+        })
+        viewModel?.registeredCellIdentifiers.bind({ [weak self] identifiers in
+            for identifier in identifiers {
+                self?.tableView.register(UINib(nibName: identifier,
+                                               bundle: nil),
+                                         forCellReuseIdentifier: identifier)
+            }
+        })
     }
 }
 
@@ -39,16 +59,18 @@ class ListActionsView: UIStackView, MVVM {
 class ListActionsViewModel: NSObject, ViewModel {
     typealias UseCasesType = ListActionsViewUseCases?
     typealias ActionsType = ListActionsViewActions?
-    typealias ViewType = ListActionsView
     
     
-    var view: ListActionsView?
     let useCases: UseCasesType
     let actions: ActionsType
     let dataSource: [StandardCellModel]
     let backgroundColor: UIColor
     let presentingViewControllerHeight: CGFloat
     let tableViewTopMargin = 300.0
+    var tableViewHeight = Observable<CGFloat>(0.0)
+    var tableViewShouldScroll = Observable<Bool>(false)
+    var tableViewBackgroundColor = Observable<UIColor>(.white)
+    var registeredCellIdentifiers = Observable<[String]>([])
     
     
     init(useCases: UseCasesType,
@@ -59,10 +81,17 @@ class ListActionsViewModel: NSObject, ViewModel {
     {
         self.useCases = useCases
         self.actions = actions
-        self.view = nil
-        self.dataSource = dataSource
         self.backgroundColor = backgroundColor
         self.presentingViewControllerHeight = presentingViewControllerHeight
+        
+        var identifiers = [String]()
+        for model in dataSource {
+            identifiers.append(model.reusableIdentifier())
+        }
+        registeredCellIdentifiers.value = identifiers
+        
+        
+        self.dataSource = dataSource
     }
     
     func setupTableView() {
@@ -72,21 +101,10 @@ class ListActionsViewModel: NSObject, ViewModel {
         let maxHeight = presentingViewControllerHeight - tableViewTopMargin
         let height = min(actualHeight, maxHeight)
         let shouldScroll = maxHeight <= actualHeight
-        view?.tableViewHeight.constant = height
+        tableViewHeight.value = height
+        tableViewShouldScroll.value = shouldScroll
         
-        view?.tableView.isScrollEnabled = shouldScroll
-        
-        view?.tableView.backgroundColor = backgroundColor
-        
-        registerCells(inTableView: view!.tableView)
-    }
-    
-    func registerCells(inTableView tableView: UITableView) {
-        for cellModel in dataSource {
-            tableView.register(UINib(nibName: cellModel.reusableIdentifier(),
-                                     bundle: nil),
-                               forCellReuseIdentifier: cellModel.reusableIdentifier())
-        }
+        tableViewBackgroundColor.value = backgroundColor
     }
 }
 

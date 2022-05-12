@@ -34,8 +34,10 @@ class ListActionsFadePresentingCoordinator: Coordinator {
         let actionsFadeInput = ActionsFadePresentingCoordinatorInput(presentingViewController: input.presentingViewController,
                                                                      title: input.title,
                                                                      actionsView:actionsView)
-        let actionsFadeActions = ActionsFadePresentingCoordinatorActions { presentedViewController in
-            presentedViewController.dismiss(animated: true)
+        let actionsFadeActions = ActionsFadePresentingCoordinatorActions { [weak self] presentedViewController in
+            presentedViewController.dismiss(animated: true) {
+                self?.actions.wasDismissed()
+            }
         }
         fadeCoordinator = ActionsFadePresentingCoordinator(input: actionsFadeInput, actions: actionsFadeActions)
         fadeCoordinator!.start()
@@ -56,4 +58,5 @@ struct ListActionsFadePresentingCoordinatorInput {
 
 
 struct ListActionsFadePresentingCoordinatorActions {
+    let wasDismissed: () -> ()
 }

@@ -25,10 +25,12 @@ class LinkedAccountsListCoordinator: Coordinator {
     
     func start() {
         let actionsListInput = ListActionsFadePresentingCoordinatorInput(presentingViewController: input.presentingViewController,
-                                                                         title: "LINKED ACCOUNTS",
+                                                                         title: input.title,
                                                                          dataSource: input.dataSource,
                                                                          backgroundColor: UIColor.white)
-        let actions = ListActionsFadePresentingCoordinatorActions()
+        let actions = ListActionsFadePresentingCoordinatorActions { [weak self] in
+            self?.actions.wasDismissed()
+        }
         actionsListCoordinator = ListActionsFadePresentingCoordinator(input: actionsListInput,
                                                                           actions: actions)
         
@@ -44,8 +46,10 @@ class LinkedAccountsListCoordinator: Coordinator {
 struct LinkedAccountsListCoordinatorInput {
     let presentingViewController: UIViewController
     let dataSource: [StandardCellModel]
+    let title: String
 }
 
 
 struct LinkedAccountsListCoordinatorActions {
+    let wasDismissed: () -> ()
 }

@@ -25,6 +25,9 @@ class LinkedAccountCell: StandardCell {
         primaryLabel.fullyRoundCorners()
         primaryLabel.backgroundColor = .mainThemeColor
         primaryLabel.type = .h6
+        
+        profileImageView.roundCorners(withRadius: 12)
+        profileImageView.clipsToBounds = true
     }
     
     

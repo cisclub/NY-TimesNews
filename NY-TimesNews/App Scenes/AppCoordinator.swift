@@ -67,8 +67,11 @@ final class AppCoordinator {
                             }), buttonTitle: Strings.saveAndContinue)
                         ]
                         let linkedAccountsInput = LinkedAccountsListCoordinatorInput(presentingViewController: presentingViewController,
-                                                                                     dataSource: dataSource!)
-                        let linkedAccountsActions = LinkedAccountsListCoordinatorActions()
+                                                                                     dataSource: dataSource!,
+                                                                                     title: Strings.linkedAccouts)
+            let linkedAccountsActions = LinkedAccountsListCoordinatorActions {
+                print("Dismissed")
+            }
                         self.innerCoordinator = LinkedAccountsListCoordinator(input: linkedAccountsInput,
                                                                          actions: linkedAccountsActions)
             

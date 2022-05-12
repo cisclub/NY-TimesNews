@@ -38,7 +38,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close_dualtone" translatesAutoresizingMaskIntoConstraints="NO" id="JHT-SY-2bS">
-                                        <rect key="frame" x="33" y="45" width="14" height="14"/>
+                                        <rect key="frame" x="30" y="42" width="14" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="14" id="0CY-he-sVU"/>
                                             <constraint firstAttribute="height" constant="14" id="gsv-TH-4JK"/>
@@ -49,8 +49,8 @@
                                 <constraints>
                                     <constraint firstItem="by3-iE-t6z" firstAttribute="centerY" secondItem="oKu-4I-fB0" secondAttribute="centerY" id="6NK-qg-Mah"/>
                                     <constraint firstItem="by3-iE-t6z" firstAttribute="centerX" secondItem="oKu-4I-fB0" secondAttribute="centerX" id="BCR-03-KC4"/>
-                                    <constraint firstItem="JHT-SY-2bS" firstAttribute="centerX" secondItem="by3-iE-t6z" secondAttribute="trailing" id="JgP-5l-YcR"/>
-                                    <constraint firstItem="JHT-SY-2bS" firstAttribute="centerY" secondItem="by3-iE-t6z" secondAttribute="baseline" id="Yh9-q3-mwP"/>
+                                    <constraint firstItem="JHT-SY-2bS" firstAttribute="centerX" secondItem="by3-iE-t6z" secondAttribute="trailing" constant="-3" id="JgP-5l-YcR"/>
+                                    <constraint firstItem="JHT-SY-2bS" firstAttribute="centerY" secondItem="by3-iE-t6z" secondAttribute="baseline" constant="-3" id="Yh9-q3-mwP"/>
                                     <constraint firstAttribute="width" constant="40" id="qll-KY-uhU"/>
                                 </constraints>
                             </view>

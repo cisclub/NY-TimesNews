@@ -80,6 +80,12 @@
 		D2C54D02282C3E01000AAA13 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D01282C3E01000AAA13 /* ButtonCell.swift */; };
 		D2C54D04282C3E82000AAA13 /* ButtonCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D03282C3E82000AAA13 /* ButtonCellModel.swift */; };
 		D2C54D06282C3EA2000AAA13 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C54D05282C3EA2000AAA13 /* ButtonCell.xib */; };
+		D2C54D16282CD42E000AAA13 /* SoftCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D0C282CD42E000AAA13 /* SoftCoordinator.swift */; };
+		D2C54D17282CD42E000AAA13 /* SoftRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D0E282CD42E000AAA13 /* SoftRepo.swift */; };
+		D2C54D18282CD42E000AAA13 /* SoftUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D10282CD42E000AAA13 /* SoftUseCase.swift */; };
+		D2C54D19282CD42E000AAA13 /* SoftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D11282CD42E000AAA13 /* SoftViewModel.swift */; };
+		D2C54D1A282CD42E000AAA13 /* SoftUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D12282CD42E000AAA13 /* SoftUseCases.swift */; };
+		D2C54D1B282CD42E000AAA13 /* SoftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D15282CD42E000AAA13 /* SoftViewController.swift */; };
 		D2D6E618281CFB6400193460 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E613281CFB6400193460 /* BaseLabel.swift */; };
 		D2D6E619281CFB6400193460 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E614281CFB6400193460 /* BaseView.swift */; };
 		D2D6E61A281CFB6400193460 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E615281CFB6400193460 /* BaseButton.swift */; };
@@ -227,6 +233,12 @@
 		D2C54D01282C3E01000AAA13 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		D2C54D03282C3E82000AAA13 /* ButtonCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellModel.swift; sourceTree = "<group>"; };
 		D2C54D05282C3EA2000AAA13 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		D2C54D0C282CD42E000AAA13 /* SoftCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftCoordinator.swift; sourceTree = "<group>"; };
+		D2C54D0E282CD42E000AAA13 /* SoftRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftRepo.swift; sourceTree = "<group>"; };
+		D2C54D10282CD42E000AAA13 /* SoftUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftUseCase.swift; sourceTree = "<group>"; };
+		D2C54D11282CD42E000AAA13 /* SoftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftViewModel.swift; sourceTree = "<group>"; };
+		D2C54D12282CD42E000AAA13 /* SoftUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftUseCases.swift; sourceTree = "<group>"; };
+		D2C54D15282CD42E000AAA13 /* SoftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftViewController.swift; sourceTree = "<group>"; };
 		D2D6E613281CFB6400193460 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		D2D6E614281CFB6400193460 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D2D6E615281CFB6400193460 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
@@ -334,6 +346,7 @@
 		07796C2F27A1773A00FD0E4D /* NY-TimesNews */ = {
 			isa = PBXGroup;
 			children = (
+				D2C54D0B282CD42E000AAA13 /* SoftScene */,
 				D24AE2C9282AA9710090B0F5 /* LinkedAccountsListScene */,
 				D28515F7282A709C004A760A /* ListActionsFadePresentingScene */,
 				D20D432E28293D2700F31B44 /* GreenScene */,
@@ -743,6 +756,51 @@
 			path = ButtonCell;
 			sourceTree = "<group>";
 		};
+		D2C54D0B282CD42E000AAA13 /* SoftScene */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54D0C282CD42E000AAA13 /* SoftCoordinator.swift */,
+				D2C54D0D282CD42E000AAA13 /* Data */,
+				D2C54D0F282CD42E000AAA13 /* Domain */,
+				D2C54D13282CD42E000AAA13 /* Presentation */,
+			);
+			path = SoftScene;
+			sourceTree = "<group>";
+		};
+		D2C54D0D282CD42E000AAA13 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54D0E282CD42E000AAA13 /* SoftRepo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D2C54D0F282CD42E000AAA13 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54D10282CD42E000AAA13 /* SoftUseCase.swift */,
+				D2C54D11282CD42E000AAA13 /* SoftViewModel.swift */,
+				D2C54D12282CD42E000AAA13 /* SoftUseCases.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D2C54D13282CD42E000AAA13 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54D14282CD42E000AAA13 /* Cells */,
+				D2C54D15282CD42E000AAA13 /* SoftViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D2C54D14282CD42E000AAA13 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D2D6E611281CFB5B00193460 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
@@ -1084,11 +1142,14 @@
 				D24BD3AE281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift in Sources */,
 				D2C54D04282C3E82000AAA13 /* ButtonCellModel.swift in Sources */,
 				D2D6E61B281CFB6400193460 /* ApplicationTheme.swift in Sources */,
+				D2C54D16282CD42E000AAA13 /* SoftCoordinator.swift in Sources */,
 				07796C7327A17E8200FD0E4D /* HTTPRequest.swift in Sources */,
 				D24AE2D6282AA9710090B0F5 /* LinkedAccountsListUseCases.swift in Sources */,
 				D25FB6652817FD980034D08A /* CLEANBase.swift in Sources */,
 				D24BD3AD281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift in Sources */,
 				07FE274B2812E8B9004B53EF /* LaunchStateManager.swift in Sources */,
+				D2C54D1A282CD42E000AAA13 /* SoftUseCases.swift in Sources */,
+				D2C54D17282CD42E000AAA13 /* SoftRepo.swift in Sources */,
 				D2D6E641281CFFFC00193460 /* OTPLoginUseCase.swift in Sources */,
 				D2C54CE4282B6B48000AAA13 /* TextCell.swift in Sources */,
 				07796C8427A1862200FD0E4D /* UIViewController+Extension.swift in Sources */,
@@ -1124,8 +1185,11 @@
 				D2D6E635281CFFFC00193460 /* OTPLoginOptionsCoordinator.swift in Sources */,
 				D20D4349282983E300F31B44 /* UIView.swift in Sources */,
 				07796C8D27A1886F00FD0E4D /* ViewsIdentifiers.swift in Sources */,
+				D2C54D18282CD42E000AAA13 /* SoftUseCase.swift in Sources */,
 				D2851605282A709C004A760A /* ListActionsFadePresentingViewModel.swift in Sources */,
+				D2C54D1B282CD42E000AAA13 /* SoftViewController.swift in Sources */,
 				D2D6E636281CFFFC00193460 /* OTPLoginOptionsRepo.swift in Sources */,
+				D2C54D19282CD42E000AAA13 /* SoftViewModel.swift in Sources */,
 				07796C3127A1773A00FD0E4D /* AppDelegate.swift in Sources */,
 				07796C7727A17FE100FD0E4D /* RESTError.swift in Sources */,
 				D24AE2DB282AABE50090B0F5 /* LinkedAccountCellModel.swift in Sources */,

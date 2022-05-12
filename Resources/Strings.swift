@@ -19,4 +19,5 @@ struct Strings {
     static let signInWithUAEPass = "Sign in with UAE Pass".localized
     static let primary = "Primary".localized
     static let saveAndContinue = "SAVE AND CONTINUE".localized
+    static let linkedAccouts = "Linked accounts".localized
 }

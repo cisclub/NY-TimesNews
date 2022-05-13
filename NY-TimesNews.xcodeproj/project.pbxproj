@@ -73,6 +73,13 @@
 		D2C54D02282C3E01000AAA13 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D01282C3E01000AAA13 /* ButtonCell.swift */; };
 		D2C54D04282C3E82000AAA13 /* ButtonCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D03282C3E82000AAA13 /* ButtonCellModel.swift */; };
 		D2C54D06282C3EA2000AAA13 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C54D05282C3EA2000AAA13 /* ButtonCell.xib */; };
+		D2C54D1F282D2F56000AAA13 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D1D282D2F56000AAA13 /* CustomTextField.swift */; };
+		D2C54D20282D2F56000AAA13 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C54D1E282D2F56000AAA13 /* CustomTextField.xib */; };
+		D2C54D22282D30B7000AAA13 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D21282D30B7000AAA13 /* UIHelper.swift */; };
+		D2C54D2F282D37FA000AAA13 /* LoginEntryField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C54D2D282D37FA000AAA13 /* LoginEntryField.xib */; };
+		D2C54D30282D37FA000AAA13 /* LoginEntryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D2E282D37FA000AAA13 /* LoginEntryField.swift */; };
+		D2C54D36282E501E000AAA13 /* LoginEntryFaceID.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C54D34282E501E000AAA13 /* LoginEntryFaceID.xib */; };
+		D2C54D37282E501E000AAA13 /* LoginEntryFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D35282E501E000AAA13 /* LoginEntryFaceID.swift */; };
 		D2D6E618281CFB6400193460 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E613281CFB6400193460 /* BaseLabel.swift */; };
 		D2D6E619281CFB6400193460 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E614281CFB6400193460 /* BaseView.swift */; };
 		D2D6E61A281CFB6400193460 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E615281CFB6400193460 /* BaseButton.swift */; };
@@ -84,7 +91,6 @@
 		D2D6E639281CFFFC00193460 /* OTPLoginOptionsUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E623281CFFFC00193460 /* OTPLoginOptionsUseCases.swift */; };
 		D2D6E63C281CFFFC00193460 /* OTPLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E629281CFFFC00193460 /* OTPLoginCoordinator.swift */; };
 		D2D6E63D281CFFFC00193460 /* OTPLoginRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E62B281CFFFC00193460 /* OTPLoginRepo.swift */; };
-		D2D6E63E281CFFFC00193460 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E62C281CFFFC00193460 /* Dummy.swift */; };
 		D2D6E63F281CFFFC00193460 /* OTPLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E62E281CFFFC00193460 /* OTPLoginViewModel.swift */; };
 		D2D6E640281CFFFC00193460 /* OTPLoginUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E62F281CFFFC00193460 /* OTPLoginUseCases.swift */; };
 		D2D6E641281CFFFC00193460 /* OTPLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E630281CFFFC00193460 /* OTPLoginUseCase.swift */; };
@@ -213,6 +219,13 @@
 		D2C54D01282C3E01000AAA13 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		D2C54D03282C3E82000AAA13 /* ButtonCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellModel.swift; sourceTree = "<group>"; };
 		D2C54D05282C3EA2000AAA13 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		D2C54D1D282D2F56000AAA13 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D2C54D1E282D2F56000AAA13 /* CustomTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
+		D2C54D21282D30B7000AAA13 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		D2C54D2D282D37FA000AAA13 /* LoginEntryField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginEntryField.xib; sourceTree = "<group>"; };
+		D2C54D2E282D37FA000AAA13 /* LoginEntryField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEntryField.swift; sourceTree = "<group>"; };
+		D2C54D34282E501E000AAA13 /* LoginEntryFaceID.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginEntryFaceID.xib; sourceTree = "<group>"; };
+		D2C54D35282E501E000AAA13 /* LoginEntryFaceID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEntryFaceID.swift; sourceTree = "<group>"; };
 		D2D6E613281CFB6400193460 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		D2D6E614281CFB6400193460 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D2D6E615281CFB6400193460 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
@@ -224,7 +237,6 @@
 		D2D6E623281CFFFC00193460 /* OTPLoginOptionsUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginOptionsUseCases.swift; sourceTree = "<group>"; };
 		D2D6E629281CFFFC00193460 /* OTPLoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginCoordinator.swift; sourceTree = "<group>"; };
 		D2D6E62B281CFFFC00193460 /* OTPLoginRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginRepo.swift; sourceTree = "<group>"; };
-		D2D6E62C281CFFFC00193460 /* Dummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		D2D6E62E281CFFFC00193460 /* OTPLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginViewModel.swift; sourceTree = "<group>"; };
 		D2D6E62F281CFFFC00193460 /* OTPLoginUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginUseCases.swift; sourceTree = "<group>"; };
 		D2D6E630281CFFFC00193460 /* OTPLoginUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoginUseCase.swift; sourceTree = "<group>"; };
@@ -682,9 +694,38 @@
 			path = ButtonCell;
 			sourceTree = "<group>";
 		};
+		D2C54D1C282D2F56000AAA13 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54D1D282D2F56000AAA13 /* CustomTextField.swift */,
+				D2C54D1E282D2F56000AAA13 /* CustomTextField.xib */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		D2C54D2C282D37FA000AAA13 /* LoginEntryFieldMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54D2D282D37FA000AAA13 /* LoginEntryField.xib */,
+				D2C54D2E282D37FA000AAA13 /* LoginEntryField.swift */,
+			);
+			path = LoginEntryFieldMVVM;
+			sourceTree = "<group>";
+		};
+		D2C54D33282E501E000AAA13 /* LoginEntryFaceIDMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54D34282E501E000AAA13 /* LoginEntryFaceID.xib */,
+				D2C54D35282E501E000AAA13 /* LoginEntryFaceID.swift */,
+			);
+			path = LoginEntryFaceIDMVVM;
+			sourceTree = "<group>";
+		};
 		D2D6E611281CFB5B00193460 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				D2C54D1C282D2F56000AAA13 /* CustomTextField */,
+				D2C54D21282D30B7000AAA13 /* UIHelper.swift */,
 				D2D6E644281D042A00193460 /* fonts */,
 				D2D6E616281CFB6400193460 /* ApplicationTheme */,
 				D2D6E612281CFB6400193460 /* BaseControls */,
@@ -753,7 +794,6 @@
 			children = (
 				D2D6E629281CFFFC00193460 /* OTPLoginCoordinator.swift */,
 				D2D6E62A281CFFFC00193460 /* Data */,
-				D2D6E62C281CFFFC00193460 /* Dummy.swift */,
 				D2D6E62D281CFFFC00193460 /* Domain */,
 				D2D6E631281CFFFC00193460 /* Presentation */,
 			);
@@ -781,6 +821,8 @@
 		D2D6E631281CFFFC00193460 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D2C54D33282E501E000AAA13 /* LoginEntryFaceIDMVVM */,
+				D2C54D2C282D37FA000AAA13 /* LoginEntryFieldMVVM */,
 				D2D6E633281CFFFC00193460 /* OTPLoginScene.storyboard */,
 				D2D6E634281CFFFC00193460 /* OTPLoginViewController.swift */,
 			);
@@ -940,8 +982,10 @@
 			files = (
 				D2D6E67B281D042A00193460 /* Lato-Heavy.ttf in Resources */,
 				D24BD3B2281CA84800974860 /* ActionsFadePresentingContainerStackView.xib in Resources */,
+				D2C54D2F282D37FA000AAA13 /* LoginEntryField.xib in Resources */,
 				D2D6E667281D042A00193460 /* Lato-LightItalic.ttf in Resources */,
 				D24EEAE3281C9A2800D7F4CC /* FadePresentingViewController.xib in Resources */,
+				D2C54D20282D2F56000AAA13 /* CustomTextField.xib in Resources */,
 				D24AE2AE282A787E0090B0F5 /* ListActionsView.xib in Resources */,
 				D2D6E670281D042A00193460 /* Lato-Regular.ttf in Resources */,
 				07796C3D27A1773C00FD0E4D /* LaunchScreen.storyboard in Resources */,
@@ -972,6 +1016,7 @@
 				D2D6E664281D042A00193460 /* Lato-HeavyItalic.ttf in Resources */,
 				D2D6E665281D042A00193460 /* Lato-Italic.ttf in Resources */,
 				D2D6E67F281D042A00193460 /* Lato-BoldItalic.ttf in Resources */,
+				D2C54D36282E501E000AAA13 /* LoginEntryFaceID.xib in Resources */,
 				D2D6E66A281D042A00193460 /* Lato-Black.ttf in Resources */,
 				D2D6E66C281D042A00193460 /* AXtManalBLack Regular.ttf in Resources */,
 				D2D6E676281D042A00193460 /* Lato-Semibold.ttf in Resources */,
@@ -1013,12 +1058,15 @@
 				D2D6E63F281CFFFC00193460 /* OTPLoginViewModel.swift in Sources */,
 				D2D6E638281CFFFC00193460 /* OTPLoginOptionsUseCase.swift in Sources */,
 				D24EEAE2281C9A2800D7F4CC /* FadePresentingViewController.swift in Sources */,
+				D2C54D37282E501E000AAA13 /* LoginEntryFaceID.swift in Sources */,
 				D20868EF281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift in Sources */,
 				D24AE2D9282AA9710090B0F5 /* LinkedAccountsListCoordinator.swift in Sources */,
 				D24AE2D7282AA9710090B0F5 /* LinkedAccountsListViewModel.swift in Sources */,
 				07796C9927A2927400FD0E4D /* UIImageView+Extension.swift in Sources */,
 				D24BD3AE281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift in Sources */,
+				D2C54D22282D30B7000AAA13 /* UIHelper.swift in Sources */,
 				D2C54D04282C3E82000AAA13 /* ButtonCellModel.swift in Sources */,
+				D2C54D30282D37FA000AAA13 /* LoginEntryField.swift in Sources */,
 				D2D6E61B281CFB6400193460 /* ApplicationTheme.swift in Sources */,
 				07796C7327A17E8200FD0E4D /* HTTPRequest.swift in Sources */,
 				D24AE2D6282AA9710090B0F5 /* LinkedAccountsListUseCases.swift in Sources */,
@@ -1030,7 +1078,6 @@
 				07796C8427A1862200FD0E4D /* UIViewController+Extension.swift in Sources */,
 				07796C6A27A17DD200FD0E4D /* HTTPClient.swift in Sources */,
 				D2851602282A709C004A760A /* ListActionsFadePresentingCoordinator.swift in Sources */,
-				D2D6E63E281CFFFC00193460 /* Dummy.swift in Sources */,
 				07796C8F27A188B100FD0E4D /* AlertsView.swift in Sources */,
 				D2D6E63C281CFFFC00193460 /* OTPLoginCoordinator.swift in Sources */,
 				D24AE2DD282ACC560090B0F5 /* LinkedAccountCell.swift in Sources */,
@@ -1055,6 +1102,7 @@
 				D2851603282A709C004A760A /* ListActionsFadePresentingRepo.swift in Sources */,
 				D2D6E635281CFFFC00193460 /* OTPLoginOptionsCoordinator.swift in Sources */,
 				D20D4349282983E300F31B44 /* UIView.swift in Sources */,
+				D2C54D1F282D2F56000AAA13 /* CustomTextField.swift in Sources */,
 				07796C8D27A1886F00FD0E4D /* ViewsIdentifiers.swift in Sources */,
 				D2851605282A709C004A760A /* ListActionsFadePresentingViewModel.swift in Sources */,
 				D2D6E636281CFFFC00193460 /* OTPLoginOptionsRepo.swift in Sources */,

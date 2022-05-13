@@ -22,7 +22,7 @@ class LinkedAccountCell: StandardCell {
         
         separator.backgroundColor = UIColor.separator
         primaryLabel.text = "   \(Strings.primary)   "
-        primaryLabel.fullyRoundCorners()
+        primaryLabel.roundCorners(withRadius: primaryLabel.frame.size.height / 2)
         primaryLabel.backgroundColor = .mainThemeColor
         primaryLabel.type = .h6
         

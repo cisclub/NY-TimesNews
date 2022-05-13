@@ -71,21 +71,6 @@ class StandardCell: UITableViewCell, MVVM {
     
     /// Override this method to change how loading state should update UI
     func updateUITOLoadingState() {
-        addShimmerView(toView:contentView)
-    }
-    
-    func addShimmerView(toView view: UIView) {
-        let whiteView = UIView(frame: view.bounds)
-        whiteView.backgroundColor = .white
-        let shimmer = UIView(frame: whiteView.bounds)
-        shimmer.backgroundColor = .shimmerColor
-        
-        whiteView.addView(view: shimmer, withMargins: [0, 0, 0, 0])
-        view.addView(view: whiteView, withMargins: [0, 0, 0, 0])
-        
-        shimmer.startShimmeringFromRight(toLeft: true)
-        
-        shimmerView = shimmer
     }
     
     func removeShimmer() {

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" id="06D-lk-GaB" customClass="LoginEntryField" customModule="NY_TimesNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="284"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Etisalat Account/Mobile number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-aa-Kzo" customClass="BaseLabel" customModule="NY_TimesNews" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="380" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="whQ-P2-pf3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bau-kq-ges" customClass="CustomTextField" customModule="NY_TimesNews" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="49.5" width="380" height="66.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="Zk9-pW-GZU"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlS-Cm-NhU" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="145" width="380" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="K9l-aJ-mGD"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="CYy-s5-dyZ"/>
+            <connections>
+                <outlet property="bodyLabel" destination="fpd-aa-Kzo" id="96I-dh-d4R"/>
+                <outlet property="button" destination="QlS-Cm-NhU" id="SbM-Dy-NYh"/>
+                <outlet property="textField" destination="bau-kq-ges" id="Z3t-cl-y7S"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="136.60714285714286"/>
+        </stackView>
+    </objects>
+    <designables>
+        <designable name="bau-kq-ges">
+            <size key="intrinsicContentSize" width="380" height="64"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

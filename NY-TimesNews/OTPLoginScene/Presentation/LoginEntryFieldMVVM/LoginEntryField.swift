@@ -1,0 +1,81 @@
+//
+//  
+//  LoginEntryField.swift
+//  NY-TimesNews
+//
+//  Created by Ali Amin on 12/05/2022.
+//
+//
+
+
+import Foundation
+
+
+class LoginEntryField: UIStackView, MVVM {
+    typealias ViewModelType = LoginEntryFieldModel
+    
+    
+    @IBOutlet private var textField: CustomTextField!
+    @IBOutlet private var button: BaseButton!
+    @IBOutlet private var bodyLabel: BaseLabel!
+    var viewModel: ViewModelType?
+    
+    
+    class func instance(withModel viewModel: ViewModelType) -> LoginEntryField {
+        let nibName = "LoginEntryField"
+        let view = Bundle.main.loadNibNamed(nibName, owner: nil)!.first as! LoginEntryField
+        view.viewModel = viewModel
+        
+        return view
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        textField.showInfoButton = true
+        textField.infoButtonCallBack = {
+        }
+        textField.placeholder = Strings.loginNumberPlaceholder
+        textField.titleLabelFont = .smallRegular
+        textField.inactiveTitleLabelColor = .appDarkText
+        textField.showTitleWhenActive = false
+        textField.title = Strings.enterEtisalatNumber
+        
+        button.type = .custom(textColor: .appDisableButtonText,
+                              bgColor: .appDisableButtonBg,
+                              cornerRadius: 24,
+                              borderColor: nil,
+                              margin: 0.0)
+        button.setTitle(Strings.login, for: .normal)
+        button.titleLabel?.font = .h4
+        
+        bodyLabel.type = .subtitle
+        bodyLabel.text = Strings.UAEPassSubtitle
+        bodyLabel.textAlignment = .center
+    }
+}
+
+
+class LoginEntryFieldModel: ViewModel {
+    typealias UseCasesType = LoginEntryFieldUseCases?
+    typealias ActionsType = LoginEntryFieldActions?
+    
+    
+    let useCases: UseCasesType
+    let actions: ActionsType
+    
+    
+    init(useCases: UseCasesType, actions: ActionsType) {
+        self.useCases = useCases
+        self.actions = actions
+    }
+}
+
+
+struct LoginEntryFieldUseCases {
+}
+
+
+struct LoginEntryFieldActions {
+}
+

@@ -14,7 +14,7 @@ extension UIFont {
     }
     
     class var h2: UIFont {
-        return UIFont(name: "Lato-Medium", size: 24.0)!
+        return UIFont(name: "NeoTech-Medium", size: 24.0)!
     }
     
     class var h3: UIFont {
@@ -40,6 +40,15 @@ extension UIFont {
     class var body2: UIFont {
         return UIFont(name: "Lato-Medium", size: 14.0)!
     }
+    
+    class var smallRegular: UIFont {
+        return UIFont(name: "Lato-Regular", size: 12.0)!
+    }
+    
+    class var regular: UIFont {
+        return UIFont(name: "Lato-Regular", size: 14.0)!
+    }
+    
 }
 
 
@@ -67,6 +76,8 @@ enum TextStyle {
     case body2
     case body2Active
     case body3
+    case regular
+    case custom(color: UIColor, alignment: NSTextAlignment, font: UIFont)
 }
 
 extension TextStyle {
@@ -79,7 +90,7 @@ extension TextStyle {
             paragraphStyle.minimumLineHeight = Spacing.XL
             return [.font: UIFont.h1,
                     .paragraphStyle: paragraphStyle,
-                    .foregroundColor: UIColor.darkText]
+                    .foregroundColor: UIColor.appDarkText]
             
         case .h2:
             let paragraphStyle = NSMutableParagraphStyle()
@@ -87,7 +98,7 @@ extension TextStyle {
             paragraphStyle.minimumLineHeight = Spacing.L
             return [.font: UIFont.h2,
                     .paragraphStyle: paragraphStyle,
-                    .foregroundColor: UIColor.darkText]
+                    .foregroundColor: UIColor.appDarkText]
             
         case .h3:
             let paragraphStyle = NSMutableParagraphStyle()
@@ -95,7 +106,7 @@ extension TextStyle {
             paragraphStyle.minimumLineHeight = Spacing.L
             return [.font: UIFont.h3,
                     .paragraphStyle: paragraphStyle,
-                    .foregroundColor: UIColor.darkText]
+                    .foregroundColor: UIColor.appDarkText]
             
         case .h4:
             let paragraphStyle = NSMutableParagraphStyle()
@@ -103,7 +114,7 @@ extension TextStyle {
             paragraphStyle.minimumLineHeight = Spacing.M
             return [.font: UIFont.h4,
                     .paragraphStyle: paragraphStyle,
-                    .foregroundColor: UIColor.darkText]
+                    .foregroundColor: UIColor.appDarkText]
             
         case .h4Active:
             let paragraphStyle = NSMutableParagraphStyle()
@@ -119,7 +130,7 @@ extension TextStyle {
             paragraphStyle.minimumLineHeight = Spacing.M
             return [.font: UIFont.body1,
                     .paragraphStyle: paragraphStyle,
-                    .foregroundColor: UIColor.darkText]
+                    .foregroundColor: UIColor.appDarkText]
             
         case .h5:
             let paragraphStyle = NSMutableParagraphStyle()
@@ -127,7 +138,7 @@ extension TextStyle {
             paragraphStyle.minimumLineHeight = Spacing.M
             return [.font: UIFont.h5,
                     .paragraphStyle: paragraphStyle,
-                    .foregroundColor: UIColor.darkText]
+                    .foregroundColor: UIColor.appDarkText]
             
         case .h6:
             let paragraphStyle = NSMutableParagraphStyle()
@@ -143,7 +154,7 @@ extension TextStyle {
             paragraphStyle.minimumLineHeight = Spacing.M
             return [.font: UIFont.body2,
                     .paragraphStyle: paragraphStyle,
-                    .foregroundColor: UIColor.darkText]
+                    .foregroundColor: UIColor.appDarkText]
             
         case .body2Active:
             let paragraphStyle = NSMutableParagraphStyle()
@@ -152,13 +163,29 @@ extension TextStyle {
             return [.font: UIFont.body2,
                     .paragraphStyle: paragraphStyle,
                     .foregroundColor: UIColor.mainThemeColor]
+            
         case .body3:
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .left
             paragraphStyle.minimumLineHeight = Spacing.MM
             return [.font: UIFont.body2,
-                    .paragraphStyle: paragraphStyle,
                     .foregroundColor: UIColor.darkText]
+            
+        case .regular:
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .left
+            paragraphStyle.minimumLineHeight = Spacing.M
+            return [.font: UIFont.regular,
+                    .paragraphStyle: paragraphStyle,
+                    .foregroundColor: UIColor.appDarkText]
+            
+        case let .custom(color, alignment, font):
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = alignment
+            paragraphStyle.minimumLineHeight = Spacing.M
+            return [.font: font,
+                    .paragraphStyle: paragraphStyle,
+                    .foregroundColor: color]
         }
     }
 }
@@ -184,32 +211,56 @@ extension UIColor {
         return UIColor(red: 0/255.0, green: 36/255.0, blue: 166/255.0, alpha: 1)
     }
     
-    class var darkText: UIColor {
+    class var pink: UIColor {
+        return UIColor(red: 255/255.0, green: 48/255.0, blue: 97/255.0, alpha: 1)
+    }
+    
+    class var black: UIColor {
+        return UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1)
+    }
+    
+    class var grey: UIColor {
+        return UIColor(red: 102/255.0, green: 102/255.0, blue: 102/255.0, alpha: 1)
+    }
+    
+    class var appDarkText: UIColor {
         return UIColor(red: 53/255.0, green: 55/255.0, blue: 56/255.0, alpha: 1)
     }
     
+    class var appActive: UIColor {
+        return UIColor(red: 113/255.0, green: 158/255.0, blue: 25/255.0, alpha: 1)
+    }
+    
+    class var appGray: UIColor {
+        return UIColor(red: 111/255.0, green: 108/255.0, blue: 112/255.0, alpha: 1)
+    }
+    
+    class var appLigtGray: UIColor {
+        return UIColor(red: 178/255.0, green: 178/255.0, blue: 178/255.0, alpha: 1)
+    }
+    
+    class var appRed: UIColor {
+        return UIColor(red: 255/255.0, green: 98/255.0, blue: 94/255.0, alpha: 1)
+    }
+    
+    class var appDisableButtonBg: UIColor {
+        return UIColor(red: 209/255.0, green: 210/255.0, blue: 209/255.0, alpha: 1)
+    }
+    
+    class var appDisableButtonText: UIColor {
+        return UIColor(red: 132/255.0, green: 135/255.0, blue: 137/255.0, alpha: 1)
+    }
+    
+    class var appSand: UIColor {
+        return UIColor(red: 245/255.0, green: 246/255.0, blue: 243/255.0, alpha: 1)
+    }
+    
     class var disabledBackground: UIColor {
-        return #colorLiteral(red: 0.8196078431, green: 0.8235294118, blue: 0.8196078431, alpha: 1)
-    }
-    
-    class var disabledTextColor: UIColor {
-        return #colorLiteral(red: 0.5176470588, green: 0.5294117647, blue: 0.537254902, alpha: 1)
-    }
-    
-    class var separatorColor: UIColor {
-        return #colorLiteral(red: 0.9058823529, green: 0.9058823529, blue: 0.9058823529, alpha: 1)
+            return #colorLiteral(red: 0.8196078431, green: 0.8235294118, blue: 0.8196078431, alpha: 1)
     }
     
     class var mainThemeColor: UIColor {
-        return #colorLiteral(red: 0.4431372549, green: 0.6196078431, blue: 0.09803921569, alpha: 1)
-    }
-    
-    class var shimmerColor: UIColor {
-        return UIColor(red: 245/255.0, green: 246/255.0, blue: 243/255.0, alpha: 1.0)
-    }
-    
-    class var separator: UIColor {
-        return UIColor(red: 231/255.0, green: 231/255.0, blue: 231/255.0, alpha: 1.0)
+            return #colorLiteral(red: 0.4431372549, green: 0.6196078431, blue: 0.09803921569, alpha: 1)
     }
 }
 
@@ -222,57 +273,5 @@ public struct ApplicationTheme {
         static let defaultBackground = UIColor(red: 245/255.0, green: 246/255.0, blue: 243/255.0, alpha: 1)
         static let lightGrey = UIColor.lightGray
         static let green = UIColor(red: 113/255.0, green: 158/255.0, blue: 25/255.0, alpha: 1)
-    }
-}
-
-
-public extension UIView {
-    
-    func roundCorners(withBorder border: CGFloat = 2.0, borderColor color: UIColor, withRadius radius: CGFloat) {
-        
-        layer.cornerRadius = radius
-        layer.borderColor = color.cgColor
-        layer.borderWidth = border
-        layer.masksToBounds  = true
-    }
-    
-    func addBorder(withColor color: UIColor, borderWidth width: CGFloat) {
-        layer.borderColor = color.cgColor
-        layer.borderWidth = width
-    }
-    
-    func roundCorners(withRadius radius: CGFloat) {
-        
-        layer.cornerRadius = radius
-        layer.masksToBounds  = true
-    }
-}
-
-
-// Navigation Bar
-extension ApplicationTheme {
-    static func setupNavigationBarTheme() {
-        // UInavigationbar in contracted state
-        let navigationTitleAttributes = [NSAttributedString.Key.font: UIFont.h2,
-                                         NSAttributedString.Key.foregroundColor: UIColor.darkText]
-        // UInavigationbar in expanded state
-        let navigationLargeTitleAttributes = [NSAttributedString.Key.font: UIFont.h1,
-                                              NSAttributedString.Key.foregroundColor: UIColor.darkText]
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .white
-        appearance.titleTextAttributes = navigationTitleAttributes
-        appearance.largeTitleTextAttributes = navigationLargeTitleAttributes
-        appearance.shadowColor = nil // to remove seperator
-        UINavigationBar.appearance().tintColor = .white // text/button color
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().compactAppearance = appearance
-        if #available(iOS 13.0, *) {
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        } else {
-            UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
-            UINavigationBar.appearance().shadowImage = UIImage()
-            UINavigationBar.appearance().barTintColor = .white // background color
-            UINavigationBar.appearance().isTranslucent = false
-        }
     }
 }

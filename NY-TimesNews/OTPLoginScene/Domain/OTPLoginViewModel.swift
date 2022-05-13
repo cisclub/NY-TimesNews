@@ -10,14 +10,28 @@
 import UIKit
 
 
-struct OTPLoginViewModel: ViewModel {
+class OTPLoginViewModel: ViewModel {
+    enum LoginEntry {
+        case mobileNumber
+        case faceID
+        case touchID
+    }
+    
+    
     typealias UseCasesType = OTPLoginUseCases
     typealias ActionsType = OTPLoginViewModelActions
     
     
     let useCases: UseCasesType
     let actions: ActionsType
+    var loginEntry: Observable<LoginEntry>
     
+    
+    init(useCases: UseCasesType, actions: ActionsType, loginEntry: LoginEntry) {
+        self.useCases = useCases
+        self.actions = actions
+        self.loginEntry = Observable<LoginEntry>(loginEntry)
+    }
     
     func showLoginOptions() {
         _ = useCases.getLinkedAccountsUseCase.execute(input: ANYInput(value: "asdfasdf"),

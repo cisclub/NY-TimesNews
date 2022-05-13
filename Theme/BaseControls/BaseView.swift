@@ -38,20 +38,20 @@ class BaseView: UIView {
         switch type {
         case .card:
             backgroundColor = ApplicationTheme.colors.defaultBackground
-            roundCorners(corners: [.topLeft, .topRight], radius: 20)
+            roundCorners(withRadius: 12)
         case .container:
             backgroundColor = ApplicationTheme.colors.lightGrey
             roundCorners(withRadius: 16)
         case .custom:
             backgroundColor = ApplicationTheme.colors.green
-            //roundCorners(withRadius: 4)
+            roundCorners(withRadius: 4)
         }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        roundCorners(corners: [.topLeft, .topRight], radius: 20.0)
+        //Custom manually positioning layout goes here
     }
     
     override func updateConstraints() {
@@ -61,14 +61,5 @@ class BaseView: UIView {
         //self.translatesAutoresizingMaskIntoConstraints = false
         
         //Add custom constraint code here
-    }
-}
-
-extension UIView {
-   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        layer.mask = mask
     }
 }

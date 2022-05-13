@@ -30,7 +30,7 @@ class OTPLoginCoordinator: Coordinator {
         let actions = OTPLoginViewModelActions(needToShowLoginOptions: needToShowLoginOptions)
         let repo = LinkedAccountsRepo(network: NetworkManager.self)
         let useCases = OTPLoginUseCases(getLinkedAccountsUseCase: GetLinkedAccountsUseCase(repo: repo))
-        let viewModel = OTPLoginViewModel(useCases: useCases, actions: actions)
+        let viewModel = OTPLoginViewModel(useCases: useCases, actions: actions, loginEntry: .faceID)
         let otpLoginViewControler = OTPLoginViewController.instanceFromStoryboard(withViewModel: viewModel, fromStoryboard: "OTPLoginScene")
         nextViewController = otpLoginViewControler
         

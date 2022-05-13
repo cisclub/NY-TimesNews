@@ -63,7 +63,7 @@ class ActionsFadePresentingContainerStackView: UIStackView, MVVM {
         
         titleLabel.type = .title
         titleContainerView.type = .card
-        closeButton.type = .icon
+        closeButton.type = .icon()
         closeButton.setImage(UIImage(named: "Close_dualtone"), for: .normal)
     }
  

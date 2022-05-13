@@ -12,7 +12,7 @@ struct Strings {
     static let loginToMyEtisalat = "uae_pass_login_title".localized
     static let UAEPassSubtitle = "uae_pass_login_subtitle".localized
     static let login = "Login".localized
-    static let loginWithOtherOptions = "Select another option".localized
+    static let loginWithOtherOptions = "uae_pass_login_options".localized
     static let continueAsGuest = "uae_pass_continue_guest".localized
     static let moreLoginOptions = "<Title>".localized
     static let loginWithUsername = "Login with username".localized
@@ -20,4 +20,6 @@ struct Strings {
     static let primary = "Primary".localized
     static let saveAndContinue = "SAVE AND CONTINUE".localized
     static let linkedAccouts = "Linked accounts".localized
+    static let enterEtisalatNumber = "uae_pass_etisalat_login".localized
+    static let loginNumberPlaceholder = "02 xxx xxxx / 04 xxx xxxx / 05x xxx xxxx".localized
 }

@@ -23,28 +23,36 @@
                 <outlet property="lblPlaceHolder" destination="HjB-id-C71" id="Ygq-d5-2p0"/>
                 <outlet property="stackActions" destination="rzC-TU-K1Z" id="5AQ-mM-zhx"/>
                 <outlet property="textField" destination="EqB-ek-7S5" id="jH0-db-TXT"/>
+                <outlet property="validationLabel" destination="2tX-Li-bRr" id="hHe-1z-ttF"/>
                 <outlet property="viewSeparator" destination="eIH-Va-fd2" id="txR-8b-1zu"/>
+                <outlet property="viewSeparatorHeightConstraint" destination="fBR-rI-cNT" id="OsE-HO-l7j"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="384" height="64"/>
+            <rect key="frame" x="0.0" y="0.0" width="384" height="69"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EqB-ek-7S5">
-                    <rect key="frame" x="0.0" y="31.5" width="384" height="18.5"/>
+                    <rect key="frame" x="0.0" y="13" width="384" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="dOJ-EK-hIk"/>
+                    </constraints>
                     <color key="textColor" red="0.20784313725490194" green="0.21568627450980393" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjB-id-C71">
-                    <rect key="frame" x="0.0" y="12" width="52" height="14.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="52" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="aYz-xC-4zZ"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                     <color key="textColor" red="0.51764705882352935" green="0.52941176470588236" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rzC-TU-K1Z">
-                    <rect key="frame" x="276" y="30" width="108" height="24"/>
+                    <rect key="frame" x="276" y="19" width="108" height="24"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQC-rP-YuB" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -75,31 +83,43 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIH-Va-fd2">
-                    <rect key="frame" x="0.0" y="58" width="384" height="1"/>
+                    <rect key="frame" x="0.0" y="47" width="384" height="2"/>
                     <color key="backgroundColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="fBR-rI-cNT"/>
+                        <constraint firstAttribute="height" constant="2" id="fBR-rI-cNT"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tX-Li-bRr" customClass="BaseLabel" customModule="NY_TimesNews" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="54" width="384" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="b4J-vy-Xf3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="HjB-id-C71" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="37k-Ej-Ngf"/>
+                <constraint firstItem="2tX-Li-bRr" firstAttribute="top" secondItem="eIH-Va-fd2" secondAttribute="bottom" constant="5" id="GtA-0p-fA5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2tX-Li-bRr" secondAttribute="bottom" constant="5" id="Rjm-bK-rUw"/>
                 <constraint firstItem="EqB-ek-7S5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="V2T-Gh-xrH"/>
-                <constraint firstItem="EqB-ek-7S5" firstAttribute="top" secondItem="HjB-id-C71" secondAttribute="bottom" constant="5" id="Y4n-kZ-RZa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EqB-ek-7S5" secondAttribute="trailing" id="aFE-xt-mfh"/>
                 <constraint firstItem="eIH-Va-fd2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ctn-td-TYU"/>
-                <constraint firstItem="HjB-id-C71" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="f8W-gp-j5Q"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eIH-Va-fd2" secondAttribute="bottom" constant="5" id="fco-eH-DHg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2tX-Li-bRr" secondAttribute="trailing" id="dLz-UB-oJE"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rzC-TU-K1Z" secondAttribute="trailing" id="kec-aB-J4X"/>
+                <constraint firstItem="2tX-Li-bRr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="noR-RP-IuT"/>
                 <constraint firstAttribute="trailing" secondItem="eIH-Va-fd2" secondAttribute="trailing" id="oW0-WI-1g4"/>
-                <constraint firstItem="eIH-Va-fd2" firstAttribute="top" secondItem="EqB-ek-7S5" secondAttribute="bottom" constant="8" id="r4Z-JU-eXr"/>
+                <constraint firstItem="EqB-ek-7S5" firstAttribute="top" secondItem="HjB-id-C71" secondAttribute="bottom" id="oaQ-Rp-v36"/>
+                <constraint firstItem="eIH-Va-fd2" firstAttribute="top" secondItem="EqB-ek-7S5" secondAttribute="bottom" id="r4Z-JU-eXr"/>
+                <constraint firstItem="HjB-id-C71" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rss-Si-NsG"/>
                 <constraint firstItem="eIH-Va-fd2" firstAttribute="top" secondItem="rzC-TU-K1Z" secondAttribute="bottom" constant="4" id="tgD-6b-kIj"/>
+                <constraint firstItem="HjB-id-C71" firstAttribute="leading" secondItem="EqB-ek-7S5" secondAttribute="leading" id="ycm-PF-F8p"/>
             </constraints>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="115.94202898550725" y="405.80357142857139"/>
+            <point key="canvasLocation" x="115.94202898550725" y="413.50446428571428"/>
         </view>
     </objects>
     <resources>

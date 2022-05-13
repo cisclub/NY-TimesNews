@@ -39,11 +39,20 @@ class OTPLoginViewController: StandardViewController<OTPLoginViewModel> {
             }
         }
     }
+    var continueButtonEnabled = false
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViews()
+        
+        viewModel?.loginEntry.bind({ [weak self] entry in
+            self?.loginEntry = entry
+        })
+    }
+    
+    func setupViews() {
         orLabel.text = "or".localized
         orLabel.font = .regular
         orLabel.textColor = .appDisableButtonText
@@ -52,8 +61,6 @@ class OTPLoginViewController: StandardViewController<OTPLoginViewModel> {
         headerLabel.type = .title
         headerLabel.text = Strings.loginToMyEtisalat
         headerLabel.textAlignment = .center
-        
-        
         
         loginOptionsButton.type = .custom(textColor: .appActive,
                                           bgColor: .white,
@@ -74,13 +81,14 @@ class OTPLoginViewController: StandardViewController<OTPLoginViewModel> {
                                       margin: 0.0)
         languageButton.titleLabel?.font = .h6
         
-        viewModel?.loginEntry.bind({ [weak self] entry in
-            self?.loginEntry = entry
-        })
+        languageButton.setTitle(Strings.loginLanguageButtonTitle, for: .normal)
     }
     
     func getMobileNumberEntryField() -> UIView {
-        let model = LoginEntryFieldModel(useCases: nil, actions: nil)
+        let model = LoginEntryFieldModel(useCases: nil,
+                                         actions: LoginEntryFieldActions(infoButtonTapped: { [unowned self] in
+            self.viewModel?.actions.infoButtonTapped()
+        }))
         let textFieldLoginEntry = LoginEntryField.instance(withModel: model)
         
         return textFieldLoginEntry
@@ -97,10 +105,12 @@ class OTPLoginViewController: StandardViewController<OTPLoginViewModel> {
 
 extension OTPLoginViewController {
     @IBAction func languageButtonTapped() {
-        loginEntry = .mobileNumber
+        self.view.endEditing(true)
+        
+        viewModel!.languageButtonTapped()
     }
     
     @IBAction func loginOptionsButtonTapped() {
-        viewModel?.showLoginOptions()
+        viewModel!.showLoginOptions()
     }
 }

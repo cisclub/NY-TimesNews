@@ -40,9 +40,29 @@ class OTPLoginViewModel: ViewModel {
         })
         actions.needToShowLoginOptions()
     }
+    
+    func languageButtonTapped() {
+        GlobalBaseClassMock.latestMenuResponse = nil
+        
+        let bundle = Bundle()
+        if LanguageHandlerMock.selectedLanguage == EnglishLanguage  {
+            LanguageHandlerMock.setLanguage(ArabicLanguage)
+            bundle.setLanguage("ar")
+            CommonMethodsMock.fireEvent(withTag: kLoginScreenArabicLanguageSelected)
+        }
+        else{
+            LanguageHandlerMock.setLanguage(EnglishLanguage)
+            bundle.setLanguage("en")
+            CommonMethodsMock.fireEvent(withTag: kLoginScreenEnglishLanguageSelected)
+        }
+        
+        actions.languageButtonTapped()
+    }
 }
 
 
 struct OTPLoginViewModelActions {
     let needToShowLoginOptions: () -> ()
+    let infoButtonTapped: () -> ()
+    let languageButtonTapped: () -> ()
 }

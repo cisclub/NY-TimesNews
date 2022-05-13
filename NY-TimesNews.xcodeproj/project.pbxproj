@@ -35,6 +35,12 @@
 		D20868F2281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D20868F1281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib */; };
 		D20D434728297E8400F31B44 /* UIView+Shimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = D20D434628297E8400F31B44 /* UIView+Shimmer.m */; };
 		D20D4349282983E300F31B44 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D4348282983E300F31B44 /* UIView.swift */; };
+		D21685A8282ECDC10031341E /* LoginInfoActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21685A6282ECDC10031341E /* LoginInfoActions.swift */; };
+		D21685A9282ECDC10031341E /* LoginInfoActions.xib in Resources */ = {isa = PBXBuildFile; fileRef = D21685A7282ECDC10031341E /* LoginInfoActions.xib */; };
+		D21685AB282F07FA0031341E /* GlobalBaseClassMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21685AA282F07FA0031341E /* GlobalBaseClassMock.swift */; };
+		D21685AD282F08540031341E /* LanguageHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21685AC282F08540031341E /* LanguageHandlerMock.swift */; };
+		D21685AF282F09380031341E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21685AE282F09380031341E /* BundleExtension.swift */; };
+		D21685B1282F096D0031341E /* CommonMethodsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21685B0282F096D0031341E /* CommonMethodsMock.swift */; };
 		D24AE2AE282A787E0090B0F5 /* ListActionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24AE2AC282A787E0090B0F5 /* ListActionsView.xib */; };
 		D24AE2AF282A787E0090B0F5 /* ListActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2AD282A787E0090B0F5 /* ListActionsView.swift */; };
 		D24AE2B5282A802B0090B0F5 /* StandardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24AE2B3282A802B0090B0F5 /* StandardCell.swift */; };
@@ -49,7 +55,6 @@
 		D24AE2DF282ACE2A0090B0F5 /* LinkedAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24AE2DE282ACE2A0090B0F5 /* LinkedAccountCell.xib */; };
 		D24BD3A9281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD39F281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift */; };
 		D24BD3AD281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD3A5281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift */; };
-		D24BD3AE281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD3A8281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift */; };
 		D24BD3B0281C9E6B00974860 /* ActionsFadePresentingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD3AF281C9E6B00974860 /* ActionsFadePresentingViewModel.swift */; };
 		D24BD3B2281CA84800974860 /* ActionsFadePresentingContainerStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D24BD3B1281CA84800974860 /* ActionsFadePresentingContainerStackView.xib */; };
 		D24BD3B5281CAD9A00974860 /* ActionsFadePresentingContainerStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BD3B4281CAD9A00974860 /* ActionsFadePresentingContainerStackView.swift */; };
@@ -80,6 +85,9 @@
 		D2C54D30282D37FA000AAA13 /* LoginEntryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D2E282D37FA000AAA13 /* LoginEntryField.swift */; };
 		D2C54D36282E501E000AAA13 /* LoginEntryFaceID.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C54D34282E501E000AAA13 /* LoginEntryFaceID.xib */; };
 		D2C54D37282E501E000AAA13 /* LoginEntryFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D35282E501E000AAA13 /* LoginEntryFaceID.swift */; };
+		D2C54D3A282E80AF000AAA13 /* ApplicationLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D39282E80AF000AAA13 /* ApplicationLogic.swift */; };
+		D2C54D40282E8709000AAA13 /* InitialLoginEntryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D3F282E8709000AAA13 /* InitialLoginEntryUseCase.swift */; };
+		D2C54D42282E9632000AAA13 /* ValidationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C54D41282E9632000AAA13 /* ValidationMock.swift */; };
 		D2D6E618281CFB6400193460 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E613281CFB6400193460 /* BaseLabel.swift */; };
 		D2D6E619281CFB6400193460 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E614281CFB6400193460 /* BaseView.swift */; };
 		D2D6E61A281CFB6400193460 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D6E615281CFB6400193460 /* BaseButton.swift */; };
@@ -181,6 +189,12 @@
 		D20D434528297E8300F31B44 /* UIView+Shimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shimmer.h"; sourceTree = "<group>"; };
 		D20D434628297E8400F31B44 /* UIView+Shimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shimmer.m"; sourceTree = "<group>"; };
 		D20D4348282983E300F31B44 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D21685A6282ECDC10031341E /* LoginInfoActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInfoActions.swift; sourceTree = "<group>"; };
+		D21685A7282ECDC10031341E /* LoginInfoActions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginInfoActions.xib; sourceTree = "<group>"; };
+		D21685AA282F07FA0031341E /* GlobalBaseClassMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalBaseClassMock.swift; sourceTree = "<group>"; };
+		D21685AC282F08540031341E /* LanguageHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageHandlerMock.swift; sourceTree = "<group>"; };
+		D21685AE282F09380031341E /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		D21685B0282F096D0031341E /* CommonMethodsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethodsMock.swift; sourceTree = "<group>"; };
 		D24AE2AC282A787E0090B0F5 /* ListActionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListActionsView.xib; sourceTree = "<group>"; };
 		D24AE2AD282A787E0090B0F5 /* ListActionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListActionsView.swift; sourceTree = "<group>"; };
 		D24AE2B3282A802B0090B0F5 /* StandardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardCell.swift; sourceTree = "<group>"; };
@@ -195,7 +209,6 @@
 		D24AE2DE282ACE2A0090B0F5 /* LinkedAccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinkedAccountCell.xib; sourceTree = "<group>"; };
 		D24BD39F281C9DA100974860 /* FadePresentingWithBottomContainerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentingWithBottomContainerCoordinator.swift; sourceTree = "<group>"; };
 		D24BD3A5281C9DA100974860 /* FadePresentingWithBottomContainerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentingWithBottomContainerViewModel.swift; sourceTree = "<group>"; };
-		D24BD3A8281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadePresentingWithBottomContainerViewController.swift; sourceTree = "<group>"; };
 		D24BD3AF281C9E6B00974860 /* ActionsFadePresentingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsFadePresentingViewModel.swift; sourceTree = "<group>"; };
 		D24BD3B1281CA84800974860 /* ActionsFadePresentingContainerStackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionsFadePresentingContainerStackView.xib; sourceTree = "<group>"; };
 		D24BD3B4281CAD9A00974860 /* ActionsFadePresentingContainerStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsFadePresentingContainerStackView.swift; sourceTree = "<group>"; };
@@ -226,6 +239,9 @@
 		D2C54D2E282D37FA000AAA13 /* LoginEntryField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEntryField.swift; sourceTree = "<group>"; };
 		D2C54D34282E501E000AAA13 /* LoginEntryFaceID.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginEntryFaceID.xib; sourceTree = "<group>"; };
 		D2C54D35282E501E000AAA13 /* LoginEntryFaceID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEntryFaceID.swift; sourceTree = "<group>"; };
+		D2C54D39282E80AF000AAA13 /* ApplicationLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationLogic.swift; sourceTree = "<group>"; };
+		D2C54D3F282E8709000AAA13 /* InitialLoginEntryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoginEntryUseCase.swift; sourceTree = "<group>"; };
+		D2C54D41282E9632000AAA13 /* ValidationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationMock.swift; sourceTree = "<group>"; };
 		D2D6E613281CFB6400193460 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		D2D6E614281CFB6400193460 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D2D6E615281CFB6400193460 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
@@ -305,6 +321,7 @@
 		07796C2427A1773A00FD0E4D = {
 			isa = PBXGroup;
 			children = (
+				D2C54D38282E809B000AAA13 /* Mocks */,
 				D20D4348282983E300F31B44 /* UIView.swift */,
 				D20D434528297E8300F31B44 /* UIView+Shimmer.h */,
 				D20D434628297E8400F31B44 /* UIView+Shimmer.m */,
@@ -419,6 +436,7 @@
 			children = (
 				07796C7927A1809900FD0E4D /* AppCoordinator.swift */,
 				07796C8527A1864400FD0E4D /* Common Views */,
+				D2C54D3F282E8709000AAA13 /* InitialLoginEntryUseCase.swift */,
 			);
 			path = "App Scenes";
 			sourceTree = "<group>";
@@ -454,6 +472,23 @@
 				D20868F1281E9DDB0032F1D2 /* OTPLoginOptionsActionsView.xib */,
 			);
 			path = OTPLoginOptionsActionsView;
+			sourceTree = "<group>";
+		};
+		D21685A4282ECDC10031341E /* LoginInfoActions */ = {
+			isa = PBXGroup;
+			children = (
+				D21685A5282ECDC10031341E /* LoginInfoActionsMVVM */,
+			);
+			path = LoginInfoActions;
+			sourceTree = "<group>";
+		};
+		D21685A5282ECDC10031341E /* LoginInfoActionsMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				D21685A6282ECDC10031341E /* LoginInfoActions.swift */,
+				D21685A7282ECDC10031341E /* LoginInfoActions.xib */,
+			);
+			path = LoginInfoActionsMVVM;
 			sourceTree = "<group>";
 		};
 		D24AE2AB282A787E0090B0F5 /* ListActionsViewMVVM */ = {
@@ -544,7 +579,6 @@
 		D24BD3A6281C9DA100974860 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D24BD3A8281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -721,6 +755,19 @@
 			path = LoginEntryFaceIDMVVM;
 			sourceTree = "<group>";
 		};
+		D2C54D38282E809B000AAA13 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54D39282E80AF000AAA13 /* ApplicationLogic.swift */,
+				D2C54D41282E9632000AAA13 /* ValidationMock.swift */,
+				D21685AA282F07FA0031341E /* GlobalBaseClassMock.swift */,
+				D21685AC282F08540031341E /* LanguageHandlerMock.swift */,
+				D21685AE282F09380031341E /* BundleExtension.swift */,
+				D21685B0282F096D0031341E /* CommonMethodsMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		D2D6E611281CFB5B00193460 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
@@ -821,6 +868,7 @@
 		D2D6E631281CFFFC00193460 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D21685A4282ECDC10031341E /* LoginInfoActions */,
 				D2C54D33282E501E000AAA13 /* LoginEntryFaceIDMVVM */,
 				D2C54D2C282D37FA000AAA13 /* LoginEntryFieldMVVM */,
 				D2D6E633281CFFFC00193460 /* OTPLoginScene.storyboard */,
@@ -999,6 +1047,7 @@
 				D2D6E67A281D042A00193460 /* AM274.TTF in Resources */,
 				D2D6E673281D042A00193460 /* AM282.TTF in Resources */,
 				D24AE2B6282A802B0090B0F5 /* StandardCell.xib in Resources */,
+				D21685A9282ECDC10031341E /* LoginInfoActions.xib in Resources */,
 				D2D6E681281D042A00193460 /* Lato-Medium.ttf in Resources */,
 				D2D6E674281D042A00193460 /* Lato-BlackItalic.ttf in Resources */,
 				D27D7BDD281F68BC00B4E0BE /* OTPRemoveActionsView.xib in Resources */,
@@ -1058,12 +1107,13 @@
 				D2D6E63F281CFFFC00193460 /* OTPLoginViewModel.swift in Sources */,
 				D2D6E638281CFFFC00193460 /* OTPLoginOptionsUseCase.swift in Sources */,
 				D24EEAE2281C9A2800D7F4CC /* FadePresentingViewController.swift in Sources */,
+				D21685AD282F08540031341E /* LanguageHandlerMock.swift in Sources */,
 				D2C54D37282E501E000AAA13 /* LoginEntryFaceID.swift in Sources */,
+				D21685AF282F09380031341E /* BundleExtension.swift in Sources */,
 				D20868EF281E9AA20032F1D2 /* OTPLoginOptionsActionsView.swift in Sources */,
 				D24AE2D9282AA9710090B0F5 /* LinkedAccountsListCoordinator.swift in Sources */,
 				D24AE2D7282AA9710090B0F5 /* LinkedAccountsListViewModel.swift in Sources */,
 				07796C9927A2927400FD0E4D /* UIImageView+Extension.swift in Sources */,
-				D24BD3AE281C9DA100974860 /* FadePresentingWithBottomContainerViewController.swift in Sources */,
 				D2C54D22282D30B7000AAA13 /* UIHelper.swift in Sources */,
 				D2C54D04282C3E82000AAA13 /* ButtonCellModel.swift in Sources */,
 				D2C54D30282D37FA000AAA13 /* LoginEntryField.swift in Sources */,
@@ -1077,6 +1127,8 @@
 				D2C54CE4282B6B48000AAA13 /* TextCell.swift in Sources */,
 				07796C8427A1862200FD0E4D /* UIViewController+Extension.swift in Sources */,
 				07796C6A27A17DD200FD0E4D /* HTTPClient.swift in Sources */,
+				D21685AB282F07FA0031341E /* GlobalBaseClassMock.swift in Sources */,
+				D2C54D3A282E80AF000AAA13 /* ApplicationLogic.swift in Sources */,
 				D2851602282A709C004A760A /* ListActionsFadePresentingCoordinator.swift in Sources */,
 				07796C8F27A188B100FD0E4D /* AlertsView.swift in Sources */,
 				D2D6E63C281CFFFC00193460 /* OTPLoginCoordinator.swift in Sources */,
@@ -1084,6 +1136,8 @@
 				D2851606282A709C004A760A /* ListActionsFadePresentingUseCases.swift in Sources */,
 				D24BD3B5281CAD9A00974860 /* ActionsFadePresentingContainerStackView.swift in Sources */,
 				07796C6F27A17E4100FD0E4D /* Data+Extension.swift in Sources */,
+				D21685B1282F096D0031341E /* CommonMethodsMock.swift in Sources */,
+				D21685A8282ECDC10031341E /* LoginInfoActions.swift in Sources */,
 				D2851604282A709C004A760A /* ListActionsFadePresentingUseCase.swift in Sources */,
 				D24EEAE1281C9A2800D7F4CC /* FadePresentingViewModel.swift in Sources */,
 				07796C7A27A1809900FD0E4D /* AppCoordinator.swift in Sources */,
@@ -1113,6 +1167,8 @@
 				07796C9B27A2AEB600FD0E4D /* APIParameters.swift in Sources */,
 				D27D7BDE281F68BC00B4E0BE /* OTPRemoveActionsView.swift in Sources */,
 				07796C7127A17E6800FD0E4D /* String+Extension.swift in Sources */,
+				D2C54D42282E9632000AAA13 /* ValidationMock.swift in Sources */,
+				D2C54D40282E8709000AAA13 /* InitialLoginEntryUseCase.swift in Sources */,
 				D24AE2AF282A787E0090B0F5 /* ListActionsView.swift in Sources */,
 				D2C54D02282C3E01000AAA13 /* ButtonCell.swift in Sources */,
 				D20D434728297E8400F31B44 /* UIView+Shimmer.m in Sources */,

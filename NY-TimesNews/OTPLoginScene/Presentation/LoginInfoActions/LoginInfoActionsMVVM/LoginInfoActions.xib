@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="8ca-QO-VlW" customClass="LoginInfoActions" customModule="NY_TimesNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="551" height="286"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Sdx-jA-euV">
+                    <rect key="frame" x="16" y="26" width="519" height="195"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBL-5t-jO0">
+                            <rect key="frame" x="0.0" y="0.0" width="519" height="65"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEN-bZ-cMG">
+                                    <rect key="frame" x="0.0" y="0.0" width="519" height="65"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FH-1I-SDf">
+                                            <rect key="frame" x="0.0" y="0.0" width="503" height="65"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPJ-CD-1EH" customClass="BaseLabel" customModule="NY_TimesNews" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="22" width="503" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="oPJ-CD-1EH" secondAttribute="bottom" constant="19" id="9eo-Z6-B5W"/>
+                                                <constraint firstItem="oPJ-CD-1EH" firstAttribute="top" secondItem="7FH-1I-SDf" secondAttribute="top" constant="22" id="TxI-KW-3cf"/>
+                                                <constraint firstItem="oPJ-CD-1EH" firstAttribute="leading" secondItem="7FH-1I-SDf" secondAttribute="leading" id="nm4-kf-z6X"/>
+                                                <constraint firstAttribute="trailing" secondItem="oPJ-CD-1EH" secondAttribute="trailing" id="tiq-sO-Bez"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOV-fl-be8">
+                                            <rect key="frame" x="503" y="0.0" width="16" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="kyn-Qz-TAh"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="iconCalendarDuo"/>
+                                            <connections>
+                                                <action selector="firstButtonTapped" destination="8ca-QO-VlW" eventType="touchUpInside" id="YTY-8S-xOg"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="65" id="uKL-LK-VjC"/>
+                                    </constraints>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vw-PV-Gyi">
+                                    <rect key="frame" x="0.0" y="64" width="519" height="1"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="gia-8D-AEe"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="XEN-bZ-cMG" firstAttribute="leading" secondItem="SBL-5t-jO0" secondAttribute="leading" id="1L3-en-CfZ"/>
+                                <constraint firstItem="XEN-bZ-cMG" firstAttribute="top" secondItem="SBL-5t-jO0" secondAttribute="top" id="e38-66-cnn"/>
+                                <constraint firstItem="8Vw-PV-Gyi" firstAttribute="leading" secondItem="SBL-5t-jO0" secondAttribute="leading" id="fj2-Yw-dHF"/>
+                                <constraint firstAttribute="height" constant="65" id="gXP-VT-K8A"/>
+                                <constraint firstAttribute="bottom" secondItem="8Vw-PV-Gyi" secondAttribute="bottom" id="if3-RU-1eh"/>
+                                <constraint firstAttribute="trailing" secondItem="8Vw-PV-Gyi" secondAttribute="trailing" id="mla-j6-gFl"/>
+                                <constraint firstAttribute="trailing" secondItem="XEN-bZ-cMG" secondAttribute="trailing" id="vDR-JF-5Hr"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coY-d8-gOY">
+                            <rect key="frame" x="0.0" y="65" width="519" height="65"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3B-ma-hZU">
+                                    <rect key="frame" x="0.0" y="0.0" width="519" height="65"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jn-6O-LVP">
+                                            <rect key="frame" x="0.0" y="0.0" width="503" height="65"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loX-PZ-IRA" customClass="BaseLabel" customModule="NY_TimesNews" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="22" width="503" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="loX-PZ-IRA" firstAttribute="top" secondItem="6jn-6O-LVP" secondAttribute="top" constant="22" id="9yR-bZ-lhz"/>
+                                                <constraint firstItem="loX-PZ-IRA" firstAttribute="leading" secondItem="6jn-6O-LVP" secondAttribute="leading" id="eli-JD-lbx"/>
+                                                <constraint firstAttribute="trailing" secondItem="loX-PZ-IRA" secondAttribute="trailing" id="od0-qR-TpO"/>
+                                                <constraint firstAttribute="bottom" secondItem="loX-PZ-IRA" secondAttribute="bottom" constant="19" id="vza-Tr-VdX"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtH-Uy-Wug">
+                                            <rect key="frame" x="503" y="0.0" width="16" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="eCC-pK-KZr"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="iconCalendarDuo"/>
+                                            <connections>
+                                                <action selector="secondButtonTapped" destination="8ca-QO-VlW" eventType="touchUpInside" id="KDs-ni-FMS"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="65" id="ELe-C6-zfz"/>
+                                    </constraints>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hnq-ZE-a2N">
+                                    <rect key="frame" x="0.0" y="64" width="519" height="1"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="QCz-oI-2oO"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Hnq-ZE-a2N" secondAttribute="bottom" id="I3m-5l-2Zn"/>
+                                <constraint firstAttribute="trailing" secondItem="W3B-ma-hZU" secondAttribute="trailing" id="Sa1-0o-Xd4"/>
+                                <constraint firstItem="W3B-ma-hZU" firstAttribute="top" secondItem="coY-d8-gOY" secondAttribute="top" id="Uq8-im-LvS"/>
+                                <constraint firstItem="Hnq-ZE-a2N" firstAttribute="leading" secondItem="coY-d8-gOY" secondAttribute="leading" id="Y9U-lN-qd1"/>
+                                <constraint firstAttribute="trailing" secondItem="Hnq-ZE-a2N" secondAttribute="trailing" id="YPG-qk-R9e"/>
+                                <constraint firstAttribute="height" constant="65" id="n6T-CM-5rS"/>
+                                <constraint firstItem="W3B-ma-hZU" firstAttribute="leading" secondItem="coY-d8-gOY" secondAttribute="leading" id="uYW-lN-Fkh"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rck-Ph-DTI">
+                            <rect key="frame" x="0.0" y="130" width="519" height="65"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uux-SQ-hI8">
+                                    <rect key="frame" x="0.0" y="0.0" width="519" height="65"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4Q-lF-TT3">
+                                            <rect key="frame" x="0.0" y="0.0" width="503" height="65"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5f-Fo-TrU" customClass="BaseLabel" customModule="NY_TimesNews" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="22" width="503" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="z5f-Fo-TrU" secondAttribute="bottom" constant="19" id="8cG-cR-izs"/>
+                                                <constraint firstItem="z5f-Fo-TrU" firstAttribute="top" secondItem="R4Q-lF-TT3" secondAttribute="top" constant="22" id="D2k-nR-19c"/>
+                                                <constraint firstAttribute="trailing" secondItem="z5f-Fo-TrU" secondAttribute="trailing" id="K6b-Pn-dfL"/>
+                                                <constraint firstItem="z5f-Fo-TrU" firstAttribute="leading" secondItem="R4Q-lF-TT3" secondAttribute="leading" id="N59-4S-ZIO"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOF-8S-yad">
+                                            <rect key="frame" x="503" y="0.0" width="16" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="16" id="kbb-98-36Q"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="iconCalendarDuo"/>
+                                            <connections>
+                                                <action selector="thirdButtonTapped" destination="8ca-QO-VlW" eventType="touchUpInside" id="m6V-Rg-baD"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="65" id="v3E-1K-veM"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="65" id="In6-b7-5ox"/>
+                                <constraint firstItem="uux-SQ-hI8" firstAttribute="leading" secondItem="rck-Ph-DTI" secondAttribute="leading" id="VT1-0h-MrH"/>
+                                <constraint firstAttribute="trailing" secondItem="uux-SQ-hI8" secondAttribute="trailing" id="f8p-5t-ZMk"/>
+                                <constraint firstItem="uux-SQ-hI8" firstAttribute="top" secondItem="rck-Ph-DTI" secondAttribute="top" id="nOF-uL-g2y"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="9YL-SA-ejR"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Sdx-jA-euV" firstAttribute="leading" secondItem="9YL-SA-ejR" secondAttribute="leading" constant="16" id="HYF-cs-9qh"/>
+                <constraint firstAttribute="bottom" secondItem="Sdx-jA-euV" secondAttribute="bottom" constant="65" id="jOw-Wf-jS4"/>
+                <constraint firstItem="Sdx-jA-euV" firstAttribute="top" secondItem="8ca-QO-VlW" secondAttribute="top" constant="26" id="nMr-au-SYk"/>
+                <constraint firstItem="9YL-SA-ejR" firstAttribute="trailing" secondItem="Sdx-jA-euV" secondAttribute="trailing" constant="16" id="tZ2-qB-wPX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="firstLabel" destination="oPJ-CD-1EH" id="Q0r-sF-P1Y"/>
+                <outlet property="firstViewLengthConstraint" destination="gXP-VT-K8A" id="4Ka-sy-whC"/>
+                <outlet property="secondLabel" destination="loX-PZ-IRA" id="oYh-PF-97C"/>
+                <outlet property="secondViewLengthConstraint" destination="n6T-CM-5rS" id="dV2-WT-Bev"/>
+                <outlet property="thirdLabel" destination="z5f-Fo-TrU" id="rZQ-a9-xUH"/>
+                <outlet property="thirdViewLengthConstraint" destination="In6-b7-5ox" id="bP6-de-jqu"/>
+                <outletCollection property="separators" destination="8Vw-PV-Gyi" collectionClass="NSMutableArray" id="PuF-Z1-kDa"/>
+                <outletCollection property="separators" destination="Hnq-ZE-a2N" collectionClass="NSMutableArray" id="Q6l-2l-fMZ"/>
+            </connections>
+            <point key="canvasLocation" x="683.33333333333337" y="-270.20089285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconCalendarDuo" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

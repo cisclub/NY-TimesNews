@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="etisalatLogoVerticalEng" translatesAutoresizingMaskIntoConstraints="NO" id="7JQ-GO-dbi">
-                                <rect key="frame" x="157.5" y="102" width="99" height="125"/>
+                                <rect key="frame" x="157.5" y="105" width="99" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="DmJ-x4-IiA"/>
                                     <constraint firstAttribute="width" constant="99" id="l5K-JU-5Dj"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="J9z-3C-UVO">
-                                <rect key="frame" x="16" y="259" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="262" width="382" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOy-Y9-azv" customClass="BaseLabel" customModule="NY_TimesNews" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -36,13 +36,13 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsy-zs-AgA" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
-                                <rect key="frame" x="173.5" y="818" width="67" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsy-zs-AgA" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
+                                <rect key="frame" x="180" y="815" width="54" height="34"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kcJ-wf-Mjm">
-                                <rect key="frame" x="16" y="303.5" width="382" height="99"/>
+                                <rect key="frame" x="16" y="306.5" width="382" height="99"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="iyP-kw-JsN">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="99"/>
@@ -79,13 +79,13 @@
                                                     <constraint firstItem="EQW-1b-phf" firstAttribute="centerY" secondItem="lJH-kc-oih" secondAttribute="centerY" id="sRA-gf-SQW"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcs-Ib-xqa" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcs-Ib-xqa" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="51" width="382" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="NwN-UJ-nZH"/>
                                                 </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
                                                     <action selector="loginOptionsButtonTapped" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JzF-fr-6FY"/>
                                                 </connections>
@@ -95,12 +95,12 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv2-Om-6JU">
-                                <rect key="frame" x="16" y="44" width="382" height="31"/>
+                                <rect key="frame" x="16" y="44" width="382" height="34"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3M-yi-mT0" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
-                                        <rect key="frame" x="315" y="0.0" width="67" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3M-yi-mT0" customClass="BaseButton" customModule="NY_TimesNews" customModuleProvider="target">
+                                        <rect key="frame" x="328" y="0.0" width="54" height="34"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="languageButtonTapped" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cxw-oh-VGC"/>
                                         </connections>

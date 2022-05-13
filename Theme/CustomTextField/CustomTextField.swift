@@ -8,27 +8,29 @@
 import UIKit
 
 
-enum CustomTextFieldType {
-    case password
-    case phoneNumber
-    case text
-    case email
-    case decimal
-}
-
 @IBDesignable
 class CustomTextField: UIView {
-
+    
+    enum `EntryType` {
+        case password
+        case phoneNumber
+        case text
+        case email
+        case decimal
+    }
+    
     
     // MARK: - Outlets
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var viewSeparator: UIView!
+    @IBOutlet private weak var viewSeparatorHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var lblPlaceHolder: UILabel!
     @IBOutlet private weak var stackActions: UIStackView!
     @IBOutlet private weak var btnClearText: BaseButton!
     @IBOutlet private weak var btnInfo: BaseButton!
     @IBOutlet private weak var btnCorrect: BaseButton!
     @IBOutlet private weak var btnShowPassword: BaseButton!
+    @IBOutlet private weak var validationLabel: BaseLabel!
     
     
     // MARK: - Private Variables
@@ -39,16 +41,23 @@ class CustomTextField: UIView {
     private lazy var tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CustomTextField.tapGestureRecognized(_:)))
     private let phoneNumberString = "0123456789 "
     private let decimalsOnlyString = "0123456789."
+    private var bottomLineHeight = 1.0 {
+        didSet {
+            viewSeparatorHeightConstraint.constant = bottomLineHeight
+        }
+    }
     
     
     // MARK: - Public Properties
     public var textChangedCallback: (() -> Void)?
+    public var textFieldDidEndEditingCallback: (() -> Void)?
+    public var textFieldShouldChangeCharsInRnage: ((_ range: NSRange, _ replacement: String) -> (Bool))?
     public var infoButtonCallBack: (() -> Void)?
     public var clearTextButtonCallBack: (() -> Void)?
     public var showPasswordButtonCallBack: (() -> Void)?
     
     /// user can select textFieldType
-    public var textFieldType: CustomTextFieldType = .text { didSet { self.setupTextFieldOnTypeChanges() } }
+    public var entryType: EntryType = .text { didSet { self.setupTextFieldOnTypeChanges() } }
     ///
     var textFieldTextColor: UIColor = .appDarkText
     
@@ -83,12 +92,16 @@ class CustomTextField: UIView {
         
         get {
             
-            let returnText = textField.text?.cleanedString() ?? ""
-            return textFieldType == .phoneNumber ? returnText.planPhoneNumberString : returnText
+            let returnText = textField.text ?? ""
+            return entryType == .phoneNumber ? returnText.planPhoneNumberString : returnText
             
         } set(newText) {
 
-            textField.text = textFieldType == .phoneNumber ? newText.formattedPhoneNumber : newText
+            textField.text = entryType == .phoneNumber ? newText.formattedPhoneNumber : newText
+            
+            if newText.count == 0 {
+                btnClearText.isHidden = true
+            }
         }
     }
     
@@ -108,6 +121,19 @@ class CustomTextField: UIView {
     @IBInspectable var showTitleWhenActive: Bool = true { didSet {
         changeTitleLabelColorIfNeeded()
     }}
+    
+    func showErrorButon() {
+        if text.count > 0 {
+            btnClearText.isHidden = false
+        }
+        viewSeparator.backgroundColor = UIColor.appRed
+        bottomLineHeight = 2.0
+    }
+    
+    func hideErrorButton() {
+        btnClearText.isHidden = true
+        viewSeparator.backgroundColor = UIColor.appActive
+    }
     
     
     /**
@@ -146,7 +172,11 @@ class CustomTextField: UIView {
      Default message will be shown if not set
      
      */
-    @IBInspectable var validationMessage: String = ""
+    @IBInspectable var validationErrorMessage = "" {
+        didSet {
+            validationLabel.text = validationErrorMessage
+        }
+    }
     
     /**
      The isSecureTextEntry of the `View` instance.
@@ -172,19 +202,14 @@ class CustomTextField: UIView {
      - Returns: isCompulsory behaviour.
      
      */
-    var isValid: Bool {
-        
-        let valid = !isHidden ? (text.count > 0) : true
-        
-        if !valid {
-            if validationMessage.count > 0 {
-                // show validation message
+    var validationMessageIsHidden = true {
+        didSet {
+            if validationMessageIsHidden {
+                validationLabel.isHidden = true
             } else {
-                // show generic message
+                validationLabel.isHidden = false
             }
         }
-        
-        return valid
     }
     
     public var rawText: String {
@@ -213,6 +238,10 @@ class CustomTextField: UIView {
         lblPlaceHolder.isHidden = true
         lblPlaceHolder.font = titleLabelFont
         
+        validationLabel.textColor = .appRed
+        validationLabel.font = .smallRegular
+        validationLabel.isHidden = true
+        
         addGestureRecognizer(tapGestureRecognizer)
         
         btnInfo.isHidden = true
@@ -225,11 +254,15 @@ class CustomTextField: UIView {
         }
         
         btnClearText.tapHandler = { [weak self] (button: BaseButton) in
+            self?.text.removeAll()
+            self?.viewSeparator.backgroundColor = UIColor.appLigtGray
+            self?.bottomLineHeight = 1.0
             self?.clearTextButtonCallBack?()
         }
         
         btnShowPassword.tapHandler = { [weak self] (button: BaseButton) in
             self?.showPasswordButtonCallBack?()
+            self?.textField.isSecureTextEntry.toggle()
         }
         
         btnCorrect.isEnabled = false
@@ -248,8 +281,10 @@ class CustomTextField: UIView {
         
         checkTextLength(textField)
         
-        if textFieldType == .phoneNumber {
+        if entryType == .phoneNumber {
             text = text.formattedPhoneNumber
+        } else if entryType == .password {
+            btnShowPassword.isHidden = text.count == 0
         }
         
         textChangedCallback?()
@@ -268,8 +303,7 @@ class CustomTextField: UIView {
     
     private func setupTextFieldOnTypeChanges() {
         
-        switch self.textFieldType {
-            
+        switch entryType {
         case .phoneNumber:
             allowedCharacters = phoneNumberString
             textField.keyboardType = .numberPad
@@ -300,6 +334,7 @@ class CustomTextField: UIView {
         
         lblPlaceHolder.textColor = textField.isFirstResponder ? activeTitleLabelColor:inactiveTitleLabelColor
         viewSeparator.backgroundColor = textField.isFirstResponder ? UIColor.appActive:UIColor.appLigtGray
+        bottomLineHeight = textField.isFirstResponder ? 2.0 : 1.0
         
         if showTitleWhenActive {
             lblPlaceHolder.isHidden = text.count == 0 && !textField.isFirstResponder
@@ -362,6 +397,7 @@ extension CustomTextField: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         changeTitleLabelColorIfNeeded()
+        textFieldDidEndEditingCallback?()
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -370,6 +406,11 @@ extension CustomTextField: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // Override default behaviour
+        if let textFieldShouldChangeCharsInRnage = textFieldShouldChangeCharsInRnage {
+            return textFieldShouldChangeCharsInRnage(range, string)
+        }
+        
         let currentText = textField.text ?? ""
         
         if range.length + range.location > currentText.count {
@@ -377,7 +418,7 @@ extension CustomTextField: UITextFieldDelegate {
         }
         let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)
         
-        if textFieldType == .decimal && string != "" {
+        if entryType == .decimal && string != "" {
             let charcount = prospectiveText.components(separatedBy: ".")
             
             if charcount.count > 1 && (charcount.last!.count >= 3) {
@@ -392,7 +433,7 @@ extension CustomTextField: UITextFieldDelegate {
             return true
         }
         
-        if textFieldType == .decimal {
+        if entryType == .decimal {
             
             let isNumeric = prospectiveText.isEmpty || (Double(prospectiveText) != nil)
             let numberOfDots = prospectiveText.components(separatedBy: ".").count - 1

@@ -34,7 +34,7 @@
                         <constraint firstItem="YRP-tX-9cp" firstAttribute="centerX" secondItem="nrA-Dh-iYm" secondAttribute="centerX" id="uRJ-KU-Dij"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWH-y1-Nsa" customClass="BaseLabel" customModule="NY_TimesNews" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWH-y1-Nsa" customClass="BaseLabel" customModule="NY_TimesNews" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="60" width="390" height="22"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="r2K-k1-tRg"/>

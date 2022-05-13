@@ -255,6 +255,10 @@ extension UIColor {
         return UIColor(red: 245/255.0, green: 246/255.0, blue: 243/255.0, alpha: 1)
     }
     
+    class var separatorColor: UIColor {
+        return UIColor(red: 231/255.0, green: 231/255.0, blue: 231/255.0, alpha: 1)
+    }
+    
     class var disabledBackground: UIColor {
             return #colorLiteral(red: 0.8196078431, green: 0.8235294118, blue: 0.8196078431, alpha: 1)
     }

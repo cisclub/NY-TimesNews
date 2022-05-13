@@ -61,8 +61,10 @@ class ActionsFadePresentingContainerStackView: UIStackView, MVVM {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        titleLabel.type = .title
-        titleContainerView.type = .card
+        titleLabel.type = .h3
+        titleContainerView.type = .none
+        titleContainerView.backgroundColor = .appSand
+        titleContainerView.roundCorners(corners: [.topLeft, .topRight], radius: 20)
         closeButton.type = .icon()
         closeButton.setImage(UIImage(named: "Close_dualtone"), for: .normal)
     }

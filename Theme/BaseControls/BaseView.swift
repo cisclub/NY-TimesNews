@@ -11,10 +11,13 @@ enum BaseViewType {
     case card
     case container
     case custom
+    case none
 }
 
 class BaseView: UIView {
     
+    var roundedCorners: UIRectCorner?
+    var cornerRadius = 0.0
     public var type: BaseViewType = .custom { didSet {
         setup()
     }}
@@ -45,11 +48,19 @@ class BaseView: UIView {
         case .custom:
             backgroundColor = ApplicationTheme.colors.green
             roundCorners(withRadius: 4)
+        case .none:
+            backgroundColor = .clear
+            roundCorners(withRadius: 0.0)
+            break
         }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        if let roundedCorners = roundedCorners {
+            roundCorners(corners: roundedCorners, radius: cornerRadius)
+        }
         
         //Custom manually positioning layout goes here
     }
@@ -61,5 +72,17 @@ class BaseView: UIView {
         //self.translatesAutoresizingMaskIntoConstraints = false
         
         //Add custom constraint code here
+    }
+    
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds,
+                                byRoundingCorners: corners,
+                                cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+        
+        roundedCorners = corners
+        cornerRadius = radius
     }
 }
